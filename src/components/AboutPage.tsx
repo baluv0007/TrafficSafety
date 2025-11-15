@@ -169,7 +169,8 @@ export default function AboutPage({ onNavigate }: AboutPageProps) {
             }`}
           >
             <div className="text-5xl font-bold text-orange-600 mb-2">20+</div>
-            <div className="text-xl text-gray-600">Years of Experience</div>
+            <div className="text-xl text-gray-600">Years Expert Experience</div>
+            <p className="text-sm text-gray-500 mt-2">Our team members bring over 20 years of industry expertise</p>
           </div>
           <div
             className={`text-center transition-all duration-1000 ${
@@ -178,7 +179,8 @@ export default function AboutPage({ onNavigate }: AboutPageProps) {
             style={{ transitionDelay: '200ms' }}
           >
             <div className="text-5xl font-bold text-orange-600 mb-2">500+</div>
-            <div className="text-xl text-gray-600">Projects Completed</div>
+            <div className="text-xl text-gray-600">Clients Served</div>
+            <p className="text-sm text-gray-500 mt-2">Our employees have successfully worked with over 500 clients</p>
           </div>
           <div
             className={`text-center transition-all duration-1000 ${
@@ -186,8 +188,9 @@ export default function AboutPage({ onNavigate }: AboutPageProps) {
             }`}
             style={{ transitionDelay: '400ms' }}
           >
-            <div className="text-5xl font-bold text-orange-600 mb-2">100%</div>
-            <div className="text-xl text-gray-600">Client Satisfaction</div>
+            <div className="text-5xl font-bold text-orange-600 mb-2">200+</div>
+            <div className="text-xl text-gray-600">Projects Completed</div>
+            <p className="text-sm text-gray-500 mt-2">Successfully delivered more than 200 traffic management projects</p>
           </div>
         </div>
 

@@ -2,8 +2,8 @@ import { Service } from '../types';
 
 export const services: Service[] = [
   {
-    id: 'rapid-deployment',
-    title: 'Rapid Deployment Teams',
+    id: 'rapid-development-teams',
+    title: 'Rapid Development Teams',
     shortDescription: 'Emergency response and quick setup traffic management services',
     images: [
       'https://images.pexels.com/photos/2219024/pexels-photo-2219024.jpeg',
@@ -60,61 +60,148 @@ export const services: Service[] = [
     ]
   },
   {
-    id: 'traffic-management-planning',
-    title: 'Traffic Management Planning',
-    shortDescription: 'Expert design and consultation for safe traffic control strategies',
+    id: 'site-assessment',
+    title: 'Site Assessment',
+    shortDescription: 'Comprehensive site evaluation and safety analysis services',
     images: [
       'https://images.pexels.com/photos/8761420/pexels-photo-8761420.jpeg',
       'https://images.pexels.com/photos/3862130/pexels-photo-3862130.jpeg',
       'https://images.pexels.com/photos/7876723/pexels-photo-7876723.jpeg',
     ],
-    description: 'Professional traffic management planning services that ensure compliance, safety, and efficiency for construction projects, events, and temporary road modifications.',
+    description: 'Professional site assessment services providing detailed analysis of traffic patterns, safety requirements, and optimal traffic management strategies for your project.',
     features: [
       'Comprehensive site surveys and risk assessments',
-      'CAD-drawn traffic management plans',
-      'Regulatory compliance verification and approval support',
-      'Pedestrian and cyclist safety integration',
-      'Environmental impact consideration and mitigation',
-      'Stakeholder communication and consultation',
-      'Ongoing plan review and optimization during project'
+      'Traffic flow analysis and modeling',
+      'Safety hazard identification',
+      'Regulatory compliance verification',
+      'Environmental impact evaluation',
+      'Detailed reporting with recommendations',
+      'Ongoing site monitoring and re-assessment'
     ],
     whyChooseUs: [
-      'Certified traffic management designers on staff',
-      'Successful approval rate exceeding 98%',
-      'Experience across all project types and scales',
-      'Fast turnaround times without compromising quality',
-      'Direct relationships with regulatory authorities',
-      'Cost-effective solutions that maximize safety',
-      'Post-implementation support and adjustments'
+      'Certified safety assessment professionals',
+      'Advanced traffic analysis tools',
+      'Experience across all project types',
+      'Fast turnaround times',
+      'Detailed documentation and reporting',
+      'Cost-effective risk mitigation strategies',
+      'Post-assessment support and consultation'
     ]
   },
   {
-    id: 'event-traffic-management',
-    title: 'Event Traffic Management',
-    shortDescription: 'Specialized traffic control for events and public gatherings',
+    id: 'complete-lifecycle-management',
+    title: 'Complete Lifecycle Management',
+    shortDescription: 'End-to-end project management for traffic control solutions',
     images: [
-      'https://images.pexels.com/photos/1105666/pexels-photo-1105666.jpeg',
-      'https://images.pexels.com/photos/2747449/pexels-photo-2747449.jpeg',
-      'https://images.pexels.com/photos/1190298/pexels-photo-1190298.jpeg',
+      'https://images.pexels.com/photos/273209/pexels-photo-273209.jpeg',
+      'https://images.pexels.com/photos/1126993/pexels-photo-1126993.jpeg',
+      'https://images.pexels.com/photos/1249610/pexels-photo-1249610.jpeg',
     ],
-    description: 'Comprehensive traffic management solutions for events of all sizes, ensuring smooth traffic flow, participant safety, and minimal disruption to local communities.',
+    description: 'Comprehensive lifecycle management service covering every phase of your traffic management project from initial planning through to completion and decommissioning.',
     features: [
-      'Pre-event traffic impact assessments',
-      'Custom signage and wayfinding solutions',
-      'Trained marshals and traffic controllers',
-      'Parking management and shuttle coordination',
-      'Emergency vehicle access planning',
-      'Post-event traffic dispersal strategies',
-      'Real-time traffic monitoring and adjustment'
+      'Project planning and design consultation',
+      'Equipment procurement and deployment',
+      'Installation and configuration services',
+      'Ongoing maintenance and monitoring',
+      'Regular inspections and compliance checks',
+      'Documentation and reporting throughout',
+      'Safe decommissioning and equipment removal'
     ],
     whyChooseUs: [
-      'Extensive experience with major sporting and cultural events',
-      'Proven strategies for crowd and vehicle management',
-      'Collaborative approach with event organizers',
-      'Scalable solutions from small gatherings to major festivals',
-      'Full coordination with local authorities and police',
-      'Contingency planning for weather and emergencies',
-      'Professional presentation reflecting well on your event'
+      'Single point of contact for entire project',
+      'Seamless coordination across all phases',
+      'Experienced project management team',
+      'Proactive issue resolution',
+      'Comprehensive documentation',
+      'Quality assurance at every stage',
+      'Cost-effective full-service solution'
+    ]
+  },
+  {
+    id: 'maintenance-contracts',
+    title: 'Maintenance Contracts',
+    shortDescription: 'Ongoing equipment maintenance and support agreements',
+    images: [
+      'https://images.pexels.com/photos/1105666/pexels-photo-1105666.jpeg',
+      'https://images.pexels.com/photos/5691597/pexels-photo-5691597.jpeg',
+      'https://images.pexels.com/photos/159358/construction-site-build-construction-work-159358.jpeg',
+    ],
+    description: 'Flexible maintenance contract options ensuring your traffic management equipment remains in optimal condition with regular servicing, inspections, and priority support.',
+    features: [
+      'Scheduled preventive maintenance visits',
+      'Priority emergency repair service',
+      'Equipment health monitoring',
+      'Compliance certification and documentation',
+      'Replacement equipment during repairs',
+      'Annual safety inspections',
+      'Detailed maintenance reporting'
+    ],
+    whyChooseUs: [
+      'Experienced maintenance technicians',
+      'Rapid response to equipment issues',
+      'Genuine parts and quality workmanship',
+      'Flexible contract terms',
+      'Cost-effective maintenance planning',
+      'Minimize equipment downtime',
+      'Extend equipment lifespan'
+    ]
+  },
+  {
+    id: 'training-certifications',
+    title: 'Training & Certifications',
+    shortDescription: 'Professional training programs for traffic management personnel',
+    images: [
+      'https://images.pexels.com/photos/3184292/pexels-photo-3184292.jpeg',
+      'https://images.pexels.com/photos/5676744/pexels-photo-5676744.jpeg',
+      'https://images.pexels.com/photos/3184325/pexels-photo-3184325.jpeg',
+    ],
+    description: 'Comprehensive training programs and certification courses designed to equip your team with the knowledge and skills required for safe and effective traffic management.',
+    features: [
+      'Accredited training courses',
+      'Hands-on practical instruction',
+      'Equipment operation training',
+      'Safety compliance education',
+      'Certification upon completion',
+      'Refresher courses available',
+      'On-site and classroom options'
+    ],
+    whyChooseUs: [
+      'Industry-recognized certifications',
+      'Experienced qualified instructors',
+      'Flexible training schedules',
+      'Customized course content',
+      'Group training discounts',
+      'Up-to-date with latest regulations',
+      'Ongoing support after training'
+    ]
+  },
+  {
+    id: 'knowledge-transfer',
+    title: 'Knowledge Transfer',
+    shortDescription: 'Expert consultation and best practice sharing services',
+    images: [
+      'https://images.pexels.com/photos/3184338/pexels-photo-3184338.jpeg',
+      'https://images.pexels.com/photos/3184339/pexels-photo-3184339.jpeg',
+      'https://images.pexels.com/photos/3182773/pexels-photo-3182773.jpeg',
+    ],
+    description: 'Strategic knowledge transfer services helping organizations build internal traffic management capabilities through expert mentoring and best practice implementation.',
+    features: [
+      'Expert consultation sessions',
+      'Best practice documentation',
+      'Process improvement recommendations',
+      'Standard operating procedure development',
+      'Technology implementation guidance',
+      'Staff mentoring programs',
+      'Ongoing advisory support'
+    ],
+    whyChooseUs: [
+      'Decades of industry expertise',
+      'Proven methodologies',
+      'Tailored to your organization',
+      'Sustainable capability building',
+      'Comprehensive knowledge resources',
+      'Long-term partnership approach',
+      'Measurable improvement outcomes'
     ]
   }
 ];

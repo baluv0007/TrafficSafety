@@ -27,7 +27,7 @@ export default function HomePage({
       <WhyChooseExpertiseSection />
       <ProductsSection onProductClick={onProductClick} />
       <ServicesSection onServiceClick={onServiceClick} />
-      <AdditionalServicesSection />
+      <AdditionalServicesSection onNavigate={onNavigate} />
       <HowWeWorkSection />
       <TestimonialsSection />
     </div>

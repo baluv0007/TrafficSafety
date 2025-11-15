@@ -1,8 +1,18 @@
 import { Building, Calendar, Compass, Wrench, AlertTriangle, Package } from 'lucide-react';
 import { useScrollAnimation } from '../hooks/useScrollAnimation';
 
-export default function AdditionalServicesSection() {
+interface AdditionalServicesSectionProps {
+  onNavigate?: (page: string) => void;
+}
+
+export default function AdditionalServicesSection({ onNavigate }: AdditionalServicesSectionProps) {
   const section = useScrollAnimation({ threshold: 0.1 });
+
+  const handleCardClick = () => {
+    if (onNavigate) {
+      onNavigate('about');
+    }
+  };
 
   const services = [
     {
@@ -63,7 +73,8 @@ export default function AdditionalServicesSection() {
           {services.map((service, index) => (
             <div
               key={index}
-              className={`group bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 ${
+              onClick={handleCardClick}
+              className={`group bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 cursor-pointer ${
                 section.isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
               }`}
               style={{ transitionDelay: `${index * 100}ms` }}
@@ -79,7 +90,13 @@ export default function AdditionalServicesSection() {
               </div>
               <div className="p-8">
                 <p className="text-gray-600 leading-relaxed mb-6">{service.description}</p>
-                <button className="text-orange-600 font-semibold hover:text-orange-700 transition-colors flex items-center gap-2 group-hover:gap-3 group-hover:translate-x-1">
+                <button
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    handleCardClick();
+                  }}
+                  className="text-orange-600 font-semibold hover:text-orange-700 transition-colors flex items-center gap-2 group-hover:gap-3 group-hover:translate-x-1"
+                >
                   Learn More
                   <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />

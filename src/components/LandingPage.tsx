@@ -40,8 +40,11 @@ export default function LandingPage({ onNavigate }: LandingPageProps) {
   }, []);
 
   useEffect(() => {
-    backgroundImages.forEach((src) => {
+    backgroundImages.forEach((src, index) => {
       const img = new Image();
+      img.fetchPriority = index < 2 ? 'high' : 'low';
+      img.loading = index < 2 ? 'eager' : 'lazy';
+      img.decoding = 'async';
       img.src = src;
     });
 

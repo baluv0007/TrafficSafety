@@ -67,6 +67,28 @@
 
 img {
   content-visibility: auto;
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+img[loading="lazy"] {
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+img[loading="lazy"].loaded,
+img[loading="eager"] {
+  opacity: 1;
+}
+
+img.blur-up {
+  filter: blur(10px);
+  transition: filter 0.3s ease-in-out;
+}
+
+img.blur-up.loaded {
+  filter: blur(0);
 }
 
 .will-change-transform {

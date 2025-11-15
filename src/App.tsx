@@ -1,6 +1,8 @@
 import { useState } from 'react';
 import Navbar from './components/Navbar';
 import HomePage from './components/HomePage';
+import ProductsPage from './components/ProductsPage';
+import ServicesPage from './components/ServicesPage';
 import ProductDetail from './components/ProductDetail';
 import ServiceDetail from './components/ServiceDetail';
 import AboutPage from './components/AboutPage';
@@ -52,13 +54,7 @@ function App() {
       )}
 
       {currentPage === 'products' && !selectedProduct && (
-        <div className="pt-24 pb-16">
-          <HomePage
-            onNavigate={handleNavigate}
-            onProductClick={handleProductClick}
-            onServiceClick={handleServiceClick}
-          />
-        </div>
+        <ProductsPage onProductClick={handleProductClick} />
       )}
 
       {currentPage === 'products' && selectedProduct && (
@@ -70,13 +66,7 @@ function App() {
       )}
 
       {currentPage === 'services' && !selectedService && (
-        <div className="pt-24 pb-16">
-          <HomePage
-            onNavigate={handleNavigate}
-            onProductClick={handleProductClick}
-            onServiceClick={handleServiceClick}
-          />
-        </div>
+        <ServicesPage onServiceClick={handleServiceClick} />
       )}
 
       {currentPage === 'services' && selectedService && (

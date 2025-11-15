@@ -13,6 +13,7 @@ export default function ProductsSection({ onProductClick }: ProductsSectionProps
   const [isAutoScrolling, setIsAutoScrolling] = useState(true);
   const animationFrameRef = useRef<number>();
   const pauseTimeoutRef = useRef<number>();
+  const scrollPositionRef = useRef<number>(0);
   const duplicatedProducts = [...products, ...products, ...products];
 
   const scroll = (direction: 'left' | 'right') => {
@@ -23,15 +24,19 @@ export default function ProductsSection({ onProductClick }: ProductsSectionProps
         clearTimeout(pauseTimeoutRef.current);
       }
 
-      const scrollAmount = 400;
-      scrollRef.current.scrollBy({
-        left: direction === 'left' ? -scrollAmount : scrollAmount,
-        behavior: 'smooth',
-      });
+      const cardWidth = 320 + 24;
+      const scrollAmount = cardWidth;
+      const container = scrollRef.current;
+
+      if (direction === 'right') {
+        container.scrollLeft += scrollAmount;
+      } else {
+        container.scrollLeft -= scrollAmount;
+      }
 
       pauseTimeoutRef.current = window.setTimeout(() => {
         setIsAutoScrolling(true);
-      }, 3000);
+      }, 2000);
     }
   };
 
@@ -39,30 +44,33 @@ export default function ProductsSection({ onProductClick }: ProductsSectionProps
     const container = scrollRef.current;
     if (!container || !section.isVisible) return;
 
-    const singleSetWidth = (320 + 24) * products.length;
+    const cardWidth = 320 + 24;
+    const singleSetWidth = cardWidth * products.length;
     container.scrollLeft = singleSetWidth;
+    scrollPositionRef.current = singleSetWidth;
 
-    let lastTimestamp = 0;
-    const scrollSpeed = 0.3;
+    const scrollSpeed = 0.5;
 
-    const autoScroll = (timestamp: number) => {
-      if (!isAutoScrolling || !container) {
+    const autoScroll = () => {
+      if (!container || !isAutoScrolling) {
         animationFrameRef.current = requestAnimationFrame(autoScroll);
         return;
       }
 
-      if (lastTimestamp) {
-        const delta = timestamp - lastTimestamp;
-        container.scrollLeft += scrollSpeed * (delta / 16);
+      scrollPositionRef.current += scrollSpeed;
+      container.scrollLeft = scrollPositionRef.current;
 
-        if (container.scrollLeft >= singleSetWidth * 2) {
-          container.scrollLeft = singleSetWidth;
-        } else if (container.scrollLeft <= 0) {
-          container.scrollLeft = singleSetWidth;
-        }
+      const maxScroll = singleSetWidth * 2;
+      const minScroll = 0;
+
+      if (scrollPositionRef.current >= maxScroll) {
+        scrollPositionRef.current = singleSetWidth;
+        container.scrollLeft = singleSetWidth;
+      } else if (scrollPositionRef.current <= minScroll) {
+        scrollPositionRef.current = singleSetWidth;
+        container.scrollLeft = singleSetWidth;
       }
 
-      lastTimestamp = timestamp;
       animationFrameRef.current = requestAnimationFrame(autoScroll);
     };
 
@@ -82,18 +90,22 @@ export default function ProductsSection({ onProductClick }: ProductsSectionProps
     const container = scrollRef.current;
     if (!container) return;
 
-    const handleScroll = () => {
-      const singleSetWidth = (320 + 24) * products.length;
+    const handleManualScroll = () => {
+      const cardWidth = 320 + 24;
+      const singleSetWidth = cardWidth * products.length;
+      scrollPositionRef.current = container.scrollLeft;
 
-      if (container.scrollLeft >= singleSetWidth * 2) {
+      if (container.scrollLeft >= singleSetWidth * 2 - 100) {
+        scrollPositionRef.current = singleSetWidth;
         container.scrollLeft = singleSetWidth;
-      } else if (container.scrollLeft <= 0) {
+      } else if (container.scrollLeft <= 100) {
+        scrollPositionRef.current = singleSetWidth;
         container.scrollLeft = singleSetWidth;
       }
     };
 
-    container.addEventListener('scroll', handleScroll);
-    return () => container.removeEventListener('scroll', handleScroll);
+    container.addEventListener('scroll', handleManualScroll, { passive: true });
+    return () => container.removeEventListener('scroll', handleManualScroll);
   }, [products.length]);
 
   return (

@@ -7,9 +7,10 @@ import ProductDetail from './components/ProductDetail';
 import ServiceDetail from './components/ServiceDetail';
 import AboutPage from './components/AboutPage';
 import ContactPage from './components/ContactPage';
+import CareersPage from './components/CareersPage';
 import Footer from './components/Footer';
 
-type Page = 'home' | 'products' | 'services' | 'about' | 'contact';
+type Page = 'home' | 'products' | 'services' | 'about' | 'contact' | 'careers';
 
 function App() {
   const [currentPage, setCurrentPage] = useState<Page>('home');
@@ -80,6 +81,8 @@ function App() {
       {currentPage === 'about' && <AboutPage onNavigate={handleNavigate} />}
 
       {currentPage === 'contact' && <ContactPage />}
+
+      {currentPage === 'careers' && <CareersPage />}
 
       <Footer onNavigate={handleNavigate} />
     </div>

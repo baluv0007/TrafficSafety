@@ -1,3 +1,4 @@
+import { useState, useEffect } from 'react';
 import { Shield, Users, Award, Target, Clock, ThumbsUp, Zap, Headphones, TrendingUp, Truck, CheckCircle } from 'lucide-react';
 import { useScrollAnimation } from '../hooks/useScrollAnimation';
 
@@ -6,6 +7,7 @@ interface AboutPageProps {
 }
 
 export default function AboutPage({ onNavigate }: AboutPageProps) {
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const hero = useScrollAnimation({ threshold: 0.2 });
   const story = useScrollAnimation({ threshold: 0.2 });
   const values_section = useScrollAnimation({ threshold: 0.1 });
@@ -13,6 +15,23 @@ export default function AboutPage({ onNavigate }: AboutPageProps) {
   const stats = useScrollAnimation({ threshold: 0.2 });
   const founder = useScrollAnimation({ threshold: 0.2 });
   const cta = useScrollAnimation({ threshold: 0.2 });
+
+  const storyImages = [
+    'https://images.pexels.com/photos/2219024/pexels-photo-2219024.jpeg',
+    'https://images.pexels.com/photos/1427541/pexels-photo-1427541.jpeg',
+    'https://images.pexels.com/photos/159358/construction-site-build-construction-work-159358.jpeg',
+    'https://images.pexels.com/photos/273209/pexels-photo-273209.jpeg',
+    'https://images.pexels.com/photos/210182/pexels-photo-210182.jpeg',
+    'https://images.pexels.com/photos/532803/pexels-photo-532803.jpeg',
+  ];
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentImageIndex((prev) => (prev + 1) % storyImages.length);
+    }, 1000);
+
+    return () => clearInterval(interval);
+  }, [storyImages.length]);
 
   const values = [
     {
@@ -73,10 +92,10 @@ export default function AboutPage({ onNavigate }: AboutPageProps) {
         >
           <div className="relative h-[500px] rounded-2xl overflow-hidden shadow-2xl">
             <img
-              src="https://images.pexels.com/photos/2219024/pexels-photo-2219024.jpeg"
+              src={storyImages[currentImageIndex]}
               alt="Traffic Management Team"
-              className="w-full h-full object-cover"
-              loading="lazy"
+              className="w-full h-full object-cover transition-opacity duration-500"
+              loading="eager"
             />
           </div>
           <div className="flex flex-col justify-center">

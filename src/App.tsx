@@ -55,7 +55,7 @@ function App() {
       )}
 
       {currentPage === 'products' && !selectedProduct && (
-        <ProductsPage onProductClick={handleProductClick} />
+        <ProductsPage onProductClick={handleProductClick} onNavigate={handleNavigate} />
       )}
 
       {currentPage === 'products' && selectedProduct && (
@@ -67,7 +67,7 @@ function App() {
       )}
 
       {currentPage === 'services' && !selectedService && (
-        <ServicesPage onServiceClick={handleServiceClick} />
+        <ServicesPage onServiceClick={handleServiceClick} onNavigate={handleNavigate} />
       )}
 
       {currentPage === 'services' && selectedService && (

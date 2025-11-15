@@ -26,7 +26,7 @@ export default function Navbar({ onNavigate, currentPage }: NavbarProps) {
     { label: 'Our Services', value: 'services' },
     { label: 'About Us', value: 'about' },
     { label: 'Careers', value: 'careers' },
-    { label: 'Contact', value: 'contact' },
+    { label: 'Contact Us', value: 'contact' },
   ];
 
   return (

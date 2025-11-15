@@ -4,10 +4,12 @@ import { useScrollAnimation } from '../hooks/useScrollAnimation';
 
 interface ProductsGridProps {
   onProductClick: (productId: string) => void;
+  onNavigate?: (page: string) => void;
 }
 
-export default function ProductsGrid({ onProductClick }: ProductsGridProps) {
+export default function ProductsGrid({ onProductClick, onNavigate }: ProductsGridProps) {
   const section = useScrollAnimation({ threshold: 0.1 });
+  const cta = useScrollAnimation({ threshold: 0.2 });
 
   return (
     <div ref={section.elementRef} className="py-20 bg-gradient-to-b from-white to-gray-50">
@@ -62,6 +64,28 @@ export default function ProductsGrid({ onProductClick }: ProductsGridProps) {
             </div>
           ))}
         </div>
+
+        {onNavigate && (
+          <div
+            ref={cta.elementRef}
+            className={`max-w-4xl mx-auto mt-16 bg-gradient-to-r from-blue-50 to-orange-50 rounded-2xl p-12 text-center border-2 border-orange-200 transition-all duration-1000 ${
+              cta.isVisible ? 'opacity-100 scale-100' : 'opacity-0 scale-95'
+            }`}
+          >
+            <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">
+              Can't Find What You're Looking For?
+            </h3>
+            <p className="text-lg text-gray-600 mb-6">
+              If you don't find your needed product in the above list, please contact us for customized solutions
+            </p>
+            <button
+              onClick={() => onNavigate('contact')}
+              className="px-8 py-4 bg-orange-600 text-white rounded-full font-semibold text-lg hover:bg-orange-700 transition-all duration-300 transform hover:scale-105 shadow-lg"
+            >
+              Contact Us
+            </button>
+          </div>
+        )}
       </div>
     </div>
   );

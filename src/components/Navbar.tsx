@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
+import TrafficLightLogo from './TrafficLightLogo';
 
 interface NavbarProps {
   onNavigate: (page: string) => void;
@@ -36,10 +37,11 @@ export default function Navbar({ onNavigate, currentPage }: NavbarProps) {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
           <div
-            className="flex items-center cursor-pointer"
+            className="flex items-center gap-3 cursor-pointer group"
             onClick={() => onNavigate('home')}
           >
-            <div className="text-2xl font-bold text-orange-600">
+            <TrafficLightLogo />
+            <div className="text-2xl font-bold text-blue-600 group-hover:text-blue-700 transition-colors">
               TrafficSafety
             </div>
           </div>
@@ -51,8 +53,8 @@ export default function Navbar({ onNavigate, currentPage }: NavbarProps) {
                 onClick={() => onNavigate(item.value)}
                 className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ${
                   currentPage === item.value
-                    ? 'bg-orange-600 text-white'
-                    : 'text-gray-700 hover:bg-orange-50 hover:text-orange-600'
+                    ? 'bg-blue-600 text-white'
+                    : 'text-gray-700 hover:bg-blue-50 hover:text-blue-600'
                 }`}
               >
                 {item.label}
@@ -85,8 +87,8 @@ export default function Navbar({ onNavigate, currentPage }: NavbarProps) {
                 }}
                 className={`block w-full text-left px-4 py-3 rounded-lg text-sm font-medium transition-all ${
                   currentPage === item.value
-                    ? 'bg-orange-600 text-white'
-                    : 'text-gray-700 hover:bg-orange-50 hover:text-orange-600'
+                    ? 'bg-blue-600 text-white'
+                    : 'text-gray-700 hover:bg-blue-50 hover:text-blue-600'
                 }`}
               >
                 {item.label}

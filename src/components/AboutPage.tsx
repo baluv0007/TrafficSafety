@@ -302,17 +302,17 @@ export default function AboutPage({ onNavigate }: AboutPageProps) {
                 Meet Our Founder & CEO
               </h2>
               <h3 className="text-2xl font-semibold text-orange-600 mb-6">
-                Robert Anderson
+                Sumanth Bathini
               </h3>
               <div className="space-y-4 text-gray-600 text-lg leading-relaxed">
                 <p>
-                  With over 25 years of experience in traffic management and civil engineering, Robert founded TrafficSafety with a clear vision: to create the safest, most efficient traffic management solutions in the industry.
+                  With over Many years of experience in traffic management and civil engineering, Sumanth founded TrafficSafety with a clear vision: to create the safest, most efficient traffic management solutions in the industry.
                 </p>
                 <p>
                   His commitment to innovation and safety has driven the company's growth from a small local operation to a nationally recognized leader in traffic control services.
                 </p>
                 <p>
-                  Under Robert's leadership, TrafficSafety has pioneered new technologies and best practices that have become industry standards, ensuring every project prioritizes the safety of workers and the public.
+                  Under Sumanth's leadership, TrafficSafety has pioneered new technologies and best practices that have become industry standards, ensuring every project prioritizes the safety of workers and the public.
                 </p>
               </div>
             </div>

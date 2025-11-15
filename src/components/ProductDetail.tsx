@@ -117,6 +117,66 @@ export default function ProductDetail({ productId, onBack, onNavigate }: Product
           </div>
         </div>
 
+        {product.detailedInfo && (
+          <div className="mb-16">
+            <div className="bg-white rounded-2xl p-8 md:p-12 shadow-lg mb-8">
+              <h2 className="text-3xl font-bold text-gray-900 mb-6">Product Overview</h2>
+              <p className="text-gray-700 text-lg leading-relaxed">
+                {product.detailedInfo.overview}
+              </p>
+            </div>
+
+            <div className="grid md:grid-cols-3 gap-8">
+              {product.detailedInfo.specifications && (
+                <div className="bg-gradient-to-br from-blue-50 to-white rounded-2xl p-8 shadow-lg border border-blue-100">
+                  <h3 className="text-2xl font-bold text-gray-900 mb-6">
+                    {product.detailedInfo.specifications.title}
+                  </h3>
+                  <ul className="space-y-3">
+                    {product.detailedInfo.specifications.items.map((item, index) => (
+                      <li key={index} className="text-gray-700 text-sm leading-relaxed border-b border-gray-200 pb-3 last:border-0">
+                        {item}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              )}
+
+              {product.detailedInfo.benefits && (
+                <div className="bg-gradient-to-br from-green-50 to-white rounded-2xl p-8 shadow-lg border border-green-100">
+                  <h3 className="text-2xl font-bold text-gray-900 mb-6">
+                    {product.detailedInfo.benefits.title}
+                  </h3>
+                  <ul className="space-y-3">
+                    {product.detailedInfo.benefits.items.map((item, index) => (
+                      <li key={index} className="flex items-start gap-2">
+                        <CheckCircle2 className="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" />
+                        <span className="text-gray-700 text-sm leading-relaxed">{item}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              )}
+
+              {product.detailedInfo.technical && (
+                <div className="bg-gradient-to-br from-orange-50 to-white rounded-2xl p-8 shadow-lg border border-orange-100">
+                  <h3 className="text-2xl font-bold text-gray-900 mb-6">
+                    {product.detailedInfo.technical.title}
+                  </h3>
+                  <ul className="space-y-3">
+                    {product.detailedInfo.technical.items.map((item, index) => (
+                      <li key={index} className="flex items-start gap-2">
+                        <CheckCircle2 className="w-5 h-5 text-orange-600 flex-shrink-0 mt-0.5" />
+                        <span className="text-gray-700 text-sm leading-relaxed">{item}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              )}
+            </div>
+          </div>
+        )}
+
         <div
           ref={details.elementRef}
           className="grid md:grid-cols-3 gap-8 mb-16"

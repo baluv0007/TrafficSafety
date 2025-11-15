@@ -289,7 +289,7 @@ export default function AboutPage({ onNavigate }: AboutPageProps) {
           <div className="grid lg:grid-cols-2 gap-0">
             <div className="relative h-[500px]">
               <img
-                src="https://images.pexels.com/photos/2182970/pexels-photo-2182970.jpeg"
+                src="https://image2url.com/images/1763235532337-ce66c63c-5a13-4ee0-a1c5-173a4b0e804a.jpg"
                 alt="Founder and CEO"
                 className="w-full h-full object-cover"
                 loading="lazy"

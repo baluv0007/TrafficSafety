@@ -1,4 +1,4 @@
-import { useRef } from 'react';
+import { useRef, useEffect, useState } from 'react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 import { products } from '../data/products';
 import { useScrollAnimation } from '../hooks/useScrollAnimation';
@@ -10,6 +10,7 @@ interface ProductsSectionProps {
 export default function ProductsSection({ onProductClick }: ProductsSectionProps) {
   const scrollRef = useRef<HTMLDivElement>(null);
   const section = useScrollAnimation({ threshold: 0.1 });
+  const [isAutoScrolling, setIsAutoScrolling] = useState(true);
 
   const scroll = (direction: 'left' | 'right') => {
     if (scrollRef.current) {
@@ -23,6 +24,31 @@ export default function ProductsSection({ onProductClick }: ProductsSectionProps
       });
     }
   };
+
+  useEffect(() => {
+    if (!section.isVisible || !isAutoScrolling) return;
+
+    const interval = setInterval(() => {
+      if (scrollRef.current) {
+        const { scrollLeft, scrollWidth, clientWidth } = scrollRef.current;
+        const cardWidth = 320 + 24;
+
+        if (scrollLeft + clientWidth >= scrollWidth - 50) {
+          scrollRef.current.scrollTo({
+            left: 0,
+            behavior: 'smooth',
+          });
+        } else {
+          scrollRef.current.scrollBy({
+            left: cardWidth,
+            behavior: 'smooth',
+          });
+        }
+      }
+    }, 5000);
+
+    return () => clearInterval(interval);
+  }, [section.isVisible, isAutoScrolling]);
 
   return (
     <div ref={section.elementRef} className="py-20 bg-gradient-to-b from-white to-gray-50">
@@ -48,6 +74,8 @@ export default function ProductsSection({ onProductClick }: ProductsSectionProps
         >
           <button
             onClick={() => scroll('left')}
+            onMouseEnter={() => setIsAutoScrolling(false)}
+            onMouseLeave={() => setIsAutoScrolling(true)}
             className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 z-10 bg-white rounded-full p-3 shadow-lg hover:bg-orange-50 transition-all duration-300 hover:scale-110"
             aria-label="Scroll left"
           >
@@ -56,6 +84,8 @@ export default function ProductsSection({ onProductClick }: ProductsSectionProps
 
           <div
             ref={scrollRef}
+            onMouseEnter={() => setIsAutoScrolling(false)}
+            onMouseLeave={() => setIsAutoScrolling(true)}
             className="flex gap-6 overflow-x-auto scrollbar-hide scroll-smooth pb-4"
             style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
           >
@@ -95,6 +125,8 @@ export default function ProductsSection({ onProductClick }: ProductsSectionProps
 
           <button
             onClick={() => scroll('right')}
+            onMouseEnter={() => setIsAutoScrolling(false)}
+            onMouseLeave={() => setIsAutoScrolling(true)}
             className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 z-10 bg-white rounded-full p-3 shadow-lg hover:bg-orange-50 transition-all duration-300 hover:scale-110"
             aria-label="Scroll right"
           >

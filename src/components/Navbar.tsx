@@ -75,9 +75,9 @@ export default function Navbar({ onNavigate, onProductClick, onServiceClick, cur
 
   const navItems = [
     { label: 'Home', value: 'home', hasDropdown: false },
+    { label: 'About Us', value: 'about', hasDropdown: false },
     { label: 'Our Products', value: 'products', hasDropdown: true },
     { label: 'Our Services', value: 'services', hasDropdown: true },
-    { label: 'About Us', value: 'about', hasDropdown: false },
     { label: 'Careers', value: 'careers', hasDropdown: false },
     { label: 'Contact Us', value: 'contact', hasDropdown: false },
   ];
@@ -199,6 +199,20 @@ export default function Navbar({ onNavigate, onProductClick, onServiceClick, cur
               Home
             </button>
 
+            <button
+              onClick={() => {
+                onNavigate('about');
+                setIsMobileMenuOpen(false);
+              }}
+              className={`block w-full text-left px-4 py-3 rounded-lg text-sm font-medium transition-all ${
+                currentPage === 'about'
+                  ? 'bg-blue-600 text-white'
+                  : 'text-gray-700 hover:bg-blue-50 hover:text-blue-600'
+              }`}
+            >
+              About Us
+            </button>
+
             <div className="space-y-1">
               <button
                 onClick={() => setMobileProductsOpen(!mobileProductsOpen)}
@@ -264,20 +278,6 @@ export default function Navbar({ onNavigate, onProductClick, onServiceClick, cur
                 </div>
               )}
             </div>
-
-            <button
-              onClick={() => {
-                onNavigate('about');
-                setIsMobileMenuOpen(false);
-              }}
-              className={`block w-full text-left px-4 py-3 rounded-lg text-sm font-medium transition-all ${
-                currentPage === 'about'
-                  ? 'bg-blue-600 text-white'
-                  : 'text-gray-700 hover:bg-blue-50 hover:text-blue-600'
-              }`}
-            >
-              About Us
-            </button>
 
             <button
               onClick={() => {

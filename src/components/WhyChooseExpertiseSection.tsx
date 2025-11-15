@@ -28,7 +28,7 @@ export default function WhyChooseExpertiseSection() {
   ];
 
   return (
-    <div ref={section.elementRef} className="py-20 bg-gradient-to-b from-gray-50 to-white">
+    <div ref={section.elementRef} className="py-14 bg-gradient-to-b from-gray-50 to-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div
@@ -39,7 +39,7 @@ export default function WhyChooseExpertiseSection() {
             <p className="text-orange-600 font-bold text-sm uppercase tracking-wider mb-4">
               Why Choose TrafficSafety
             </p>
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6 leading-tight">
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4 leading-tight">
               Unmatched Expertise, Innovation, and Reliability in Traffic Management Solutions
             </h2>
           </div>

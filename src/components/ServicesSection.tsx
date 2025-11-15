@@ -97,14 +97,14 @@ export default function ServicesSection({ onServiceClick }: ServicesSectionProps
   }, [services.length]);
 
   return (
-    <div ref={section.elementRef} className="py-20 bg-gradient-to-b from-gray-50 to-white">
+    <div ref={section.elementRef} className="py-14 bg-gradient-to-b from-gray-50 to-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div
-          className={`text-center mb-12 transition-all duration-1000 ${
+          className={`text-center mb-10 transition-all duration-1000 ${
             section.isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
           }`}
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-3">
             Our Services
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">

@@ -6,7 +6,7 @@ export default function MissionStatementSection() {
   return (
     <div
       ref={section.elementRef}
-      className="relative py-24 bg-gradient-to-br from-slate-900 via-slate-800 to-orange-900 overflow-hidden"
+      className="relative py-16 bg-gradient-to-br from-slate-900 via-slate-800 to-orange-900 overflow-hidden"
     >
       <div className="absolute inset-0 opacity-10">
         <div className="absolute inset-0" style={{
@@ -22,14 +22,14 @@ export default function MissionStatementSection() {
             section.isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
           }`}
         >
-          <p className="text-orange-500 font-bold text-sm uppercase tracking-wider mb-6 text-center">
+          <p className="text-orange-500 font-bold text-sm uppercase tracking-wider mb-4 text-center">
             YOUR PARTNER IN ADVANCED TRAFFIC TECHNOLOGY
           </p>
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white text-center mb-8 leading-tight">
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white text-center mb-6 leading-tight">
             "Leading the Way in Intelligent Traffic Management"
           </h2>
 
-          <div className="max-w-5xl mx-auto space-y-6 text-gray-200 text-lg leading-relaxed">
+          <div className="max-w-5xl mx-auto space-y-4 text-gray-200 text-lg leading-relaxed">
             <p>
               TrafficSafety is a leading provider of Traffic Signal Management Systems. With a strong nationwide presence, we operate the highest number of traffic signals across major cities including metropolitan and regional areas. Our commitment to quality and innovation has made us a trusted partner for municipalities and urban planners.
             </p>

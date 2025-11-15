@@ -29,17 +29,17 @@ export default function WhyChooseSection() {
   ];
 
   return (
-    <div ref={section.elementRef} className="py-20 bg-gradient-to-b from-slate-900 to-slate-800">
+    <div ref={section.elementRef} className="py-14 bg-gradient-to-b from-slate-900 to-slate-800">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div
-          className={`mb-16 transition-all duration-1000 ${
+          className={`mb-12 transition-all duration-1000 ${
             section.isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
           }`}
         >
           <p className="text-orange-500 font-bold text-sm uppercase tracking-wider mb-4 text-center">
             WHY CHOOSE US
           </p>
-          <h2 className="text-4xl md:text-5xl font-bold text-white text-center mb-6">
+          <h2 className="text-4xl md:text-5xl font-bold text-white text-center mb-4">
             Your Trusted Partner in Seamless Traffic Management
           </h2>
           <p className="text-lg text-gray-300 max-w-4xl mx-auto text-center leading-relaxed">
@@ -47,7 +47,7 @@ export default function WhyChooseSection() {
           </p>
         </div>
 
-        <div className="mb-12 text-white max-w-4xl mx-auto">
+        <div className="mb-8 text-white max-w-4xl mx-auto">
           <p className="text-lg leading-relaxed mb-4">
             <span className="font-bold">Here's why you should choose us:</span>
           </p>

@@ -44,7 +44,12 @@ function App() {
 
   return (
     <div className="min-h-screen bg-white">
-      <Navbar onNavigate={handleNavigate} currentPage={currentPage} />
+      <Navbar
+        onNavigate={handleNavigate}
+        onProductClick={handleProductClick}
+        onServiceClick={handleServiceClick}
+        currentPage={currentPage}
+      />
 
       {currentPage === 'home' && (
         <HomePage

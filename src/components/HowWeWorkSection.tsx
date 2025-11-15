@@ -12,7 +12,7 @@ export default function HowWeWorkSection({ onNavigate }: HowWeWorkSectionProps) 
     {
       icon: FileText,
       title: 'Consultation & Requirement Analysis',
-      description: 'We begin by understanding your unique traffic challenges through detailed consultations, ensuring our solutions are tailored to your city\'s needs.',
+      description: 'We begin by understanding your unique challenges through detailed consultations, ensuring our solutions are tailored to your city\'s needs.',
       color: 'from-orange-500 to-orange-600'
     },
     {

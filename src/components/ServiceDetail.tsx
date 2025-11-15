@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { ChevronLeft, ChevronRight, ArrowLeft, CheckCircle2 } from 'lucide-react';
 import { services } from '../data/services';
+import { useScrollAnimation } from '../hooks/useScrollAnimation';
 
 interface ServiceDetailProps {
   serviceId: string;
@@ -11,6 +12,9 @@ interface ServiceDetailProps {
 export default function ServiceDetail({ serviceId, onBack, onNavigate }: ServiceDetailProps) {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const service = services.find((s) => s.id === serviceId);
+  const hero = useScrollAnimation({ threshold: 0.2 });
+  const details = useScrollAnimation({ threshold: 0.1 });
+  const cta = useScrollAnimation({ threshold: 0.2 });
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -55,13 +59,19 @@ export default function ServiceDetail({ serviceId, onBack, onNavigate }: Service
           <span className="font-semibold">Back to Services</span>
         </button>
 
-        <div className="grid lg:grid-cols-2 gap-12 mb-16">
+        <div
+          ref={hero.elementRef}
+          className={`grid lg:grid-cols-2 gap-12 mb-16 transition-all duration-1000 ${
+            hero.isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+          }`}
+        >
           <div className="relative">
             <div className="relative h-[500px] rounded-2xl overflow-hidden shadow-2xl">
               <img
                 src={service.images[currentImageIndex]}
                 alt={service.title}
-                className="w-full h-full object-cover"
+                className="w-full h-full object-cover transition-opacity duration-300"
+                loading="eager"
               />
               <button
                 onClick={prevImage}
@@ -107,8 +117,15 @@ export default function ServiceDetail({ serviceId, onBack, onNavigate }: Service
           </div>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-8 mb-16">
-          <div className="bg-white rounded-2xl p-8 shadow-lg">
+        <div
+          ref={details.elementRef}
+          className="grid md:grid-cols-2 gap-8 mb-16"
+        >
+          <div
+            className={`bg-white rounded-2xl p-8 shadow-lg transition-all duration-1000 ${
+              details.isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+            }`}
+          >
             <h2 className="text-2xl font-bold text-gray-900 mb-6">
               Service Features
             </h2>
@@ -122,7 +139,12 @@ export default function ServiceDetail({ serviceId, onBack, onNavigate }: Service
             </ul>
           </div>
 
-          <div className="bg-white rounded-2xl p-8 shadow-lg">
+          <div
+            className={`bg-white rounded-2xl p-8 shadow-lg transition-all duration-1000 ${
+              details.isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+            }`}
+            style={{ transitionDelay: '200ms' }}
+          >
             <h2 className="text-2xl font-bold text-gray-900 mb-6">
               Why Choose Us
             </h2>
@@ -137,7 +159,12 @@ export default function ServiceDetail({ serviceId, onBack, onNavigate }: Service
           </div>
         </div>
 
-        <div className="bg-gradient-to-r from-orange-600 to-orange-500 rounded-2xl p-12 text-center shadow-2xl">
+        <div
+          ref={cta.elementRef}
+          className={`bg-gradient-to-r from-orange-600 to-orange-500 rounded-2xl p-12 text-center shadow-2xl transition-all duration-1000 ${
+            cta.isVisible ? 'opacity-100 scale-100' : 'opacity-0 scale-95'
+          }`}
+        >
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
             Ready to Get Started?
           </h2>

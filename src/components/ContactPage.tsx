@@ -1,7 +1,11 @@
 import { useState } from 'react';
 import { Mail, Phone, MapPin, Send } from 'lucide-react';
+import { useScrollAnimation } from '../hooks/useScrollAnimation';
 
 export default function ContactPage() {
+  const hero = useScrollAnimation({ threshold: 0.2 });
+  const content = useScrollAnimation({ threshold: 0.1 });
+
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -45,7 +49,12 @@ export default function ContactPage() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-white to-gray-50 pt-24 pb-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
+        <div
+          ref={hero.elementRef}
+          className={`text-center mb-16 transition-all duration-1000 ${
+            hero.isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+          }`}
+        >
           <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
             Get in Touch
           </h1>
@@ -55,7 +64,12 @@ export default function ContactPage() {
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-12 mb-16">
+        <div
+          ref={content.elementRef}
+          className={`grid lg:grid-cols-2 gap-12 mb-16 transition-all duration-1000 ${
+            content.isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+          }`}
+        >
           <div>
             <div className="bg-white rounded-2xl p-8 shadow-lg mb-8">
               <h2 className="text-3xl font-bold text-gray-900 mb-8">

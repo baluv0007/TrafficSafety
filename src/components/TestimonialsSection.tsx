@@ -62,6 +62,7 @@ const testimonials: Testimonial[] = [
 export default function TestimonialsSection() {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isVisible, setIsVisible] = useState(false);
+  const [fadeIn, setFadeIn] = useState(true);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -69,6 +70,7 @@ export default function TestimonialsSection() {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
             setIsVisible(true);
+            observer.disconnect();
           }
         });
       },
@@ -81,28 +83,38 @@ export default function TestimonialsSection() {
     }
 
     return () => {
-      if (section) {
-        observer.unobserve(section);
-      }
+      observer.disconnect();
     };
   }, []);
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setCurrentIndex((prev) => (prev + 1) % testimonials.length);
+      setFadeIn(false);
+      setTimeout(() => {
+        setCurrentIndex((prev) => (prev + 1) % testimonials.length);
+        setFadeIn(true);
+      }, 300);
     }, 6000);
 
     return () => clearInterval(interval);
   }, []);
 
   const nextTestimonial = () => {
-    setCurrentIndex((prev) => (prev + 1) % testimonials.length);
+    setFadeIn(false);
+    setTimeout(() => {
+      setCurrentIndex((prev) => (prev + 1) % testimonials.length);
+      setFadeIn(true);
+    }, 300);
   };
 
   const prevTestimonial = () => {
-    setCurrentIndex(
-      (prev) => (prev - 1 + testimonials.length) % testimonials.length
-    );
+    setFadeIn(false);
+    setTimeout(() => {
+      setCurrentIndex(
+        (prev) => (prev - 1 + testimonials.length) % testimonials.length
+      );
+      setFadeIn(true);
+    }, 300);
   };
 
   const currentTestimonial = testimonials[currentIndex];
@@ -126,12 +138,17 @@ export default function TestimonialsSection() {
 
         <div className="relative max-w-4xl mx-auto">
           <div className="bg-white rounded-2xl shadow-2xl p-8 md:p-12">
-            <div className="flex flex-col md:flex-row gap-8 items-center">
+            <div
+              className={`flex flex-col md:flex-row gap-8 items-center transition-opacity duration-300 ${
+                fadeIn ? 'opacity-100' : 'opacity-0'
+              }`}
+            >
               <div className="flex-shrink-0">
                 <img
                   src={currentTestimonial.image}
                   alt={currentTestimonial.name}
                   className="w-32 h-32 rounded-full object-cover shadow-lg"
+                  loading="lazy"
                 />
               </div>
               <div className="flex-1 text-center md:text-left">

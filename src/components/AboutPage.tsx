@@ -1,10 +1,19 @@
 import { Shield, Users, Award, Target, Clock, ThumbsUp } from 'lucide-react';
+import { useScrollAnimation } from '../hooks/useScrollAnimation';
 
 interface AboutPageProps {
   onNavigate: (page: string) => void;
 }
 
 export default function AboutPage({ onNavigate }: AboutPageProps) {
+  const hero = useScrollAnimation({ threshold: 0.2 });
+  const story = useScrollAnimation({ threshold: 0.2 });
+  const values_section = useScrollAnimation({ threshold: 0.1 });
+  const mission = useScrollAnimation({ threshold: 0.2 });
+  const stats = useScrollAnimation({ threshold: 0.2 });
+  const founder = useScrollAnimation({ threshold: 0.2 });
+  const cta = useScrollAnimation({ threshold: 0.2 });
+
   const values = [
     {
       icon: Shield,
@@ -41,7 +50,12 @@ export default function AboutPage({ onNavigate }: AboutPageProps) {
   return (
     <div className="min-h-screen bg-white pt-24 pb-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
+        <div
+          ref={hero.elementRef}
+          className={`text-center mb-16 transition-all duration-1000 ${
+            hero.isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+          }`}
+        >
           <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
             About TrafficSafety
           </h1>
@@ -51,12 +65,18 @@ export default function AboutPage({ onNavigate }: AboutPageProps) {
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-12 mb-20">
+        <div
+          ref={story.elementRef}
+          className={`grid lg:grid-cols-2 gap-12 mb-20 transition-all duration-1000 ${
+            story.isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+          }`}
+        >
           <div className="relative h-[500px] rounded-2xl overflow-hidden shadow-2xl">
             <img
               src="https://images.pexels.com/photos/2219024/pexels-photo-2219024.jpeg"
               alt="Traffic Management Team"
               className="w-full h-full object-cover"
+              loading="lazy"
             />
           </div>
           <div className="flex flex-col justify-center">
@@ -88,15 +108,25 @@ export default function AboutPage({ onNavigate }: AboutPageProps) {
           </div>
         </div>
 
-        <div className="mb-20">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 text-center mb-12">
+        <div
+          ref={values_section.elementRef}
+          className="mb-20"
+        >
+          <h2
+            className={`text-3xl md:text-4xl font-bold text-gray-900 text-center mb-12 transition-all duration-1000 ${
+              values_section.isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+            }`}
+          >
             Our Core Values
           </h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {values.map((value, index) => (
               <div
                 key={index}
-                className="bg-gradient-to-br from-white to-gray-50 rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2"
+                className={`bg-gradient-to-br from-white to-gray-50 rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-700 transform hover:-translate-y-2 ${
+                  values_section.isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+                }`}
+                style={{ transitionDelay: `${index * 100}ms` }}
               >
                 <div className="bg-orange-100 w-16 h-16 rounded-full flex items-center justify-center mb-6">
                   <value.icon className="w-8 h-8 text-orange-600" />
@@ -112,7 +142,12 @@ export default function AboutPage({ onNavigate }: AboutPageProps) {
           </div>
         </div>
 
-        <div className="bg-gradient-to-br from-slate-900 to-orange-900 rounded-2xl p-12 text-center shadow-2xl mb-20">
+        <div
+          ref={mission.elementRef}
+          className={`bg-gradient-to-br from-slate-900 to-orange-900 rounded-2xl p-12 text-center shadow-2xl mb-20 transition-all duration-1000 ${
+            mission.isVisible ? 'opacity-100 scale-100' : 'opacity-0 scale-95'
+          }`}
+        >
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
             Our Mission
           </h2>
@@ -124,28 +159,51 @@ export default function AboutPage({ onNavigate }: AboutPageProps) {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-8 mb-20">
-          <div className="text-center">
+        <div
+          ref={stats.elementRef}
+          className="grid md:grid-cols-3 gap-8 mb-20"
+        >
+          <div
+            className={`text-center transition-all duration-1000 ${
+              stats.isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+            }`}
+          >
             <div className="text-5xl font-bold text-orange-600 mb-2">20+</div>
             <div className="text-xl text-gray-600">Years of Experience</div>
           </div>
-          <div className="text-center">
+          <div
+            className={`text-center transition-all duration-1000 ${
+              stats.isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+            }`}
+            style={{ transitionDelay: '200ms' }}
+          >
             <div className="text-5xl font-bold text-orange-600 mb-2">500+</div>
             <div className="text-xl text-gray-600">Projects Completed</div>
           </div>
-          <div className="text-center">
+          <div
+            className={`text-center transition-all duration-1000 ${
+              stats.isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+            }`}
+            style={{ transitionDelay: '400ms' }}
+          >
             <div className="text-5xl font-bold text-orange-600 mb-2">100%</div>
             <div className="text-xl text-gray-600">Client Satisfaction</div>
           </div>
         </div>
 
-        <div className="bg-white rounded-2xl shadow-2xl overflow-hidden mb-20">
+        <div
+          ref={founder.elementRef}
+          className={`bg-white rounded-2xl shadow-2xl overflow-hidden mb-20 transition-all duration-1000 ${
+            founder.isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-10'
+          }`}
+        >
           <div className="grid lg:grid-cols-2 gap-0">
             <div className="relative h-[500px]">
               <img
                 src="https://images.pexels.com/photos/2182970/pexels-photo-2182970.jpeg"
                 alt="Founder and CEO"
                 className="w-full h-full object-cover"
+                loading="lazy"
               />
             </div>
             <div className="p-12 flex flex-col justify-center">
@@ -170,7 +228,12 @@ export default function AboutPage({ onNavigate }: AboutPageProps) {
           </div>
         </div>
 
-        <div className="bg-gradient-to-r from-orange-600 to-orange-500 rounded-2xl p-12 text-center shadow-2xl">
+        <div
+          ref={cta.elementRef}
+          className={`bg-gradient-to-r from-orange-600 to-orange-500 rounded-2xl p-12 text-center shadow-2xl transition-all duration-1000 ${
+            cta.isVisible ? 'opacity-100 scale-100' : 'opacity-0 scale-95'
+          }`}
+        >
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
             Let's Work Together
           </h2>

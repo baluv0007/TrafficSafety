@@ -1,7 +1,11 @@
 import { FileText, Pencil, Wrench, Headphones } from 'lucide-react';
 import { useScrollAnimation } from '../hooks/useScrollAnimation';
 
-export default function HowWeWorkSection() {
+interface HowWeWorkSectionProps {
+  onNavigate: (page: string) => void;
+}
+
+export default function HowWeWorkSection({ onNavigate }: HowWeWorkSectionProps) {
   const section = useScrollAnimation({ threshold: 0.1 });
 
   const steps = [
@@ -61,7 +65,7 @@ export default function HowWeWorkSection() {
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-4">{step.title}</h3>
               <p className="text-gray-600 leading-relaxed">{step.description}</p>
-              <button className="mt-6 px-6 py-2 border-2 border-gray-300 text-gray-700 rounded-lg hover:border-orange-500 hover:text-orange-600 transition-colors font-semibold">
+              <button onClick={() => onNavigate('about')} className="mt-6 px-6 py-2 border-2 border-gray-300 text-gray-700 rounded-lg hover:border-orange-500 hover:text-orange-600 transition-colors font-semibold">
                 Learn More
               </button>
             </div>

@@ -28,7 +28,7 @@ export default function HomePage({
       <ProductsSection onProductClick={onProductClick} />
       <ServicesSection onServiceClick={onServiceClick} />
       <AdditionalServicesSection onNavigate={onNavigate} />
-      <HowWeWorkSection />
+      <HowWeWorkSection onNavigate={onNavigate} />
       <TestimonialsSection />
     </div>
   );

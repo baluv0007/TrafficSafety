@@ -40,7 +40,7 @@ export default function ProductsGrid({ onProductClick, onNavigate }: ProductsGri
                 transitionDelay: section.isVisible ? `${index * 100}ms` : '0ms'
               }}
             >
-              <div className="relative h-80 overflow-hidden">
+              <div className="relative aspect-square overflow-hidden">
                 <img
                   src={product.images[0]}
                   alt={product.title}

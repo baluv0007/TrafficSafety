@@ -137,7 +137,7 @@ export default function ProductsSection({ onProductClick }: ProductsSectionProps
                 onClick={() => onProductClick(product.id)}
                 className="flex-shrink-0 w-80 bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 cursor-pointer group transform hover:scale-105"
               >
-                <div className="relative h-64 overflow-hidden">
+                <div className="relative w-80 h-80 overflow-hidden">
                   <img
                     src={product.images[0]}
                     alt={product.title}

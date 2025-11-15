@@ -137,7 +137,7 @@ export default function ServicesSection({ onServiceClick }: ServicesSectionProps
                 onClick={() => onServiceClick(service.id)}
                 className="flex-shrink-0 w-80 bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 cursor-pointer group transform hover:scale-105"
               >
-                <div className="relative h-64 overflow-hidden">
+                <div className="relative w-80 h-80 overflow-hidden">
                   <img
                     src={service.images[0]}
                     alt={service.title}

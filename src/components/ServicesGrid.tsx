@@ -40,7 +40,7 @@ export default function ServicesGrid({ onServiceClick, onNavigate }: ServicesGri
                 transitionDelay: section.isVisible ? `${index * 100}ms` : '0ms'
               }}
             >
-              <div className="relative h-80 overflow-hidden">
+              <div className="relative aspect-square overflow-hidden">
                 <img
                   src={service.images[0]}
                   alt={service.title}

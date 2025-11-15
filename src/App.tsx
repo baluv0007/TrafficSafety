@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Navbar from './components/Navbar';
 import HomePage from './components/HomePage';
 import ProductsPage from './components/ProductsPage';
@@ -17,29 +17,110 @@ function App() {
   const [selectedProduct, setSelectedProduct] = useState<string | null>(null);
   const [selectedService, setSelectedService] = useState<string | null>(null);
 
+  useEffect(() => {
+    const path = window.location.pathname;
+
+    if (path === '/' || path === '') {
+      setCurrentPage('home');
+    } else if (path.startsWith('/ourproducts/')) {
+      const productId = path.replace('/ourproducts/', '').toLowerCase().replace(/_/g, '-');
+      setSelectedProduct(productId);
+      setCurrentPage('products');
+    } else if (path === '/ourproducts') {
+      setCurrentPage('products');
+    } else if (path.startsWith('/ourservices/')) {
+      const serviceId = path.replace('/ourservices/', '').toLowerCase().replace(/_/g, '-');
+      setSelectedService(serviceId);
+      setCurrentPage('services');
+    } else if (path === '/ourservices') {
+      setCurrentPage('services');
+    } else if (path === '/about') {
+      setCurrentPage('about');
+    } else if (path === '/contact') {
+      setCurrentPage('contact');
+    } else if (path === '/careers') {
+      setCurrentPage('careers');
+    }
+
+    const handlePopState = () => {
+      const newPath = window.location.pathname;
+
+      if (newPath === '/' || newPath === '') {
+        setCurrentPage('home');
+        setSelectedProduct(null);
+        setSelectedService(null);
+      } else if (newPath.startsWith('/ourproducts/')) {
+        const productId = newPath.replace('/ourproducts/', '').toLowerCase().replace(/_/g, '-');
+        setSelectedProduct(productId);
+        setCurrentPage('products');
+      } else if (newPath === '/ourproducts') {
+        setCurrentPage('products');
+        setSelectedProduct(null);
+      } else if (newPath.startsWith('/ourservices/')) {
+        const serviceId = newPath.replace('/ourservices/', '').toLowerCase().replace(/_/g, '-');
+        setSelectedService(serviceId);
+        setCurrentPage('services');
+      } else if (newPath === '/ourservices') {
+        setCurrentPage('services');
+        setSelectedService(null);
+      } else if (newPath === '/about') {
+        setCurrentPage('about');
+        setSelectedProduct(null);
+        setSelectedService(null);
+      } else if (newPath === '/contact') {
+        setCurrentPage('contact');
+        setSelectedProduct(null);
+        setSelectedService(null);
+      } else if (newPath === '/careers') {
+        setCurrentPage('careers');
+        setSelectedProduct(null);
+        setSelectedService(null);
+      }
+    };
+
+    window.addEventListener('popstate', handlePopState);
+    return () => window.removeEventListener('popstate', handlePopState);
+  }, []);
+
   const handleNavigate = (page: string) => {
     setCurrentPage(page as Page);
     setSelectedProduct(null);
     setSelectedService(null);
+    const path = page === 'home' ? '/' : `/${page}`;
+    window.history.pushState({}, '', path);
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
   const handleProductClick = (productId: string) => {
     setSelectedProduct(productId);
     setCurrentPage('products');
+    const urlFriendlyId = productId.replace(/-/g, '_').split('_').map(word =>
+      word.charAt(0).toUpperCase() + word.slice(1)
+    ).join('_');
+    window.history.pushState({}, '', `/ourproducts/${urlFriendlyId}`);
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
   const handleServiceClick = (serviceId: string) => {
     setSelectedService(serviceId);
     setCurrentPage('services');
+    const urlFriendlyId = serviceId.replace(/-/g, '_').split('_').map(word =>
+      word.charAt(0).toUpperCase() + word.slice(1)
+    ).join('_');
+    window.history.pushState({}, '', `/ourservices/${urlFriendlyId}`);
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
   const handleBackToProducts = () => {
     setSelectedProduct(null);
+    window.history.pushState({}, '', '/ourproducts');
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
   const handleBackToServices = () => {
     setSelectedService(null);
+    window.history.pushState({}, '', '/ourservices');
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
   return (

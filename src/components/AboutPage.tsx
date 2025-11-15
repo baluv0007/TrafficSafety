@@ -1,4 +1,4 @@
-import { Shield, Users, Award, Target, Clock, ThumbsUp } from 'lucide-react';
+import { Shield, Users, Award, Target, Clock, ThumbsUp, Zap, Headphones, TrendingUp, Truck, CheckCircle } from 'lucide-react';
 import { useScrollAnimation } from '../hooks/useScrollAnimation';
 
 interface AboutPageProps {
@@ -190,7 +190,74 @@ export default function AboutPage({ onNavigate }: AboutPageProps) {
           >
             <div className="text-5xl font-bold text-orange-600 mb-2">200+</div>
             <div className="text-xl text-gray-600">Projects Completed</div>
-            <p className="text-sm text-gray-500 mt-2">Successfully delivered more than 200 traffic management projects</p>
+            <p className="text-sm text-gray-500 mt-2">Our employees have successfully delivered more than 200 traffic management projects across diverse industries and scales</p>
+          </div>
+        </div>
+
+        <div
+          ref={useScrollAnimation({ threshold: 0.1 }).elementRef}
+          className="mb-20"
+        >
+          <h2
+            className={`text-3xl md:text-4xl font-bold text-gray-900 text-center mb-16 transition-all duration-1000`}
+          >
+            How Capable We Are
+          </h2>
+          <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-6">
+            <div className="group relative bg-gradient-to-br from-orange-50 to-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border border-orange-100 hover:border-orange-300">
+              <div className="absolute inset-0 bg-gradient-to-br from-orange-500/5 to-transparent rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+              <div className="relative">
+                <div className="bg-gradient-to-br from-orange-500 to-orange-600 w-14 h-14 rounded-xl flex items-center justify-center mb-4 shadow-lg">
+                  <Zap className="w-7 h-7 text-white" />
+                </div>
+                <h3 className="text-xl font-bold text-gray-900 mb-3">Rapid Deployment</h3>
+                <p className="text-gray-600 leading-relaxed">Emergency response within 2 hours with fully trained teams and pre-loaded equipment packages ready for immediate action.</p>
+              </div>
+            </div>
+
+            <div className="group relative bg-gradient-to-br from-blue-50 to-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border border-blue-100 hover:border-blue-300">
+              <div className="absolute inset-0 bg-gradient-to-br from-blue-500/5 to-transparent rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+              <div className="relative">
+                <div className="bg-gradient-to-br from-blue-500 to-blue-600 w-14 h-14 rounded-xl flex items-center justify-center mb-4 shadow-lg">
+                  <Truck className="w-7 h-7 text-white" />
+                </div>
+                <h3 className="text-xl font-bold text-gray-900 mb-3">Largest Fleet</h3>
+                <p className="text-gray-600 leading-relaxed">Extensive inventory of modern equipment ensuring immediate availability and flexible solutions for projects of any scale.</p>
+              </div>
+            </div>
+
+            <div className="group relative bg-gradient-to-br from-green-50 to-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border border-green-100 hover:border-green-300">
+              <div className="absolute inset-0 bg-gradient-to-br from-green-500/5 to-transparent rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+              <div className="relative">
+                <div className="bg-gradient-to-br from-green-500 to-green-600 w-14 h-14 rounded-xl flex items-center justify-center mb-4 shadow-lg">
+                  <CheckCircle className="w-7 h-7 text-white" />
+                </div>
+                <h3 className="text-xl font-bold text-gray-900 mb-3">Safety Certified</h3>
+                <p className="text-gray-600 leading-relaxed">ISO certified operations with comprehensive safety standards, compliance verification, and professional safety consultation included.</p>
+              </div>
+            </div>
+
+            <div className="group relative bg-gradient-to-br from-purple-50 to-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border border-purple-100 hover:border-purple-300">
+              <div className="absolute inset-0 bg-gradient-to-br from-purple-500/5 to-transparent rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+              <div className="relative">
+                <div className="bg-gradient-to-br from-purple-500 to-purple-600 w-14 h-14 rounded-xl flex items-center justify-center mb-4 shadow-lg">
+                  <Headphones className="w-7 h-7 text-white" />
+                </div>
+                <h3 className="text-xl font-bold text-gray-900 mb-3">24/7 Support</h3>
+                <p className="text-gray-600 leading-relaxed">Round-the-clock technical support, rapid response maintenance teams, and dedicated account managers for seamless coordination.</p>
+              </div>
+            </div>
+
+            <div className="group relative bg-gradient-to-br from-red-50 to-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border border-red-100 hover:border-red-300">
+              <div className="absolute inset-0 bg-gradient-to-br from-red-500/5 to-transparent rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+              <div className="relative">
+                <div className="bg-gradient-to-br from-red-500 to-red-600 w-14 h-14 rounded-xl flex items-center justify-center mb-4 shadow-lg">
+                  <TrendingUp className="w-7 h-7 text-white" />
+                </div>
+                <h3 className="text-xl font-bold text-gray-900 mb-3">Proven Track Record</h3>
+                <p className="text-gray-600 leading-relaxed">Decades of industry expertise with major infrastructure projects, consistent excellence, and measurable improvement outcomes.</p>
+              </div>
+            </div>
           </div>
         </div>
 

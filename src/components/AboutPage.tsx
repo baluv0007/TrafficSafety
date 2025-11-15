@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Shield, Users, Award, Target, Clock, ThumbsUp, Zap, Headphones, TrendingUp, Truck, CheckCircle } from 'lucide-react';
 import { useScrollAnimation } from '../hooks/useScrollAnimation';
+import FounderImage from '../assets/FounderImagenew.jpg';
 
 interface AboutPageProps {
   onNavigate: (page: string) => void;
@@ -289,7 +290,7 @@ export default function AboutPage({ onNavigate }: AboutPageProps) {
           <div className="grid lg:grid-cols-2 gap-0">
             <div className="relative h-[500px]">
               <img
-                src="/FounderImage.jpg"
+                src={FounderImage}
                 alt="Founder and CEO"
                 className="w-full h-full object-cover"
                 loading="eager"

@@ -63,29 +63,29 @@ export default function LandingPage({ onNavigate }: LandingPageProps) {
                 : 'opacity-0 -translate-y-4'
             }`}
           >
-            <h1 className="text-5xl md:text-7xl font-bold text-white mb-8 leading-tight">
+            <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 sm:mb-8 leading-tight">
               {phrases[currentPhraseIndex]}
             </h1>
-            <p className="text-xl md:text-2xl text-gray-200 mb-12 max-w-2xl mx-auto">
+            <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-200 mb-8 sm:mb-12 max-w-2xl mx-auto px-2">
               Providing comprehensive traffic management solutions for construction,
               events, and emergency situations
             </p>
           </div>
 
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+          <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-center px-4">
             <button
               onClick={() => onNavigate('about')}
-              className="group px-8 py-4 bg-white text-orange-600 rounded-full font-semibold text-lg hover:bg-orange-50 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl flex items-center gap-2"
+              className="group w-full sm:w-auto px-6 sm:px-8 py-3 sm:py-4 bg-white text-orange-600 rounded-full font-semibold text-sm sm:text-base md:text-lg hover:bg-orange-50 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl flex items-center justify-center gap-2"
             >
               About Us
-              <ChevronRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+              <ChevronRight className="w-4 sm:w-5 h-4 sm:h-5 group-hover:translate-x-1 transition-transform" />
             </button>
             <button
               onClick={() => onNavigate('contact')}
-              className="group px-8 py-4 bg-orange-600 text-white rounded-full font-semibold text-lg hover:bg-orange-700 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl flex items-center gap-2"
+              className="group w-full sm:w-auto px-6 sm:px-8 py-3 sm:py-4 bg-orange-600 text-white rounded-full font-semibold text-sm sm:text-base md:text-lg hover:bg-orange-700 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl flex items-center justify-center gap-2"
             >
               Contact Us
-              <ChevronRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+              <ChevronRight className="w-4 sm:w-5 h-4 sm:h-5 group-hover:translate-x-1 transition-transform" />
             </button>
           </div>
         </div>

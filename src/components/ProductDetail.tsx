@@ -119,124 +119,148 @@ export default function ProductDetail({ productId, onBack, onNavigate }: Product
 
         {product.detailedInfo && (
           <div className="mb-16">
-            <div className="bg-white rounded-2xl p-8 md:p-12 shadow-lg mb-8">
-              <h2 className="text-3xl font-bold text-gray-900 mb-6">Product Overview</h2>
-              <p className="text-gray-700 text-lg leading-relaxed">
-                {product.detailedInfo.overview}
-              </p>
-            </div>
+            {product.detailedInfo.overview && (
+              <div className="bg-white rounded-2xl p-8 md:p-12 shadow-lg mb-8">
+                <h2 className="text-3xl font-bold text-gray-900 mb-6">Product Overview</h2>
+                <p className="text-gray-700 text-lg leading-relaxed">
+                  {product.detailedInfo.overview}
+                </p>
+              </div>
+            )}
 
-            <div className="grid md:grid-cols-3 gap-8">
-              {product.detailedInfo.specifications && (
-                <div className="bg-gradient-to-br from-blue-50 to-white rounded-2xl p-8 shadow-lg border border-blue-100">
-                  <h3 className="text-2xl font-bold text-gray-900 mb-6">
-                    {product.detailedInfo.specifications.title}
-                  </h3>
-                  <ul className="space-y-3">
-                    {product.detailedInfo.specifications.items.map((item, index) => (
-                      <li key={index} className="text-gray-700 text-sm leading-relaxed border-b border-gray-200 pb-3 last:border-0">
-                        {item}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              )}
+            {(product.detailedInfo.specifications || product.detailedInfo.benefits || product.detailedInfo.technical) && (
+              <div className={`grid gap-8 ${
+                [product.detailedInfo.specifications, product.detailedInfo.benefits, product.detailedInfo.technical].filter(Boolean).length === 3
+                  ? 'md:grid-cols-3'
+                  : [product.detailedInfo.specifications, product.detailedInfo.benefits, product.detailedInfo.technical].filter(Boolean).length === 2
+                  ? 'md:grid-cols-2'
+                  : 'md:grid-cols-1'
+              }`}>
+                {product.detailedInfo.specifications && (
+                  <div className="bg-gradient-to-br from-blue-50 to-white rounded-2xl p-8 shadow-lg border border-blue-100">
+                    <h3 className="text-2xl font-bold text-gray-900 mb-6">
+                      {product.detailedInfo.specifications.title}
+                    </h3>
+                    <ul className="space-y-3">
+                      {product.detailedInfo.specifications.items.map((item, index) => (
+                        <li key={index} className="text-gray-700 text-sm leading-relaxed border-b border-gray-200 pb-3 last:border-0">
+                          {item}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                )}
 
-              {product.detailedInfo.benefits && (
-                <div className="bg-gradient-to-br from-green-50 to-white rounded-2xl p-8 shadow-lg border border-green-100">
-                  <h3 className="text-2xl font-bold text-gray-900 mb-6">
-                    {product.detailedInfo.benefits.title}
-                  </h3>
-                  <ul className="space-y-3">
-                    {product.detailedInfo.benefits.items.map((item, index) => (
-                      <li key={index} className="flex items-start gap-2">
-                        <CheckCircle2 className="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" />
-                        <span className="text-gray-700 text-sm leading-relaxed">{item}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              )}
+                {product.detailedInfo.benefits && (
+                  <div className="bg-gradient-to-br from-green-50 to-white rounded-2xl p-8 shadow-lg border border-green-100">
+                    <h3 className="text-2xl font-bold text-gray-900 mb-6">
+                      {product.detailedInfo.benefits.title}
+                    </h3>
+                    <ul className="space-y-3">
+                      {product.detailedInfo.benefits.items.map((item, index) => (
+                        <li key={index} className="flex items-start gap-2">
+                          <CheckCircle2 className="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" />
+                          <span className="text-gray-700 text-sm leading-relaxed">{item}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                )}
 
-              {product.detailedInfo.technical && (
-                <div className="bg-gradient-to-br from-orange-50 to-white rounded-2xl p-8 shadow-lg border border-orange-100">
-                  <h3 className="text-2xl font-bold text-gray-900 mb-6">
-                    {product.detailedInfo.technical.title}
-                  </h3>
-                  <ul className="space-y-3">
-                    {product.detailedInfo.technical.items.map((item, index) => (
-                      <li key={index} className="flex items-start gap-2">
-                        <CheckCircle2 className="w-5 h-5 text-orange-600 flex-shrink-0 mt-0.5" />
-                        <span className="text-gray-700 text-sm leading-relaxed">{item}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              )}
-            </div>
+                {product.detailedInfo.technical && (
+                  <div className="bg-gradient-to-br from-orange-50 to-white rounded-2xl p-8 shadow-lg border border-orange-100">
+                    <h3 className="text-2xl font-bold text-gray-900 mb-6">
+                      {product.detailedInfo.technical.title}
+                    </h3>
+                    <ul className="space-y-3">
+                      {product.detailedInfo.technical.items.map((item, index) => (
+                        <li key={index} className="flex items-start gap-2">
+                          <CheckCircle2 className="w-5 h-5 text-orange-600 flex-shrink-0 mt-0.5" />
+                          <span className="text-gray-700 text-sm leading-relaxed">{item}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                )}
+              </div>
+            )}
           </div>
         )}
 
-        <div
-          ref={details.elementRef}
-          className="grid md:grid-cols-3 gap-8 mb-16"
-        >
+        {(product.features?.length > 0 || product.applications?.length > 0 || product.whyChooseUs?.length > 0) && (
           <div
-            className={`bg-white rounded-2xl p-8 shadow-lg transition-all duration-1000 ${
-              details.isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+            ref={details.elementRef}
+            className={`grid gap-8 mb-16 ${
+              [product.features, product.applications, product.whyChooseUs].filter(arr => arr?.length > 0).length === 3
+                ? 'md:grid-cols-3'
+                : [product.features, product.applications, product.whyChooseUs].filter(arr => arr?.length > 0).length === 2
+                ? 'md:grid-cols-2'
+                : 'md:grid-cols-1'
             }`}
           >
-            <h2 className="text-2xl font-bold text-gray-900 mb-6">
-              Key Features
-            </h2>
-            <ul className="space-y-4">
-              {product.features.map((feature, index) => (
-                <li key={index} className="flex items-start gap-3">
-                  <CheckCircle2 className="w-6 h-6 text-orange-600 flex-shrink-0 mt-1" />
-                  <span className="text-gray-700">{feature}</span>
-                </li>
-              ))}
-            </ul>
-          </div>
+            {product.features?.length > 0 && (
+              <div
+                className={`bg-white rounded-2xl p-8 shadow-lg transition-all duration-1000 ${
+                  details.isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+                }`}
+              >
+                <h2 className="text-2xl font-bold text-gray-900 mb-6">
+                  Key Features
+                </h2>
+                <ul className="space-y-4">
+                  {product.features.map((feature, index) => (
+                    <li key={index} className="flex items-start gap-3">
+                      <CheckCircle2 className="w-6 h-6 text-orange-600 flex-shrink-0 mt-1" />
+                      <span className="text-gray-700">{feature}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            )}
 
-          <div
-            className={`bg-white rounded-2xl p-8 shadow-lg transition-all duration-1000 ${
-              details.isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
-            }`}
-            style={{ transitionDelay: '200ms' }}
-          >
-            <h2 className="text-2xl font-bold text-gray-900 mb-6">
-              Applications
-            </h2>
-            <ul className="space-y-4">
-              {product.applications.map((application, index) => (
-                <li key={index} className="flex items-start gap-3">
-                  <CheckCircle2 className="w-6 h-6 text-orange-600 flex-shrink-0 mt-1" />
-                  <span className="text-gray-700">{application}</span>
-                </li>
-              ))}
-            </ul>
-          </div>
+            {product.applications?.length > 0 && (
+              <div
+                className={`bg-white rounded-2xl p-8 shadow-lg transition-all duration-1000 ${
+                  details.isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+                }`}
+                style={{ transitionDelay: '200ms' }}
+              >
+                <h2 className="text-2xl font-bold text-gray-900 mb-6">
+                  Applications
+                </h2>
+                <ul className="space-y-4">
+                  {product.applications.map((application, index) => (
+                    <li key={index} className="flex items-start gap-3">
+                      <CheckCircle2 className="w-6 h-6 text-orange-600 flex-shrink-0 mt-1" />
+                      <span className="text-gray-700">{application}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            )}
 
-          <div
-            className={`bg-white rounded-2xl p-8 shadow-lg transition-all duration-1000 ${
-              details.isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
-            }`}
-            style={{ transitionDelay: '400ms' }}
-          >
-            <h2 className="text-2xl font-bold text-gray-900 mb-6">
-              Why Choose Us
-            </h2>
-            <ul className="space-y-4">
-              {product.whyChooseUs.map((reason, index) => (
-                <li key={index} className="flex items-start gap-3">
-                  <CheckCircle2 className="w-6 h-6 text-orange-600 flex-shrink-0 mt-1" />
-                  <span className="text-gray-700">{reason}</span>
-                </li>
-              ))}
-            </ul>
+            {product.whyChooseUs?.length > 0 && (
+              <div
+                className={`bg-white rounded-2xl p-8 shadow-lg transition-all duration-1000 ${
+                  details.isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+                }`}
+                style={{ transitionDelay: '400ms' }}
+              >
+                <h2 className="text-2xl font-bold text-gray-900 mb-6">
+                  Why Choose Us
+                </h2>
+                <ul className="space-y-4">
+                  {product.whyChooseUs.map((reason, index) => (
+                    <li key={index} className="flex items-start gap-3">
+                      <CheckCircle2 className="w-6 h-6 text-orange-600 flex-shrink-0 mt-1" />
+                      <span className="text-gray-700">{reason}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            )}
           </div>
-        </div>
+        )}
 
         <div
           ref={cta.elementRef}

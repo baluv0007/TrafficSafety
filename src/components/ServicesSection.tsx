@@ -12,15 +12,26 @@ export default function ServicesSection({ onServiceClick }: ServicesSectionProps
   const section = useScrollAnimation({ threshold: 0.1 });
   const [isAutoScrolling, setIsAutoScrolling] = useState(true);
   const animationFrameRef = useRef<number>();
+  const pauseTimeoutRef = useRef<number>();
   const duplicatedServices = [...services, ...services, ...services];
 
   const scroll = (direction: 'left' | 'right') => {
     if (scrollRef.current) {
+      setIsAutoScrolling(false);
+
+      if (pauseTimeoutRef.current) {
+        clearTimeout(pauseTimeoutRef.current);
+      }
+
       const scrollAmount = 400;
       scrollRef.current.scrollBy({
         left: direction === 'left' ? -scrollAmount : scrollAmount,
         behavior: 'smooth',
       });
+
+      pauseTimeoutRef.current = window.setTimeout(() => {
+        setIsAutoScrolling(true);
+      }, 3000);
     }
   };
 
@@ -32,7 +43,7 @@ export default function ServicesSection({ onServiceClick }: ServicesSectionProps
     container.scrollLeft = singleSetWidth;
 
     let lastTimestamp = 0;
-    const scrollSpeed = 0.5;
+    const scrollSpeed = 0.3;
 
     const autoScroll = (timestamp: number) => {
       if (!isAutoScrolling || !container) {
@@ -60,6 +71,9 @@ export default function ServicesSection({ onServiceClick }: ServicesSectionProps
     return () => {
       if (animationFrameRef.current) {
         cancelAnimationFrame(animationFrameRef.current);
+      }
+      if (pauseTimeoutRef.current) {
+        clearTimeout(pauseTimeoutRef.current);
       }
     };
   }, [section.isVisible, isAutoScrolling, services.length]);
@@ -106,8 +120,6 @@ export default function ServicesSection({ onServiceClick }: ServicesSectionProps
         >
           <button
             onClick={() => scroll('left')}
-            onMouseEnter={() => setIsAutoScrolling(false)}
-            onMouseLeave={() => setIsAutoScrolling(true)}
             className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 z-10 bg-white rounded-full p-3 shadow-lg hover:bg-orange-50 transition-all duration-300 hover:scale-110"
             aria-label="Scroll left"
           >
@@ -116,8 +128,6 @@ export default function ServicesSection({ onServiceClick }: ServicesSectionProps
 
           <div
             ref={scrollRef}
-            onMouseEnter={() => setIsAutoScrolling(false)}
-            onMouseLeave={() => setIsAutoScrolling(true)}
             className="flex gap-6 overflow-x-auto scrollbar-hide pb-4"
             style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
           >
@@ -155,8 +165,6 @@ export default function ServicesSection({ onServiceClick }: ServicesSectionProps
 
           <button
             onClick={() => scroll('right')}
-            onMouseEnter={() => setIsAutoScrolling(false)}
-            onMouseLeave={() => setIsAutoScrolling(true)}
             className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 z-10 bg-white rounded-full p-3 shadow-lg hover:bg-orange-50 transition-all duration-300 hover:scale-110"
             aria-label="Scroll right"
           >

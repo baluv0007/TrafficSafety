@@ -17,7 +17,7 @@ export default function HowWeWorkSection({ onNavigate }: HowWeWorkSectionProps) 
     },
     {
       icon: Pencil,
-      title: 'Custom Design & Engineering',
+      title: 'Our Custom Design & Engineering',
       description: 'Our team of experts designs customized traffic management systems, integrating cutting-edge technology to optimize traffic flow and safety.',
       color: 'from-blue-500 to-blue-600'
     },

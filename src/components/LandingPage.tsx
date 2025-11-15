@@ -8,11 +8,23 @@ interface LandingPageProps {
 export default function LandingPage({ onNavigate }: LandingPageProps) {
   const [currentPhraseIndex, setCurrentPhraseIndex] = useState(0);
   const [isVisible, setIsVisible] = useState(true);
+  const [currentBgIndex, setCurrentBgIndex] = useState(0);
 
   const phrases = [
     'Your Safety Our Responsibility',
     'Leaders in Traffic Management',
     'Modern Traffic Solutions',
+  ];
+
+  const backgroundImages = [
+    'https://images.pexels.com/photos/210182/pexels-photo-210182.jpeg',
+    'https://images.pexels.com/photos/2219024/pexels-photo-2219024.jpeg',
+    'https://images.pexels.com/photos/1427541/pexels-photo-1427541.jpeg',
+    'https://images.pexels.com/photos/159358/construction-site-build-construction-work-159358.jpeg',
+    'https://images.pexels.com/photos/279984/pexels-photo-279984.jpeg',
+    'https://images.pexels.com/photos/273209/pexels-photo-273209.jpeg',
+    'https://images.pexels.com/photos/1249610/pexels-photo-1249610.jpeg',
+    'https://images.pexels.com/photos/532803/pexels-photo-532803.jpeg',
   ];
 
   useEffect(() => {
@@ -27,9 +39,20 @@ export default function LandingPage({ onNavigate }: LandingPageProps) {
     return () => clearInterval(interval);
   }, []);
 
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentBgIndex((prev) => (prev + 1) % backgroundImages.length);
+    }, 1000);
+
+    return () => clearInterval(interval);
+  }, []);
+
   return (
     <div className="min-h-screen relative overflow-hidden bg-gradient-to-br from-slate-900 via-orange-900 to-slate-900">
-      <div className="absolute inset-0 bg-[url('https://images.pexels.com/photos/210182/pexels-photo-210182.jpeg')] bg-cover bg-center opacity-20"></div>
+      <div
+        className="absolute inset-0 bg-cover bg-center opacity-20 transition-all duration-1000"
+        style={{ backgroundImage: `url('${backgroundImages[currentBgIndex]}')` }}
+      ></div>
 
       <div className="relative z-10 min-h-screen flex items-center justify-center px-4">
         <div className="text-center max-w-4xl mx-auto">

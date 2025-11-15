@@ -1,4 +1,5 @@
 import { Facebook, Twitter, Linkedin, Instagram, Mail, Phone, MapPin } from 'lucide-react';
+import TrafficLightLogo from './TrafficLightLogo';
 
 interface FooterProps {
   onNavigate?: (page: string) => void;
@@ -12,7 +13,10 @@ export default function Footer({ onNavigate }: FooterProps) {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid md:grid-cols-4 gap-8 mb-8">
           <div>
-            <h3 className="text-2xl font-bold text-orange-500 mb-4">TrafficSafety</h3>
+            <div className="flex items-center gap-3 mb-4">
+              <TrafficLightLogo />
+              <h3 className="text-2xl font-bold text-orange-500">TrafficSafety</h3>
+            </div>
             <p className="text-gray-400 leading-relaxed">
               Leading provider of traffic management solutions, ensuring safety and efficiency on every project.
             </p>

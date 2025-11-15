@@ -5,6 +5,7 @@ import ProductDetail from './components/ProductDetail';
 import ServiceDetail from './components/ServiceDetail';
 import AboutPage from './components/AboutPage';
 import ContactPage from './components/ContactPage';
+import Footer from './components/Footer';
 
 type Page = 'home' | 'products' | 'services' | 'about' | 'contact';
 
@@ -89,6 +90,8 @@ function App() {
       {currentPage === 'about' && <AboutPage onNavigate={handleNavigate} />}
 
       {currentPage === 'contact' && <ContactPage />}
+
+      <Footer onNavigate={handleNavigate} />
     </div>
   );
 }

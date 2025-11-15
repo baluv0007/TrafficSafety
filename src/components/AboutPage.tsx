@@ -139,6 +139,37 @@ export default function AboutPage({ onNavigate }: AboutPageProps) {
           </div>
         </div>
 
+        <div className="bg-white rounded-2xl shadow-2xl overflow-hidden mb-20">
+          <div className="grid lg:grid-cols-2 gap-0">
+            <div className="relative h-[500px]">
+              <img
+                src="https://images.pexels.com/photos/2182970/pexels-photo-2182970.jpeg"
+                alt="Founder and CEO"
+                className="w-full h-full object-cover"
+              />
+            </div>
+            <div className="p-12 flex flex-col justify-center">
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                Meet Our Founder & CEO
+              </h2>
+              <h3 className="text-2xl font-semibold text-orange-600 mb-6">
+                Robert Anderson
+              </h3>
+              <div className="space-y-4 text-gray-600 text-lg leading-relaxed">
+                <p>
+                  With over 25 years of experience in traffic management and civil engineering, Robert founded TrafficSafety with a clear vision: to create the safest, most efficient traffic management solutions in the industry.
+                </p>
+                <p>
+                  His commitment to innovation and safety has driven the company's growth from a small local operation to a nationally recognized leader in traffic control services.
+                </p>
+                <p>
+                  Under Robert's leadership, TrafficSafety has pioneered new technologies and best practices that have become industry standards, ensuring every project prioritizes the safety of workers and the public.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
         <div className="bg-gradient-to-r from-orange-600 to-orange-500 rounded-2xl p-12 text-center shadow-2xl">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
             Let's Work Together

@@ -1,6 +1,7 @@
 import LandingPage from './LandingPage';
 import ProductsSection from './ProductsSection';
 import ServicesSection from './ServicesSection';
+import TestimonialsSection from './TestimonialsSection';
 
 interface HomePageProps {
   onNavigate: (page: string) => void;
@@ -18,6 +19,7 @@ export default function HomePage({
       <LandingPage onNavigate={onNavigate} />
       <ProductsSection onProductClick={onProductClick} />
       <ServicesSection onServiceClick={onServiceClick} />
+      <TestimonialsSection />
     </div>
   );
 }

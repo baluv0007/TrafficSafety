@@ -11,44 +11,76 @@ export default function ServicesSection({ onServiceClick }: ServicesSectionProps
   const scrollRef = useRef<HTMLDivElement>(null);
   const section = useScrollAnimation({ threshold: 0.1 });
   const [isAutoScrolling, setIsAutoScrolling] = useState(true);
+  const animationFrameRef = useRef<number>();
+  const duplicatedServices = [...services, ...services, ...services];
 
   const scroll = (direction: 'left' | 'right') => {
     if (scrollRef.current) {
       const scrollAmount = 400;
-      const newScrollLeft =
-        scrollRef.current.scrollLeft +
-        (direction === 'left' ? -scrollAmount : scrollAmount);
-      scrollRef.current.scrollTo({
-        left: newScrollLeft,
+      scrollRef.current.scrollBy({
+        left: direction === 'left' ? -scrollAmount : scrollAmount,
         behavior: 'smooth',
       });
     }
   };
 
   useEffect(() => {
-    if (!section.isVisible || !isAutoScrolling) return;
+    const container = scrollRef.current;
+    if (!container || !section.isVisible) return;
 
-    const interval = setInterval(() => {
-      if (scrollRef.current) {
-        const { scrollLeft, scrollWidth, clientWidth } = scrollRef.current;
-        const cardWidth = 320 + 24;
+    const singleSetWidth = (320 + 24) * services.length;
+    container.scrollLeft = singleSetWidth;
 
-        if (scrollLeft + clientWidth >= scrollWidth - 50) {
-          scrollRef.current.scrollTo({
-            left: 0,
-            behavior: 'smooth',
-          });
-        } else {
-          scrollRef.current.scrollBy({
-            left: cardWidth,
-            behavior: 'smooth',
-          });
+    let lastTimestamp = 0;
+    const scrollSpeed = 0.5;
+
+    const autoScroll = (timestamp: number) => {
+      if (!isAutoScrolling || !container) {
+        animationFrameRef.current = requestAnimationFrame(autoScroll);
+        return;
+      }
+
+      if (lastTimestamp) {
+        const delta = timestamp - lastTimestamp;
+        container.scrollLeft += scrollSpeed * (delta / 16);
+
+        if (container.scrollLeft >= singleSetWidth * 2) {
+          container.scrollLeft = singleSetWidth;
+        } else if (container.scrollLeft <= 0) {
+          container.scrollLeft = singleSetWidth;
         }
       }
-    }, 5000);
 
-    return () => clearInterval(interval);
-  }, [section.isVisible, isAutoScrolling]);
+      lastTimestamp = timestamp;
+      animationFrameRef.current = requestAnimationFrame(autoScroll);
+    };
+
+    animationFrameRef.current = requestAnimationFrame(autoScroll);
+
+    return () => {
+      if (animationFrameRef.current) {
+        cancelAnimationFrame(animationFrameRef.current);
+      }
+    };
+  }, [section.isVisible, isAutoScrolling, services.length]);
+
+  useEffect(() => {
+    const container = scrollRef.current;
+    if (!container) return;
+
+    const handleScroll = () => {
+      const singleSetWidth = (320 + 24) * services.length;
+
+      if (container.scrollLeft >= singleSetWidth * 2) {
+        container.scrollLeft = singleSetWidth;
+      } else if (container.scrollLeft <= 0) {
+        container.scrollLeft = singleSetWidth;
+      }
+    };
+
+    container.addEventListener('scroll', handleScroll);
+    return () => container.removeEventListener('scroll', handleScroll);
+  }, [services.length]);
 
   return (
     <div ref={section.elementRef} className="py-20 bg-gradient-to-b from-gray-50 to-white">
@@ -86,24 +118,22 @@ export default function ServicesSection({ onServiceClick }: ServicesSectionProps
             ref={scrollRef}
             onMouseEnter={() => setIsAutoScrolling(false)}
             onMouseLeave={() => setIsAutoScrolling(true)}
-            className="flex gap-6 overflow-x-auto scrollbar-hide scroll-smooth pb-4"
+            className="flex gap-6 overflow-x-auto scrollbar-hide pb-4"
             style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
           >
-            {services.map((service, index) => (
+            {duplicatedServices.map((service, index) => (
               <div
-                key={service.id}
+                key={`${service.id}-${index}`}
                 onClick={() => onServiceClick(service.id)}
-                className="flex-shrink-0 w-80 bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 cursor-pointer group transform hover:scale-105"
-                style={{
-                  animation: section.isVisible ? `slideIn 0.6s ease-out ${index * 0.1}s both` : 'none'
-                }}
+                className="flex-shrink-0 w-80 bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 cursor-pointer group transform hover:scale-105"
               >
                 <div className="relative h-64 overflow-hidden">
                   <img
                     src={service.images[0]}
                     alt={service.title}
                     className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                    loading="lazy"
+                    loading="eager"
+                    decoding="async"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 </div>

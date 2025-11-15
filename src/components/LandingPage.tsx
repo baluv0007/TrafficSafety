@@ -40,6 +40,11 @@ export default function LandingPage({ onNavigate }: LandingPageProps) {
   }, []);
 
   useEffect(() => {
+    backgroundImages.forEach((src) => {
+      const img = new Image();
+      img.src = src;
+    });
+
     const interval = setInterval(() => {
       setCurrentBgIndex((prev) => (prev + 1) % backgroundImages.length);
     }, 1000);

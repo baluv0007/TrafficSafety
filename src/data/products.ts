@@ -21,7 +21,6 @@ export const products: Product[] = [
           'Visibility Range: 1000 meters in clear conditions, 500 meters in adverse weather',
           'Wireless Range: Up to 2000 meters line-of-sight between units',
           'Signal Phases: Fully programmable red, amber, and green phases',
-          'Setup Time: 10-15 minutes single-person deployment',
           'Operating Temperature: -20°C to +60°C continuous operation',
           'Weight: 25kg per unit including battery and solar panel',
           'Dimensions: 300mm diameter lens, 1800mm overall height',

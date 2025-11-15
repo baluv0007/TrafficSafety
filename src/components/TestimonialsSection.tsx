@@ -139,36 +139,25 @@ export default function TestimonialsSection() {
         <div className="relative max-w-4xl mx-auto">
           <div className="bg-white rounded-2xl shadow-2xl p-8 md:p-12">
             <div
-              className={`flex flex-col md:flex-row gap-8 items-center transition-opacity duration-300 ${
+              className={`flex flex-col transition-opacity duration-300 ${
                 fadeIn ? 'opacity-100' : 'opacity-0'
               }`}
             >
-              <div className="flex-shrink-0">
-                <img
-                  src={currentTestimonial.image}
-                  alt={currentTestimonial.name}
-                  className="w-32 h-32 rounded-full object-cover shadow-lg"
-                  loading="lazy"
-                />
+              <div className="flex justify-center gap-1 mb-6">
+                {[...Array(currentTestimonial.rating)].map((_, i) => (
+                  <Star key={i} className="w-5 h-5 fill-orange-500 text-orange-500" />
+                ))}
               </div>
-              <div className="flex-1 text-center md:text-left">
-                <div className="flex justify-center md:justify-start gap-1 mb-4">
-                  {[...Array(currentTestimonial.rating)].map((_, i) => (
-                    <Star key={i} className="w-5 h-5 fill-orange-500 text-orange-500" />
-                  ))}
-                </div>
-                <p className="text-gray-700 text-lg leading-relaxed mb-6 italic">
-                  "{currentTestimonial.content}"
+              <p className="text-gray-700 text-lg leading-relaxed mb-8 italic text-center">
+                "{currentTestimonial.content}"
+              </p>
+              <div className="text-center">
+                <p className="text-xl font-bold text-gray-900">
+                  {currentTestimonial.name}
                 </p>
-                <div>
-                  <p className="text-xl font-bold text-gray-900">
-                    {currentTestimonial.name}
-                  </p>
-                  <p className="text-orange-600 font-semibold">
-                    {currentTestimonial.role}
-                  </p>
-                  <p className="text-gray-600">{currentTestimonial.company}</p>
-                </div>
+                <p className="text-orange-600 font-semibold">
+                  {currentTestimonial.role}
+                </p>
               </div>
             </div>
           </div>

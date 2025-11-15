@@ -1,4 +1,4 @@
-import ProductsSection from './ProductsSection';
+import ProductsGrid from './ProductsGrid';
 
 interface ProductsPageProps {
   onProductClick: (productId: string) => void;
@@ -7,7 +7,7 @@ interface ProductsPageProps {
 export default function ProductsPage({ onProductClick }: ProductsPageProps) {
   return (
     <div className="pt-24 pb-16">
-      <ProductsSection onProductClick={onProductClick} />
+      <ProductsGrid onProductClick={onProductClick} />
     </div>
   );
 }

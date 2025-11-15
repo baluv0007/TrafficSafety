@@ -1,4 +1,4 @@
-import ServicesSection from './ServicesSection';
+import ServicesGrid from './ServicesGrid';
 
 interface ServicesPageProps {
   onServiceClick: (serviceId: string) => void;
@@ -7,7 +7,7 @@ interface ServicesPageProps {
 export default function ServicesPage({ onServiceClick }: ServicesPageProps) {
   return (
     <div className="pt-24 pb-16">
-      <ServicesSection onServiceClick={onServiceClick} />
+      <ServicesGrid onServiceClick={onServiceClick} />
     </div>
   );
 }

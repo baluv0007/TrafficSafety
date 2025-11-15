@@ -23,7 +23,7 @@ export default function HowWeWorkSection({ onNavigate }: HowWeWorkSectionProps) 
     },
     {
       icon: Wrench,
-      title: 'Seamless Installation',
+      title: 'Our Seamless Installation',
       description: 'Our experienced installation teams work efficiently to implement systems with minimal disruption, ensuring smooth integration with existing infrastructure.',
       color: 'from-green-500 to-green-600'
     },

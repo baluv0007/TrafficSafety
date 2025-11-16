@@ -6,9 +6,9 @@ export const services: Service[] = [
     title: 'Rapid Development Teams',
     shortDescription: 'Emergency response and quick setup traffic management services',
     images: [
-      'https://images.pexels.com/photos/2219024/pexels-photo-2219024.jpeg',
-      'https://images.pexels.com/photos/1427541/pexels-photo-1427541.jpeg',
-      'https://images.pexels.com/photos/159358/construction-site-build-construction-work-159358.jpeg',
+      'https://images.unsplash.com/photo-1707044353662-bbce055f9ff1?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTZ8fHRyYWZmaWMlMjB3b3JrZXJzfGVufDB8MHwwfHx8MA%3D%3D',
+      'https://plus.unsplash.com/premium_photo-1687948157521-348a723ffede?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NDB8fHRyYWZmaWMlMjB3b3JrZXJzfGVufDB8MHwwfHx8MA%3D%3D',
+      'https://plus.unsplash.com/premium_photo-1687948155996-8fe64cd74c02?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nzd8fHRyYWZmaWMlMjB3b3JrZXJzfGVufDB8MHwwfHx8MA%3D%3D',
     ],
     description: 'Our rapid deployment teams provide immediate traffic management solutions for emergency situations, unplanned roadworks, and urgent infrastructure projects requiring swift action.',
     features: [
@@ -35,9 +35,9 @@ export const services: Service[] = [
     title: 'Flexible Rental & Leasing',
     shortDescription: 'Cost-effective equipment rental solutions for all project durations',
     images: [
-      'https://images.pexels.com/photos/273209/pexels-photo-273209.jpeg',
-      'https://images.pexels.com/photos/1249610/pexels-photo-1249610.jpeg',
-      'https://images.pexels.com/photos/1126993/pexels-photo-1126993.jpeg',
+      'https://plus.unsplash.com/premium_photo-1661963287664-ea60b0039118?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjV8fHJlbnRhbC1sZWFzaW5nJTIwdHJhZmZpY3xlbnwwfDB8MHx8fDA%3D',
+      'https://images.unsplash.com/photo-1706887743083-3c222e904b74?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTh8fHJlbnRhbCUyMGxlYXNpbmclMjB0cmFmZmljfGVufDB8MHwwfHx8MA%3D%3D',
+      'https://plus.unsplash.com/premium_photo-1742493663512-4155bf0cc343?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjJ8fHJlbnRhbCUyMGxlYXNpbmclMjB0cmFmZmljfGVufDB8MHwwfHx8MA%3D%3D',
     ],
     description: 'Comprehensive rental and leasing options for all traffic management equipment, from single items to complete fleet solutions, with flexible terms to match your project timeline.',
     features: [
@@ -64,9 +64,9 @@ export const services: Service[] = [
     title: 'Site Assessment',
     shortDescription: 'Comprehensive site evaluation and safety analysis services',
     images: [
-      'https://images.pexels.com/photos/8761420/pexels-photo-8761420.jpeg',
-      'https://images.pexels.com/photos/3862130/pexels-photo-3862130.jpeg',
-      'https://images.pexels.com/photos/7876723/pexels-photo-7876723.jpeg',
+      'https://images.unsplash.com/photo-1627378753431-e1bac9874c36?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NjZ8fHNpdGUtYXNzZXNzbWVudCUyMHRyYWZmaWN8ZW58MHwwfDB8fHww',
+      'https://images.unsplash.com/photo-1722336760994-8e33dc1c116a?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTA3fHxzaXRlLWFzc2Vzc21lbnQlMjB0cmFmZmljfGVufDB8MHwwfHx8MA%3D%3D',
+      'https://plus.unsplash.com/premium_photo-1687948155585-ef58a07d5dda?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTM0fHxzaXRlLWFzc2Vzc21lbnQlMjB0cmFmZmljfGVufDB8MHwwfHx8MA%3D%3D',
     ],
     description: 'Professional site assessment services providing detailed analysis of traffic patterns, safety requirements, and optimal traffic management strategies for your project.',
     features: [
@@ -93,9 +93,9 @@ export const services: Service[] = [
     title: 'Complete Lifecycle Management',
     shortDescription: 'End-to-end project management for traffic control solutions',
     images: [
-      'https://images.pexels.com/photos/273209/pexels-photo-273209.jpeg',
-      'https://images.pexels.com/photos/1126993/pexels-photo-1126993.jpeg',
-      'https://images.pexels.com/photos/1249610/pexels-photo-1249610.jpeg',
+      'https://images.unsplash.com/photo-1677772241032-b820361a10ff?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NDV8fGNvbXBsZXRlJTIwdHJhZmZpYyUyMGxpZmVjeWNsZS1tYW5hZ2VtZW50fGVufDB8MHwwfHx8MA%3D%3D',
+      'https://images.unsplash.com/photo-1595734479747-1c325e70127b?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NzB8fGNvbXBsZXRlJTIwdHJhZmZpYyUyMG1hbmFnZW1lbnR8ZW58MHwwfDB8fHww',
+      'https://images.unsplash.com/photo-1667729555757-bb6e9fd8c182?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8ODl8fGNvbXBsZXRlJTIwdHJhZmZpYyUyMG1hbmFnZW1lbnR8ZW58MHwwfDB8fHww',
     ],
     description: 'Comprehensive lifecycle management service covering every phase of your traffic management project from initial planning through to completion and decommissioning.',
     features: [
@@ -122,9 +122,9 @@ export const services: Service[] = [
     title: 'Maintenance Contracts',
     shortDescription: 'Ongoing equipment maintenance and support agreements',
     images: [
-      'https://images.pexels.com/photos/1105666/pexels-photo-1105666.jpeg',
-      'https://images.pexels.com/photos/5691597/pexels-photo-5691597.jpeg',
-      'https://images.pexels.com/photos/159358/construction-site-build-construction-work-159358.jpeg',
+      'https://images.unsplash.com/photo-1659353589241-f450b33f908a?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTh8fG1haW50ZW5hbmNlLWNvbnRyYWN0c3xlbnwwfDB8MHx8fDA%3D',
+      'https://plus.unsplash.com/premium_photo-1664299776394-33629d445a77?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NDl8fG1haW50ZW5hbmNlLWNvbnRyYWN0c3xlbnwwfDB8MHx8fDA%3D',
+      'https://plus.unsplash.com/premium_photo-1663047163041-2530862ab5fc?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Njh8fG1haW50ZW5hbmNlLWNvbnRyYWN0cyUyMHJvYWR8ZW58MHwwfDB8fHww',
     ],
     description: 'Flexible maintenance contract options ensuring your traffic management equipment remains in optimal condition with regular servicing, inspections, and priority support.',
     features: [
@@ -151,9 +151,9 @@ export const services: Service[] = [
     title: 'Training & Certifications',
     shortDescription: 'Professional training programs for traffic management personnel',
     images: [
-      'https://images.pexels.com/photos/3184292/pexels-photo-3184292.jpeg',
-      'https://images.pexels.com/photos/5676744/pexels-photo-5676744.jpeg',
-      'https://images.pexels.com/photos/3184325/pexels-photo-3184325.jpeg',
+      'https://media.istockphoto.com/id/1932531930/photo/teacher-explaining-traffic-rules-to-audience-during-lesson-in-driving-school.webp?a=1&b=1&s=612x612&w=0&k=20&c=Pa0KzV8q1tdpUQII2xZHOYWb-9sreB6ZJ6DqQhMkF4w=',
+      'https://media.istockphoto.com/id/1283621201/photo/man-training-business-skilled-expert-productivity-and-knowledge-training-e-learning.webp?a=1&b=1&s=612x612&w=0&k=20&c=7_efh18PIdyWHXEMhGDs6TEoSNiO2sBxndrCECedBSQ=',
+      'https://plus.unsplash.com/premium_photo-1687948157437-d4ae6a00e3ca?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTIzfHx0cmFpbmluZy1jZXJ0aWZpY2F0aW9ucyUyMHRyYWZmaWMlMjBwZW9wbGV8ZW58MHwwfDB8fHww',
     ],
     description: 'Comprehensive training programs and certification courses designed to equip your team with the knowledge and skills required for safe and effective traffic management.',
     features: [
@@ -180,9 +180,9 @@ export const services: Service[] = [
     title: 'Knowledge Transfer',
     shortDescription: 'Expert consultation and best practice sharing services',
     images: [
-      'https://images.pexels.com/photos/3184338/pexels-photo-3184338.jpeg',
-      'https://images.pexels.com/photos/3184339/pexels-photo-3184339.jpeg',
-      'https://images.pexels.com/photos/3182773/pexels-photo-3182773.jpeg',
+      'https://images.unsplash.com/photo-1573846764373-39f57aaeda0a?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NTV8fHRyYWZmaWMlMjBydWxlc3xlbnwwfDB8MHx8fDA%3D',
+      'https://images.unsplash.com/photo-1738776209399-ce7f0105ad36?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NTd8fHRyYWZmaWMlMjBydWxlc3xlbnwwfDB8MHx8fDA%3D',
+      'https://images.unsplash.com/photo-1590557721866-e94374a1d78d?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NjZ8fHRyYWZmaWMlMjBydWxlc3xlbnwwfDB8MHx8fDA%3D',
     ],
     description: 'Strategic knowledge transfer services helping organizations build internal traffic management capabilities through expert mentoring and best practice implementation.',
     features: [

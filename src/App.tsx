@@ -22,10 +22,8 @@ function App() {
 
   const parseUrl = (path: string) => {
     const cleanPath = path.trim().replace(/\/$/, '');
-    console.log('Parsing path:', cleanPath);
 
     if (cleanPath === '' || cleanPath === '/') {
-      console.log('Setting to home');
       setCurrentPage('home');
       setSelectedProduct(null);
       setSelectedService(null);

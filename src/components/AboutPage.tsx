@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import { Shield, Users, Award, Target, Clock, ThumbsUp, Zap, Headphones, TrendingUp, Truck, CheckCircle, ChevronLeft, ChevronRight } from 'lucide-react';
 import { useScrollAnimation } from '../hooks/useScrollAnimation';
 import FounderImage from '../assets/FounderImagenew.jpg';
-import TTMImage from '../assets/01TTM.jpeg';
+import TTMImage from '../assets/01TTMcopy.jpeg';
 import TMPImage from '../assets/02TMP.jpeg';
 import WZImage from '../assets/03WZcopy.jpeg';
 
@@ -13,6 +13,7 @@ interface AboutPageProps {
 export default function AboutPage({ onNavigate }: AboutPageProps) {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const [isAutoScrolling, setIsAutoScrolling] = useState(true);
+  const [imagesLoaded, setImagesLoaded] = useState<Set<number>>(new Set());
   const hero = useScrollAnimation({ threshold: 0.2 });
   const story = useScrollAnimation({ threshold: 0.2 });
   const values_section = useScrollAnimation({ threshold: 0.1 });
@@ -38,6 +39,21 @@ export default function AboutPage({ onNavigate }: AboutPageProps) {
       alt: 'Work Zone Safety Configurations'
     }
   ];
+
+  useEffect(() => {
+    const allImages = [TTMImage, TMPImage, WZImage, FounderImage];
+
+    allImages.forEach((src, index) => {
+      const img = new Image();
+      img.fetchPriority = 'high';
+      img.loading = 'eager';
+      img.decoding = 'async';
+      img.onload = () => {
+        setImagesLoaded(prev => new Set([...prev, index]));
+      };
+      img.src = src;
+    });
+  }, []);
 
   useEffect(() => {
     if (!isAutoScrolling) return;
@@ -122,7 +138,7 @@ export default function AboutPage({ onNavigate }: AboutPageProps) {
             <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-6">
               {storyImages[currentImageIndex].title}
             </h3>
-            <div className="relative rounded-2xl overflow-hidden shadow-2xl bg-gray-100 flex-1 group">
+            <div className="relative rounded-2xl overflow-hidden shadow-2xl bg-gray-100 flex-1 group min-h-[500px]">
               <div className="relative w-full h-full flex items-center justify-center">
                 {storyImages.map((image, index) => (
                   <div
@@ -140,6 +156,8 @@ export default function AboutPage({ onNavigate }: AboutPageProps) {
                       alt={image.alt}
                       className="w-full h-full object-contain p-6"
                       loading="eager"
+                      fetchPriority="high"
+                      decoding="async"
                     />
                   </div>
                 ))}

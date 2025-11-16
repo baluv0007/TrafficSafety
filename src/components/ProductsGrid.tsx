@@ -31,19 +31,19 @@ export default function ProductsGrid({ onProductClick, onNavigate }: ProductsGri
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {products.map((product, index) => (
             <div
               key={product.id}
               onClick={() => onProductClick(product.id)}
-              className={`bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 cursor-pointer group transform hover:scale-105 ${
+              className={`bg-white rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-500 cursor-pointer group transform hover:scale-105 ${
                 section.isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
               }`}
               style={{
                 transitionDelay: section.isVisible ? `${index * 100}ms` : '0ms'
               }}
             >
-              <div className="relative w-full bg-gradient-to-br from-gray-100 to-gray-200" style={{ paddingBottom: '100%' }}>
+              <div className="relative w-full bg-gradient-to-br from-gray-100 to-gray-200" style={{ paddingBottom: '75%' }}>
                 {!imageErrors[product.id] ? (
                   <>
                     <img
@@ -69,11 +69,11 @@ export default function ProductsGrid({ onProductClick, onNavigate }: ProductsGri
                 )}
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"></div>
               </div>
-              <div className="p-8">
-                <h3 className="text-2xl font-bold text-gray-900 mb-3 group-hover:text-orange-600 transition-colors">
+              <div className="p-6">
+                <h3 className="text-lg font-bold text-gray-900 mb-2 group-hover:text-orange-600 transition-colors">
                   {product.title}
                 </h3>
-                <p className="text-gray-600 mb-4 line-clamp-3">
+                <p className="text-sm text-gray-600 mb-3 line-clamp-2">
                   {product.shortDescription}
                 </p>
                 <div className="flex items-center text-orange-600 font-semibold group-hover:gap-2 transition-all">

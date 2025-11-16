@@ -4,6 +4,7 @@ import { useScrollAnimation } from '../hooks/useScrollAnimation';
 import FounderImage from '../assets/FounderImagenew.jpg';
 import TTMImage from '../assets/01TTM.jpeg';
 import TMPImage from '../assets/02TMP.jpeg';
+import WZImage from '../assets/03WZ copy.jpeg';
 
 interface AboutPageProps {
   onNavigate: (page: string) => void;
@@ -32,7 +33,7 @@ export default function AboutPage({ onNavigate }: AboutPageProps) {
       alt: 'Traffic Management Plan Layout'
     },
     {
-      src: 'https://images.pexels.com/photos/5473337/pexels-photo-5473337.jpeg',
+      src: WZImage,
       title: 'Work Zone Scenarios and Safety Configurations',
       alt: 'Work Zone Safety Configurations'
     }
@@ -117,35 +118,36 @@ export default function AboutPage({ onNavigate }: AboutPageProps) {
             story.isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
           }`}
         >
-          <div className="relative">
-            <div className="relative rounded-2xl overflow-hidden shadow-2xl bg-gray-100">
-              <div className="relative w-full" style={{ paddingBottom: '75%' }}>
-                <div className="absolute inset-0 flex items-center justify-center">
-                  {storyImages.map((image, index) => (
-                    <div
-                      key={index}
-                      className={`absolute inset-0 transition-all duration-700 ${
-                        index === currentImageIndex
-                          ? 'opacity-100 translate-x-0'
-                          : index < currentImageIndex
-                          ? 'opacity-0 -translate-x-full'
-                          : 'opacity-0 translate-x-full'
-                      }`}
-                    >
-                      <img
-                        src={image.src}
-                        alt={image.alt}
-                        className="w-full h-full object-contain"
-                        loading="eager"
-                      />
-                    </div>
-                  ))}
-                </div>
+          <div className="relative flex flex-col">
+            <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-6">
+              {storyImages[currentImageIndex].title}
+            </h3>
+            <div className="relative rounded-2xl overflow-hidden shadow-2xl bg-gray-100 flex-1 group">
+              <div className="relative w-full h-full flex items-center justify-center">
+                {storyImages.map((image, index) => (
+                  <div
+                    key={index}
+                    className={`absolute inset-0 transition-all duration-1000 transform ${
+                      index === currentImageIndex
+                        ? 'opacity-100 translate-x-0'
+                        : index < currentImageIndex
+                        ? 'opacity-0 -translate-x-full'
+                        : 'opacity-0 translate-x-full'
+                    }`}
+                  >
+                    <img
+                      src={image.src}
+                      alt={image.alt}
+                      className="w-full h-full object-contain p-6"
+                      loading="eager"
+                    />
+                  </div>
+                ))}
               </div>
 
               <button
                 onClick={handlePrevious}
-                className="absolute left-4 top-1/2 -translate-y-1/2 bg-white/90 hover:bg-white rounded-full p-3 shadow-lg transition-all hover:scale-110 z-10"
+                className="absolute left-4 top-1/2 -translate-y-1/2 bg-white/90 hover:bg-white rounded-full p-3 shadow-lg transition-all hover:scale-110 z-10 opacity-0 group-hover:opacity-100"
                 aria-label="Previous image"
               >
                 <ChevronLeft className="w-6 h-6 text-gray-800" />
@@ -153,20 +155,14 @@ export default function AboutPage({ onNavigate }: AboutPageProps) {
 
               <button
                 onClick={handleNext}
-                className="absolute right-4 top-1/2 -translate-y-1/2 bg-white/90 hover:bg-white rounded-full p-3 shadow-lg transition-all hover:scale-110 z-10"
+                className="absolute right-4 top-1/2 -translate-y-1/2 bg-white/90 hover:bg-white rounded-full p-3 shadow-lg transition-all hover:scale-110 z-10 opacity-0 group-hover:opacity-100"
                 aria-label="Next image"
               >
                 <ChevronRight className="w-6 h-6 text-gray-800" />
               </button>
-
-              <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-6">
-                <h3 className="text-white text-lg md:text-xl font-bold text-center">
-                  {storyImages[currentImageIndex].title}
-                </h3>
-              </div>
             </div>
 
-            <div className="flex justify-center gap-2 mt-4">
+            <div className="flex justify-center gap-2 mt-6">
               {storyImages.map((_, index) => (
                 <button
                   key={index}
@@ -175,10 +171,10 @@ export default function AboutPage({ onNavigate }: AboutPageProps) {
                     setCurrentImageIndex(index);
                     setTimeout(() => setIsAutoScrolling(true), 5000);
                   }}
-                  className={`h-2 rounded-full transition-all ${
+                  className={`h-3 rounded-full transition-all ${
                     index === currentImageIndex
                       ? 'w-8 bg-orange-600'
-                      : 'w-2 bg-gray-300 hover:bg-gray-400'
+                      : 'w-3 bg-gray-300 hover:bg-gray-400'
                   }`}
                   aria-label={`Go to image ${index + 1}`}
                 />

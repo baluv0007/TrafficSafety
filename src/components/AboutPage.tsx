@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { Shield, Users, Award, Target, Clock, ThumbsUp, Zap, Headphones, TrendingUp, Truck, CheckCircle, ChevronLeft, ChevronRight } from 'lucide-react';
 import { useScrollAnimation } from '../hooks/useScrollAnimation';
 import { preloadCriticalImages } from '../utils/imagePreloader';
+import { trafficImages } from '../utils/placeholderImages';
 import FounderImage from '../assets/FounderImagenew.jpg';
 import TTMImage from '../assets/01TTMcopy.jpeg';
 import TMPImage from '../assets/02TMP.jpeg';
@@ -25,17 +26,20 @@ export default function AboutPage({ onNavigate }: AboutPageProps) {
 
   const storyImages = [
     {
-      src: TTMImage,
+      src: TTMImage || trafficImages.ttm,
+      fallback: trafficImages.ttm,
       title: 'TTM Equipment Catalog and Specifications',
       alt: 'Traffic Management Equipment Catalog'
     },
     {
-      src: TMPImage,
+      src: TMPImage || trafficImages.tmp,
+      fallback: trafficImages.tmp,
       title: 'Traffic Management Plan Layout and Procedures',
       alt: 'Traffic Management Plan Layout'
     },
     {
-      src: WZImage,
+      src: WZImage || trafficImages.wz,
+      fallback: trafficImages.wz,
       title: 'Work Zone Scenarios and Safety Configurations',
       alt: 'Work Zone Safety Configurations'
     }
@@ -162,6 +166,7 @@ export default function AboutPage({ onNavigate }: AboutPageProps) {
                   >
                     <div className="w-full h-full flex items-center justify-center bg-white">
                       <img
+                        key={`img-${index}`}
                         src={image.src}
                         alt={image.alt}
                         className="w-full h-full object-contain p-6 max-w-full max-h-full"
@@ -170,11 +175,7 @@ export default function AboutPage({ onNavigate }: AboutPageProps) {
                         decoding="async"
                         onError={(e) => {
                           const target = e.target as HTMLImageElement;
-                          target.style.display = 'none';
-                          const parent = target.parentElement;
-                          if (parent) {
-                            parent.innerHTML = `<div class="flex flex-col items-center justify-center w-full h-full text-gray-400"><svg class="w-24 h-24 mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg><p>${image.alt}</p></div>`;
-                          }
+                          target.src = image.fallback;
                         }}
                       />
                     </div>

@@ -1,7 +1,9 @@
 import { useState, useEffect } from 'react';
-import { Shield, Users, Award, Target, Clock, ThumbsUp, Zap, Headphones, TrendingUp, Truck, CheckCircle } from 'lucide-react';
+import { Shield, Users, Award, Target, Clock, ThumbsUp, Zap, Headphones, TrendingUp, Truck, CheckCircle, ChevronLeft, ChevronRight } from 'lucide-react';
 import { useScrollAnimation } from '../hooks/useScrollAnimation';
 import FounderImage from '../assets/FounderImagenew.jpg';
+import TTMImage from '../assets/01TTM.jpeg';
+import TMPImage from '../assets/02TMP.jpeg';
 
 interface AboutPageProps {
   onNavigate: (page: string) => void;
@@ -9,6 +11,7 @@ interface AboutPageProps {
 
 export default function AboutPage({ onNavigate }: AboutPageProps) {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const [isAutoScrolling, setIsAutoScrolling] = useState(true);
   const hero = useScrollAnimation({ threshold: 0.2 });
   const story = useScrollAnimation({ threshold: 0.2 });
   const values_section = useScrollAnimation({ threshold: 0.1 });
@@ -18,21 +21,44 @@ export default function AboutPage({ onNavigate }: AboutPageProps) {
   const cta = useScrollAnimation({ threshold: 0.2 });
 
   const storyImages = [
-    'https://images.pexels.com/photos/2219024/pexels-photo-2219024.jpeg',
-    'https://images.pexels.com/photos/1427541/pexels-photo-1427541.jpeg',
-    'https://images.pexels.com/photos/159358/construction-site-build-construction-work-159358.jpeg',
-    'https://images.pexels.com/photos/273209/pexels-photo-273209.jpeg',
-    'https://images.pexels.com/photos/210182/pexels-photo-210182.jpeg',
-    'https://images.pexels.com/photos/532803/pexels-photo-532803.jpeg',
+    {
+      src: TTMImage,
+      title: 'TTM Equipment Catalog and Specifications',
+      alt: 'Traffic Management Equipment Catalog'
+    },
+    {
+      src: TMPImage,
+      title: 'Traffic Management Plan Layout and Procedures',
+      alt: 'Traffic Management Plan Layout'
+    },
+    {
+      src: 'https://images.pexels.com/photos/5473337/pexels-photo-5473337.jpeg',
+      title: 'Work Zone Scenarios and Safety Configurations',
+      alt: 'Work Zone Safety Configurations'
+    }
   ];
 
   useEffect(() => {
+    if (!isAutoScrolling) return;
+
     const interval = setInterval(() => {
       setCurrentImageIndex((prev) => (prev + 1) % storyImages.length);
-    }, 1000);
+    }, 2000);
 
     return () => clearInterval(interval);
-  }, [storyImages.length]);
+  }, [storyImages.length, isAutoScrolling]);
+
+  const handlePrevious = () => {
+    setIsAutoScrolling(false);
+    setCurrentImageIndex((prev) => (prev - 1 + storyImages.length) % storyImages.length);
+    setTimeout(() => setIsAutoScrolling(true), 5000);
+  };
+
+  const handleNext = () => {
+    setIsAutoScrolling(false);
+    setCurrentImageIndex((prev) => (prev + 1) % storyImages.length);
+    setTimeout(() => setIsAutoScrolling(true), 5000);
+  };
 
   const values = [
     {
@@ -91,14 +117,75 @@ export default function AboutPage({ onNavigate }: AboutPageProps) {
             story.isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
           }`}
         >
-          <div className="relative h-[500px] rounded-2xl overflow-hidden shadow-2xl">
-            <img
-              src={storyImages[currentImageIndex]}
-              alt="Traffic Management Team"
-              className="w-full h-full object-cover transition-opacity duration-500"
-              loading="eager"
-            />
+          <div className="relative">
+            <div className="relative rounded-2xl overflow-hidden shadow-2xl bg-gray-100">
+              <div className="relative w-full" style={{ paddingBottom: '75%' }}>
+                <div className="absolute inset-0 flex items-center justify-center">
+                  {storyImages.map((image, index) => (
+                    <div
+                      key={index}
+                      className={`absolute inset-0 transition-all duration-700 ${
+                        index === currentImageIndex
+                          ? 'opacity-100 translate-x-0'
+                          : index < currentImageIndex
+                          ? 'opacity-0 -translate-x-full'
+                          : 'opacity-0 translate-x-full'
+                      }`}
+                    >
+                      <img
+                        src={image.src}
+                        alt={image.alt}
+                        className="w-full h-full object-contain"
+                        loading="eager"
+                      />
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              <button
+                onClick={handlePrevious}
+                className="absolute left-4 top-1/2 -translate-y-1/2 bg-white/90 hover:bg-white rounded-full p-3 shadow-lg transition-all hover:scale-110 z-10"
+                aria-label="Previous image"
+              >
+                <ChevronLeft className="w-6 h-6 text-gray-800" />
+              </button>
+
+              <button
+                onClick={handleNext}
+                className="absolute right-4 top-1/2 -translate-y-1/2 bg-white/90 hover:bg-white rounded-full p-3 shadow-lg transition-all hover:scale-110 z-10"
+                aria-label="Next image"
+              >
+                <ChevronRight className="w-6 h-6 text-gray-800" />
+              </button>
+
+              <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-6">
+                <h3 className="text-white text-lg md:text-xl font-bold text-center">
+                  {storyImages[currentImageIndex].title}
+                </h3>
+              </div>
+            </div>
+
+            <div className="flex justify-center gap-2 mt-4">
+              {storyImages.map((_, index) => (
+                <button
+                  key={index}
+                  onClick={() => {
+                    setIsAutoScrolling(false);
+                    setCurrentImageIndex(index);
+                    setTimeout(() => setIsAutoScrolling(true), 5000);
+                  }}
+                  className={`h-2 rounded-full transition-all ${
+                    index === currentImageIndex
+                      ? 'w-8 bg-orange-600'
+                      : 'w-2 bg-gray-300 hover:bg-gray-400'
+                  }`}
+                  aria-label={`Go to image ${index + 1}`}
+                />
+              ))}
+            </div>
           </div>
+
           <div className="flex flex-col justify-center">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
               Our Story

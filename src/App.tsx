@@ -17,65 +17,49 @@ function App() {
   const [selectedProduct, setSelectedProduct] = useState<string | null>(null);
   const [selectedService, setSelectedService] = useState<string | null>(null);
 
-  useEffect(() => {
-    const path = window.location.pathname;
-
+  const parseUrl = (path: string) => {
     if (path === '/' || path === '') {
       setCurrentPage('home');
+      setSelectedProduct(null);
+      setSelectedService(null);
     } else if (path.startsWith('/ourproducts/')) {
-      const productId = path.replace('/ourproducts/', '').toLowerCase().replace(/_/g, '-');
+      const urlSegment = decodeURIComponent(path.replace('/ourproducts/', ''));
+      const productId = urlSegment.toLowerCase().replace(/_/g, '-').replace(/ /g, '-');
       setSelectedProduct(productId);
       setCurrentPage('products');
     } else if (path === '/ourproducts') {
       setCurrentPage('products');
+      setSelectedProduct(null);
+      setSelectedService(null);
     } else if (path.startsWith('/ourservices/')) {
-      const serviceId = path.replace('/ourservices/', '').toLowerCase().replace(/_/g, '-');
+      const urlSegment = decodeURIComponent(path.replace('/ourservices/', ''));
+      const serviceId = urlSegment.toLowerCase().replace(/_/g, '-').replace(/ /g, '-');
       setSelectedService(serviceId);
       setCurrentPage('services');
     } else if (path === '/ourservices') {
       setCurrentPage('services');
+      setSelectedProduct(null);
+      setSelectedService(null);
     } else if (path === '/about') {
       setCurrentPage('about');
+      setSelectedProduct(null);
+      setSelectedService(null);
     } else if (path === '/contact') {
       setCurrentPage('contact');
+      setSelectedProduct(null);
+      setSelectedService(null);
     } else if (path === '/careers') {
       setCurrentPage('careers');
+      setSelectedProduct(null);
+      setSelectedService(null);
     }
+  };
+
+  useEffect(() => {
+    parseUrl(window.location.pathname);
 
     const handlePopState = () => {
-      const newPath = window.location.pathname;
-
-      if (newPath === '/' || newPath === '') {
-        setCurrentPage('home');
-        setSelectedProduct(null);
-        setSelectedService(null);
-      } else if (newPath.startsWith('/ourproducts/')) {
-        const productId = newPath.replace('/ourproducts/', '').toLowerCase().replace(/_/g, '-');
-        setSelectedProduct(productId);
-        setCurrentPage('products');
-      } else if (newPath === '/ourproducts') {
-        setCurrentPage('products');
-        setSelectedProduct(null);
-      } else if (newPath.startsWith('/ourservices/')) {
-        const serviceId = newPath.replace('/ourservices/', '').toLowerCase().replace(/_/g, '-');
-        setSelectedService(serviceId);
-        setCurrentPage('services');
-      } else if (newPath === '/ourservices') {
-        setCurrentPage('services');
-        setSelectedService(null);
-      } else if (newPath === '/about') {
-        setCurrentPage('about');
-        setSelectedProduct(null);
-        setSelectedService(null);
-      } else if (newPath === '/contact') {
-        setCurrentPage('contact');
-        setSelectedProduct(null);
-        setSelectedService(null);
-      } else if (newPath === '/careers') {
-        setCurrentPage('careers');
-        setSelectedProduct(null);
-        setSelectedService(null);
-      }
+      parseUrl(window.location.pathname);
     };
 
     window.addEventListener('popstate', handlePopState);

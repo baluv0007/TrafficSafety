@@ -4,6 +4,7 @@ import { useScrollAnimation } from '../hooks/useScrollAnimation';
 import FounderImage from '../assets/FounderImagenew.jpg';
 import TTMImage from '../assets/01TTM.jpeg';
 import TMPImage from '../assets/02TMP.jpeg';
+import TMPImage from '../assets/03WZ.jpeg';
 
 interface AboutPageProps {
   onNavigate: (page: string) => void;

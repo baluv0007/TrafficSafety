@@ -12,6 +12,7 @@ export default function ProductsGrid({ onProductClick, onNavigate }: ProductsGri
   const section = useScrollAnimation({ threshold: 0.1 });
   const cta = useScrollAnimation({ threshold: 0.2 });
   const [imageErrors, setImageErrors] = useState<Record<string, boolean>>({});
+  const [imageLoaded, setImageLoaded] = useState<Record<string, boolean>>({});
 
   return (
     <div ref={section.elementRef} className="py-20 bg-gradient-to-b from-white to-gray-50">
@@ -42,21 +43,31 @@ export default function ProductsGrid({ onProductClick, onNavigate }: ProductsGri
                 transitionDelay: section.isVisible ? `${index * 100}ms` : '0ms'
               }}
             >
-              <div className="relative w-full bg-gradient-to-br from-gray-200 to-gray-300" style={{ paddingBottom: '100%' }}>
+              <div className="relative w-full bg-gradient-to-br from-gray-100 to-gray-200" style={{ paddingBottom: '100%' }}>
                 {!imageErrors[product.id] ? (
-                  <img
-                    src={product.images[0]}
-                    alt={product.title}
-                    className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                    loading="lazy"
-                    onError={() => setImageErrors(prev => ({ ...prev, [product.id]: true }))}
-                  />
+                  <>
+                    <img
+                      src={product.images[0]}
+                      alt={product.title}
+                      className={`absolute inset-0 w-full h-full object-cover transition-all duration-700 group-hover:scale-110 ${
+                        imageLoaded[product.id] ? 'opacity-100' : 'opacity-0'
+                      }`}
+                      loading="eager"
+                      onLoad={() => setImageLoaded(prev => ({ ...prev, [product.id]: true }))}
+                      onError={() => setImageErrors(prev => ({ ...prev, [product.id]: true }))}
+                    />
+                    {!imageLoaded[product.id] && (
+                      <div className="absolute inset-0 flex items-center justify-center">
+                        <div className="animate-pulse text-gray-400">Loading...</div>
+                      </div>
+                    )}
+                  </>
                 ) : (
                   <div className="absolute inset-0 bg-gradient-to-br from-orange-200 to-orange-100 flex items-center justify-center">
                     <span className="text-orange-800 font-semibold text-center px-4">{product.title}</span>
                   </div>
                 )}
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"></div>
               </div>
               <div className="p-8">
                 <h3 className="text-2xl font-bold text-gray-900 mb-3 group-hover:text-orange-600 transition-colors">

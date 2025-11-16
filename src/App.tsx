@@ -9,6 +9,7 @@ import AboutPage from './components/AboutPage';
 import ContactPage from './components/ContactPage';
 import CareersPage from './components/CareersPage';
 import NotFoundPage from './components/NotFoundPage';
+import ErrorBoundary from './components/ErrorBoundary';
 import Footer from './components/Footer';
 import { services } from './data/services';
 import { products } from './data/products';

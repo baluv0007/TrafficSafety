@@ -409,10 +409,10 @@ export default function AboutPage({ onNavigate }: AboutPageProps) {
           }`}
         >
           <div className="grid lg:grid-cols-2 gap-0">
-            <div className="relative h-[500px] bg-gradient-to-br from-gray-100 to-gray-200">
+            <div className="relative h-[500px] bg-gradient-to-br from-orange-100 via-gray-100 to-gray-200 flex items-center justify-center">
               <img
                 src={FounderImage}
-                alt="Founder and CEO"
+                alt="Founder and CEO Sumanth Bathini"
                 className="w-full h-full object-cover"
                 loading="eager"
                 fetchPriority="high"
@@ -422,12 +422,21 @@ export default function AboutPage({ onNavigate }: AboutPageProps) {
                   target.style.display = 'none';
                   const parent = target.parentElement;
                   if (parent) {
-                    parent.innerHTML = `<div class="flex items-center justify-center w-full h-full bg-gradient-to-br from-gray-100 to-gray-200"><svg class="w-32 h-32 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path></svg></div>`;
+                    parent.innerHTML = `
+                      <div class="flex flex-col items-center justify-center w-full h-full bg-gradient-to-br from-orange-100 via-gray-100 to-gray-200 p-8">
+                        <div class="bg-white rounded-full p-8 shadow-lg mb-6">
+                          <svg class="w-24 h-24 text-orange-600" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
+                          </svg>
+                        </div>
+                        <p class="text-gray-600 text-center font-medium">Founder Image</p>
+                      </div>
+                    `;
                   }
                 }}
               />
             </div>
-            <div className="p-12 flex flex-col justify-center">
+            <div className="p-12 flex flex-col justify-center bg-gradient-to-br from-white to-orange-50">
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
                 Meet Our Founder & CEO
               </h2>
@@ -436,7 +445,7 @@ export default function AboutPage({ onNavigate }: AboutPageProps) {
               </h3>
               <div className="space-y-4 text-gray-600 text-lg leading-relaxed">
                 <p>
-                  With over Many years of experience in traffic management and civil engineering, Sumanth founded TrafficSafety with a clear vision: to create the safest, most efficient traffic management solutions in the industry.
+                  With over many years of experience in traffic management and civil engineering, Sumanth founded TrafficSafety with a clear vision: to create the safest, most efficient traffic management solutions in the industry.
                 </p>
                 <p>
                   His commitment to innovation and safety has driven the company's growth from a small local operation to a nationally recognized leader in traffic control services.

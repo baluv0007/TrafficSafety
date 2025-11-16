@@ -1,11 +1,7 @@
 import { useState, useEffect } from 'react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 import { useScrollAnimation } from '../hooks/useScrollAnimation';
-import safety01 from '../assets/safety01.jpg';
-import safety02 from '../assets/safety02.jpg';
-import safety03 from '../assets/safety03.jpeg.jpg';
-import safety04 from '../assets/safety04.jpeg.jpg';
-import safety05 from '../assets/saftey05.jpeg.jpg';
+
 
 const SAFETY_IMAGES = [
   { src: safety01, alt: 'Road construction safety procedures' },

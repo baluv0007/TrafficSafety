@@ -16,7 +16,6 @@ interface AboutPageProps {
 export default function AboutPage({ onNavigate }: AboutPageProps) {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const [isAutoScrolling, setIsAutoScrolling] = useState(true);
-  const [imagesLoaded, setImagesLoaded] = useState<Set<number>>(new Set());
   const hero = useScrollAnimation({ threshold: 0.2 });
   const story = useScrollAnimation({ threshold: 0.2 });
   const values_section = useScrollAnimation({ threshold: 0.1 });
@@ -54,17 +53,11 @@ export default function AboutPage({ onNavigate }: AboutPageProps) {
       preloadCriticalImages(validImages);
     }
 
-    allImages.forEach((src, index) => {
+    allImages.forEach((src) => {
       const img = new Image();
       img.fetchPriority = 'high';
       img.loading = 'eager';
       img.decoding = 'async';
-      img.onload = () => {
-        setImagesLoaded(prev => new Set([...prev, index]));
-      };
-      img.onerror = () => {
-        setImagesLoaded(prev => new Set([...prev, index]));
-      };
       img.src = src;
     });
   }, []);

@@ -8,7 +8,7 @@ export default function WhyChooseExpertiseSection() {
     {
       icon: Rocket,
       title: '17+ Years of Industry Leadership',
-      description: 'Proven track record in traffic management solutions.'
+      description: 'Most experienced employees with proven track record in traffic management solutions.'
     },
     {
       icon: Building2,

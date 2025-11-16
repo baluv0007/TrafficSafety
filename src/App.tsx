@@ -196,6 +196,8 @@ function App() {
 
       {currentPage === 'careers' && <CareersPage />}
 
+      {currentPage === 'notfound' && <NotFoundPage onNavigate={handleNavigate} />}
+
       <Footer onNavigate={handleNavigate} />
     </div>
   );

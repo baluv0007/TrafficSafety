@@ -28,11 +28,12 @@ export default function ProductsSection({ onProductClick }: ProductsSectionProps
       const scrollAmount = cardWidth;
       const container = scrollRef.current;
 
-      if (direction === 'right') {
-        container.scrollLeft += scrollAmount;
-      } else {
-        container.scrollLeft -= scrollAmount;
-      }
+      container.scrollTo({
+        left: direction === 'right'
+          ? container.scrollLeft + scrollAmount
+          : container.scrollLeft - scrollAmount,
+        behavior: 'smooth'
+      });
 
       pauseTimeoutRef.current = window.setTimeout(() => {
         setIsAutoScrolling(true);
@@ -140,8 +141,8 @@ export default function ProductsSection({ onProductClick }: ProductsSectionProps
 
           <div
             ref={scrollRef}
-            className="flex gap-6 overflow-x-auto scrollbar-hide pb-4"
-            style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
+            className="flex gap-6 overflow-x-auto scrollbar-hide pb-4 smooth-scroll"
+            style={{ scrollbarWidth: 'none', msOverflowStyle: 'none', WebkitOverflowScrolling: 'touch' }}
           >
             {duplicatedProducts.map((product, index) => (
               <div

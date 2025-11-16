@@ -27,37 +27,80 @@ function App() {
       setCurrentPage('home');
       setSelectedProduct(null);
       setSelectedService(null);
-    } else if (cleanPath.startsWith('/ourproducts/')) {
+      return;
+    }
+
+    if (cleanPath.startsWith('/ourproducts/')) {
       const urlSegment = cleanPath.replace('/ourproducts/', '');
-      const productId = urlSegment.toLowerCase().replace(/_/g, '-');
-      setSelectedProduct(productId);
-      setCurrentPage('products');
-    } else if (cleanPath === '/ourproducts') {
+      const productId = urlSegment.toLowerCase().replace(/ /g, '-').replace(/_/g, '-');
+
+      // Check if product exists
+      const productExists = products.some(p => p.id === productId);
+      if (productExists) {
+        setSelectedProduct(productId);
+        setCurrentPage('products');
+        setSelectedService(null);
+      } else {
+        setCurrentPage('notfound');
+      }
+      return;
+    }
+
+    if (cleanPath === '/ourproducts') {
       setCurrentPage('products');
       setSelectedProduct(null);
       setSelectedService(null);
-    } else if (cleanPath.startsWith('/ourservices/')) {
+      return;
+    }
+
+    if (cleanPath.startsWith('/ourservices/')) {
       const urlSegment = cleanPath.replace('/ourservices/', '');
-      const serviceId = urlSegment.toLowerCase().replace(/_/g, '-');
-      setSelectedService(serviceId);
-      setCurrentPage('services');
-    } else if (cleanPath === '/ourservices') {
+      const serviceId = urlSegment.toLowerCase().replace(/ /g, '-').replace(/_/g, '-');
+
+      // Check if service exists
+      const serviceExists = services.some(s => s.id === serviceId);
+      if (serviceExists) {
+        setSelectedService(serviceId);
+        setCurrentPage('services');
+        setSelectedProduct(null);
+      } else {
+        setCurrentPage('notfound');
+      }
+      return;
+    }
+
+    if (cleanPath === '/ourservices') {
       setCurrentPage('services');
       setSelectedProduct(null);
       setSelectedService(null);
-    } else if (cleanPath === '/about') {
+      return;
+    }
+
+    if (cleanPath === '/about') {
       setCurrentPage('about');
       setSelectedProduct(null);
       setSelectedService(null);
-    } else if (cleanPath === '/contact') {
+      return;
+    }
+
+    if (cleanPath === '/contact') {
       setCurrentPage('contact');
       setSelectedProduct(null);
       setSelectedService(null);
-    } else if (cleanPath === '/careers') {
+      return;
+    }
+
+    if (cleanPath === '/careers') {
       setCurrentPage('careers');
       setSelectedProduct(null);
       setSelectedService(null);
+      return;
     }
+
+    // If no route matches, show 404
+    setCurrentPage('notfound');
+    setSelectedProduct(null);
+    setSelectedService(null);
   };
 
   useEffect(() => {

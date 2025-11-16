@@ -104,10 +104,14 @@ function App() {
   };
 
   useEffect(() => {
-    parseUrl(window.location.pathname);
+    const initialPath = window.location.pathname;
+    console.log('Initial path:', initialPath);
+    parseUrl(initialPath);
 
     const handlePopState = () => {
-      parseUrl(window.location.pathname);
+      const currentPath = window.location.pathname;
+      console.log('Popstate path:', currentPath);
+      parseUrl(currentPath);
     };
 
     window.addEventListener('popstate', handlePopState);

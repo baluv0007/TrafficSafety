@@ -200,8 +200,9 @@ function App() {
 
       {currentPage === 'notfound' && <NotFoundPage onNavigate={handleNavigate} />}
 
-      <Footer onNavigate={handleNavigate} />
-    </div>
+        <Footer onNavigate={handleNavigate} />
+      </div>
+    </ErrorBoundary>
   );
 }
 

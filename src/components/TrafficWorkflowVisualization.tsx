@@ -40,8 +40,8 @@ export default function TrafficWorkflowVisualization() {
     const interval = setInterval(() => {
       setIsAnimating(true);
       setActiveStep((prev) => (prev + 1) % processingSteps.length);
-      setTimeout(() => setIsAnimating(false), 800);
-    }, 3000);
+      setTimeout(() => setIsAnimating(false), 400);
+    }, 1500);
 
     return () => clearInterval(interval);
   }, [section.isVisible, processingSteps.length]);
@@ -76,10 +76,10 @@ export default function TrafficWorkflowVisualization() {
                 {dataSources.map((source, index) => (
                   <div
                     key={index}
-                    className={`flex items-center gap-3 p-3 rounded-xl bg-gradient-to-r from-gray-50 to-white border border-gray-200 transition-all duration-500 hover:shadow-md hover:scale-105 ${
+                    className={`flex items-center gap-3 p-3 rounded-xl bg-gradient-to-r from-gray-50 to-white border border-gray-200 transition-all duration-300 hover:shadow-md hover:scale-105 ${
                       section.isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-10'
                     }`}
-                    style={{ transitionDelay: `${index * 100}ms` }}
+                    style={{ transitionDelay: `${index * 60}ms` }}
                   >
                     <div className={`bg-gradient-to-br ${source.color} w-10 h-10 rounded-lg flex items-center justify-center shadow-md flex-shrink-0`}>
                       <source.icon className="w-5 h-5 text-white" />
@@ -127,16 +127,16 @@ export default function TrafficWorkflowVisualization() {
                   {processingSteps.map((step, index) => (
                     <div key={index} className="relative">
                       <div
-                        className={`relative bg-white rounded-xl p-4 border-2 transition-all duration-500 ${
+                        className={`relative bg-white rounded-xl p-4 border-2 transition-all duration-300 ${
                           activeStep === index
                             ? 'border-orange-500 shadow-lg scale-105 bg-gradient-to-r from-orange-50 to-white'
                             : 'border-gray-200 hover:border-orange-300'
                         } ${section.isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-10'}`}
-                        style={{ transitionDelay: `${index * 100}ms` }}
+                        style={{ transitionDelay: `${index * 60}ms` }}
                       >
                         <div className="flex items-center gap-3">
                           <div
-                            className={`w-10 h-10 rounded-lg flex items-center justify-center shadow-md transition-all duration-500 ${
+                            className={`w-10 h-10 rounded-lg flex items-center justify-center shadow-md transition-all duration-300 ${
                               activeStep === index
                                 ? 'bg-gradient-to-br from-orange-500 to-orange-600 scale-110'
                                 : 'bg-gradient-to-br from-gray-400 to-gray-500'
@@ -176,7 +176,7 @@ export default function TrafficWorkflowVisualization() {
                       strokeDasharray="5,5"
                       opacity="0.6"
                     >
-                      <animate attributeName="stroke-dashoffset" from="0" to="10" dur="1s" repeatCount="indefinite" />
+                      <animate attributeName="stroke-dashoffset" from="0" to="10" dur="0.6s" repeatCount="indefinite" />
                     </path>
                   </svg>
                 </div>
@@ -211,10 +211,10 @@ export default function TrafficWorkflowVisualization() {
                 {outputs.map((output, index) => (
                   <div
                     key={index}
-                    className={`flex items-center gap-3 p-3 rounded-xl bg-gradient-to-r from-gray-50 to-white border border-gray-200 transition-all duration-500 hover:shadow-md hover:scale-105 ${
+                    className={`flex items-center gap-3 p-3 rounded-xl bg-gradient-to-r from-gray-50 to-white border border-gray-200 transition-all duration-300 hover:shadow-md hover:scale-105 ${
                       section.isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-10'
                     }`}
-                    style={{ transitionDelay: `${index * 100}ms` }}
+                    style={{ transitionDelay: `${index * 60}ms` }}
                   >
                     <div className="bg-gradient-to-br from-green-500 to-green-600 w-8 h-8 rounded-lg flex items-center justify-center shadow-md flex-shrink-0">
                       <output.icon className="w-4 h-4 text-white" />
@@ -242,7 +242,7 @@ export default function TrafficWorkflowVisualization() {
             {processingSteps.map((_, index) => (
               <div
                 key={index}
-                className={`h-2 rounded-full transition-all duration-500 ${
+                className={`h-2 rounded-full transition-all duration-300 ${
                   activeStep === index ? 'w-8 bg-orange-500' : 'w-2 bg-gray-300'
                 }`}
               />

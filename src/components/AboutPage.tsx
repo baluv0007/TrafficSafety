@@ -7,6 +7,7 @@ import FounderImage from '../assets/NewFounderImage.jpg';
 import TTMImage from '../assets/01TTMcopy.jpeg';
 import TMPImage from '../assets/02TMP.jpeg';
 import WZImage from '../assets/03WZ.jpeg';
+import SafetyCarousel from './SafetyCarousel';
 
 interface AboutPageProps {
   onNavigate: (page: string) => void;
@@ -440,6 +441,8 @@ export default function AboutPage({ onNavigate }: AboutPageProps) {
             </div>
           </div>
         </div>
+
+        <SafetyCarousel />
 
         <div
           ref={cta.elementRef}

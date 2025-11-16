@@ -8,9 +8,12 @@ import ServiceDetail from './components/ServiceDetail';
 import AboutPage from './components/AboutPage';
 import ContactPage from './components/ContactPage';
 import CareersPage from './components/CareersPage';
+import NotFoundPage from './components/NotFoundPage';
 import Footer from './components/Footer';
+import { services } from './data/services';
+import { products } from './data/products';
 
-type Page = 'home' | 'products' | 'services' | 'about' | 'contact' | 'careers';
+type Page = 'home' | 'products' | 'services' | 'about' | 'contact' | 'careers' | 'notfound';
 
 function App() {
   const [currentPage, setCurrentPage] = useState<Page>('home');
@@ -24,37 +27,80 @@ function App() {
       setCurrentPage('home');
       setSelectedProduct(null);
       setSelectedService(null);
-    } else if (cleanPath.startsWith('/ourproducts/')) {
+      return;
+    }
+
+    if (cleanPath.startsWith('/ourproducts/')) {
       const urlSegment = cleanPath.replace('/ourproducts/', '');
-      const productId = urlSegment.toLowerCase().replace(/_/g, '-');
-      setSelectedProduct(productId);
-      setCurrentPage('products');
-    } else if (cleanPath === '/ourproducts') {
+      const productId = urlSegment.toLowerCase().replace(/ /g, '-').replace(/_/g, '-');
+
+      // Check if product exists
+      const productExists = products.some(p => p.id === productId);
+      if (productExists) {
+        setSelectedProduct(productId);
+        setCurrentPage('products');
+        setSelectedService(null);
+      } else {
+        setCurrentPage('notfound');
+      }
+      return;
+    }
+
+    if (cleanPath === '/ourproducts') {
       setCurrentPage('products');
       setSelectedProduct(null);
       setSelectedService(null);
-    } else if (cleanPath.startsWith('/ourservices/')) {
+      return;
+    }
+
+    if (cleanPath.startsWith('/ourservices/')) {
       const urlSegment = cleanPath.replace('/ourservices/', '');
-      const serviceId = urlSegment.toLowerCase().replace(/_/g, '-');
-      setSelectedService(serviceId);
-      setCurrentPage('services');
-    } else if (cleanPath === '/ourservices') {
+      const serviceId = urlSegment.toLowerCase().replace(/ /g, '-').replace(/_/g, '-');
+
+      // Check if service exists
+      const serviceExists = services.some(s => s.id === serviceId);
+      if (serviceExists) {
+        setSelectedService(serviceId);
+        setCurrentPage('services');
+        setSelectedProduct(null);
+      } else {
+        setCurrentPage('notfound');
+      }
+      return;
+    }
+
+    if (cleanPath === '/ourservices') {
       setCurrentPage('services');
       setSelectedProduct(null);
       setSelectedService(null);
-    } else if (cleanPath === '/about') {
+      return;
+    }
+
+    if (cleanPath === '/about') {
       setCurrentPage('about');
       setSelectedProduct(null);
       setSelectedService(null);
-    } else if (cleanPath === '/contact') {
+      return;
+    }
+
+    if (cleanPath === '/contact') {
       setCurrentPage('contact');
       setSelectedProduct(null);
       setSelectedService(null);
-    } else if (cleanPath === '/careers') {
+      return;
+    }
+
+    if (cleanPath === '/careers') {
       setCurrentPage('careers');
       setSelectedProduct(null);
       setSelectedService(null);
+      return;
     }
+
+    // If no route matches, show 404
+    setCurrentPage('notfound');
+    setSelectedProduct(null);
+    setSelectedService(null);
   };
 
   useEffect(() => {
@@ -80,20 +126,14 @@ function App() {
   const handleProductClick = (productId: string) => {
     setSelectedProduct(productId);
     setCurrentPage('products');
-    const urlFriendlyId = productId.replace(/-/g, '_').split('_').map(word =>
-      word.charAt(0).toUpperCase() + word.slice(1)
-    ).join('_');
-    window.history.pushState({}, '', `/ourproducts/${urlFriendlyId}`);
+    window.history.pushState({}, '', `/ourproducts/${productId}`);
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
   const handleServiceClick = (serviceId: string) => {
     setSelectedService(serviceId);
     setCurrentPage('services');
-    const urlFriendlyId = serviceId.replace(/-/g, '_').split('_').map(word =>
-      word.charAt(0).toUpperCase() + word.slice(1)
-    ).join('_');
-    window.history.pushState({}, '', `/ourservices/${urlFriendlyId}`);
+    window.history.pushState({}, '', `/ourservices/${serviceId}`);
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
@@ -155,6 +195,8 @@ function App() {
       {currentPage === 'contact' && <ContactPage />}
 
       {currentPage === 'careers' && <CareersPage />}
+
+      {currentPage === 'notfound' && <NotFoundPage onNavigate={handleNavigate} />}
 
       <Footer onNavigate={handleNavigate} />
     </div>

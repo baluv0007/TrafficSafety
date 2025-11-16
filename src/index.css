@@ -276,6 +276,37 @@ img.blur-up.loaded {
   animation: fadeInUp 0.8s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+@keyframes gradientShift {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
+@keyframes colorPulse {
+  0%, 100% { filter: hue-rotate(0deg) brightness(1); }
+  50% { filter: hue-rotate(10deg) brightness(1.1); }
+}
+
+@keyframes rainbowBorder {
+  0% { border-color: #ff0080; }
+  25% { border-color: #00d4ff; }
+  50% { border-color: #00ff88; }
+  75% { border-color: #ffd700; }
+  100% { border-color: #ff0080; }
+}
+
+.gradient-animate {
+  background-size: 200% 200%;
+  animation: gradientShift 8s ease infinite;
+}
+
+.color-pulse {
+  animation: colorPulse 4s ease-in-out infinite;
+}
+
+.rainbow-border {
+  animation: rainbowBorder 4s linear infinite;
+}
+
 @media (prefers-reduced-motion: reduce) {
   * {
     animation-duration: 0.01ms !important;
@@ -288,5 +319,11 @@ img.blur-up.loaded {
   .hover-scale:hover,
   .card-hover:hover {
     transform: none;
+  }
+
+  .gradient-animate,
+  .color-pulse,
+  .rainbow-border {
+    animation: none !important;
   }
 }

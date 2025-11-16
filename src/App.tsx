@@ -126,20 +126,14 @@ function App() {
   const handleProductClick = (productId: string) => {
     setSelectedProduct(productId);
     setCurrentPage('products');
-    const urlFriendlyId = productId.replace(/-/g, '_').split('_').map(word =>
-      word.charAt(0).toUpperCase() + word.slice(1)
-    ).join('_');
-    window.history.pushState({}, '', `/ourproducts/${urlFriendlyId}`);
+    window.history.pushState({}, '', `/ourproducts/${productId}`);
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
   const handleServiceClick = (serviceId: string) => {
     setSelectedService(serviceId);
     setCurrentPage('services');
-    const urlFriendlyId = serviceId.replace(/-/g, '_').split('_').map(word =>
-      word.charAt(0).toUpperCase() + word.slice(1)
-    ).join('_');
-    window.history.pushState({}, '', `/ourservices/${urlFriendlyId}`);
+    window.history.pushState({}, '', `/ourservices/${serviceId}`);
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 

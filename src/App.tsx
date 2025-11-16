@@ -18,37 +18,39 @@ function App() {
   const [selectedService, setSelectedService] = useState<string | null>(null);
 
   const parseUrl = (path: string) => {
-    if (path === '/' || path === '') {
+    const cleanPath = path.trim().replace(/\/$/, '');
+
+    if (cleanPath === '' || cleanPath === '/') {
       setCurrentPage('home');
       setSelectedProduct(null);
       setSelectedService(null);
-    } else if (path.startsWith('/ourproducts/')) {
-      const urlSegment = decodeURIComponent(path.replace('/ourproducts/', ''));
-      const productId = urlSegment.toLowerCase().replace(/_/g, '-').replace(/ /g, '-');
+    } else if (cleanPath.startsWith('/ourproducts/')) {
+      const urlSegment = cleanPath.replace('/ourproducts/', '');
+      const productId = urlSegment.toLowerCase().replace(/_/g, '-');
       setSelectedProduct(productId);
       setCurrentPage('products');
-    } else if (path === '/ourproducts') {
+    } else if (cleanPath === '/ourproducts') {
       setCurrentPage('products');
       setSelectedProduct(null);
       setSelectedService(null);
-    } else if (path.startsWith('/ourservices/')) {
-      const urlSegment = decodeURIComponent(path.replace('/ourservices/', ''));
-      const serviceId = urlSegment.toLowerCase().replace(/_/g, '-').replace(/ /g, '-');
+    } else if (cleanPath.startsWith('/ourservices/')) {
+      const urlSegment = cleanPath.replace('/ourservices/', '');
+      const serviceId = urlSegment.toLowerCase().replace(/_/g, '-');
       setSelectedService(serviceId);
       setCurrentPage('services');
-    } else if (path === '/ourservices') {
+    } else if (cleanPath === '/ourservices') {
       setCurrentPage('services');
       setSelectedProduct(null);
       setSelectedService(null);
-    } else if (path === '/about') {
+    } else if (cleanPath === '/about') {
       setCurrentPage('about');
       setSelectedProduct(null);
       setSelectedService(null);
-    } else if (path === '/contact') {
+    } else if (cleanPath === '/contact') {
       setCurrentPage('contact');
       setSelectedProduct(null);
       setSelectedService(null);
-    } else if (path === '/careers') {
+    } else if (cleanPath === '/careers') {
       setCurrentPage('careers');
       setSelectedProduct(null);
       setSelectedService(null);

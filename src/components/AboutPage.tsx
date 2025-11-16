@@ -3,7 +3,7 @@ import { Shield, Users, Award, Target, Clock, ThumbsUp, Zap, Headphones, Trendin
 import { useScrollAnimation } from '../hooks/useScrollAnimation';
 import { preloadCriticalImages } from '../utils/imagePreloader';
 import { trafficImages } from '../utils/placeholderImages';
-import FounderImage from '../assets/FounderImagenew.jpg';
+import FounderImage from '../assets/NewFounderImage.jpg';
 import TTMImage from '../assets/01TTMcopy.jpeg';
 import TMPImage from '../assets/02TMP.jpeg';
 import WZImage from '../assets/03WZ.jpeg';
@@ -409,31 +409,14 @@ export default function AboutPage({ onNavigate }: AboutPageProps) {
           }`}
         >
           <div className="grid lg:grid-cols-2 gap-0">
-            <div className="relative h-[500px] bg-gradient-to-br from-orange-100 via-gray-100 to-gray-200 flex items-center justify-center">
+            <div className="relative h-[600px] bg-gradient-to-br from-slate-50 via-gray-50 to-orange-50 flex items-center justify-center overflow-hidden">
               <img
                 src={FounderImage}
                 alt="Founder and CEO Sumanth Bathini"
-                className="w-full h-full object-cover"
+                className="w-full h-full object-cover object-center"
                 loading="eager"
                 fetchPriority="high"
                 decoding="async"
-                onError={(e) => {
-                  const target = e.target as HTMLImageElement;
-                  target.style.display = 'none';
-                  const parent = target.parentElement;
-                  if (parent) {
-                    parent.innerHTML = `
-                      <div class="flex flex-col items-center justify-center w-full h-full bg-gradient-to-br from-orange-100 via-gray-100 to-gray-200 p-8">
-                        <div class="bg-white rounded-full p-8 shadow-lg mb-6">
-                          <svg class="w-24 h-24 text-orange-600" fill="currentColor" viewBox="0 0 24 24">
-                            <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
-                          </svg>
-                        </div>
-                        <p class="text-gray-600 text-center font-medium">Founder Image</p>
-                      </div>
-                    `;
-                  }
-                }}
               />
             </div>
             <div className="p-12 flex flex-col justify-center bg-gradient-to-br from-white to-orange-50">

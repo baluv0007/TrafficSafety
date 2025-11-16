@@ -49,7 +49,7 @@ export const careerOpenings: CareerOpening[] = [
     id: 'traffic-engineer',
     title: 'Traffic Safety Engineer',
     department: 'Engineering',
-    description: 'We are looking for a talented Traffic Safety Engineer to join our team. You will be responsible for designing and developing innovative traffic control solutions, conducting safety assessments, and ensuring compliance with traffic management standards. Experience with traffic engineering principles and project management is required.'
+    description: 'We are looking for a talented Traffic Safety Engineer to join our team. You will be responsible for designing and developing innovative traffic control solutions, conducting safety assessments, and ensuring compliance with standards. Experience with traffic engineering principles and project management is required.'
   },
   {
     id: 'quality-manager',

@@ -6,9 +6,9 @@ export const products: Product[] = [
     title: 'Temporary Traffic Lights',
     shortDescription: 'Advanced portable traffic control systems for safe work zones',
     images: [
-      'https://images.pexels.com/photos/259620/pexels-photo-259620.jpeg',
-      'https://images.pexels.com/photos/1117132/pexels-photo-1117132.jpeg',
-      'https://images.pexels.com/photos/2800832/pexels-photo-2800832.jpeg',
+      'https://media.istockphoto.com/id/1502200274/photo/stop-go-lights.webp?a=1&b=1&s=612x612&w=0&k=20&c=o5ib4M-DCRCu4iDh-GWynBtrah2K8O-PC2r3YcIaZq8=',
+      'https://media.istockphoto.com/id/523629839/photo/detour-road.jpg?s=612x612&w=0&k=20&c=E1jWrZvxscQVr23q2EHmHZItmJz718EM67RQYYd335k=',
+      'https://media.istockphoto.com/id/545092132/photo/road-signs-informing-about-detour.jpg?s=612x612&w=0&k=20&c=mKdRm4CGKLChN64YI5Xr9aTDKUrsaG-ZKgWzpBnlQoY=',
     ],
     description: 'Our temporary traffic lights provide reliable, portable traffic control solutions for construction sites, roadworks, and emergency situations. Engineered for durability and ease of deployment.',
     detailedInfo: {

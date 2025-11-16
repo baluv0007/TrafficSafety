@@ -6,7 +6,7 @@ import { trafficImages } from '../utils/placeholderImages';
 import FounderImage from '../assets/FounderImagenew.jpg';
 import TTMImage from '../assets/01TTMcopy.jpeg';
 import TMPImage from '../assets/02TMP.jpeg';
-import WZImage from '../assets/03WZcopy.jpeg';
+import WZImage from '../assets/03WZ.jpeg';
 
 interface AboutPageProps {
   onNavigate: (page: string) => void;

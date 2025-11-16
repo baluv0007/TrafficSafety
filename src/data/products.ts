@@ -87,9 +87,9 @@ export const products: Product[] = [
     title: 'Variable Message Signs (VMS)',
     shortDescription: 'Dynamic digital signage for real-time traffic communication',
     images: [
-      'https://images.pexels.com/photos/532803/pexels-photo-532803.jpeg',
-      'https://images.pexels.com/photos/279984/pexels-photo-279984.jpeg',
-      'https://images.pexels.com/photos/1004665/pexels-photo-1004665.jpeg',
+      'https://images.unsplash.com/photo-1723403067414-3d8570dc5fc4?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTh8fFZhcmlhYmxlJTIwTWVzc2FnZSUyMFNpZ25zJTIwYm9hcmRzJTIwdHJhZmZpY3xlbnwwfHwwfHx8MA%3D%3D',
+      'https://media.istockphoto.com/id/89330498/photo/rainy-road.webp?a=1&b=1&s=612x612&w=0&k=20&c=ogg_dmgJlHOxzOhGuafs5TMLVQIBzwMcT2j5ySZsjys=',
+      'https://media.istockphoto.com/id/869561300/photo/electronic-traffic-signs.webp?a=1&b=1&s=612x612&w=0&k=20&c=b1pqw5qNiYx5lqQXTMH4t_H8tF3vsc_q5GPDdROaE90=',
     ],
     description: 'High-visibility variable message signs that deliver critical traffic information in real-time. Perfect for managing traffic flow, warning of hazards, and providing route guidance.',
     detailedInfo: {
@@ -169,9 +169,9 @@ export const products: Product[] = [
     title: 'Traffic Cones & Drums',
     shortDescription: 'Premium quality channeling devices for safe traffic management',
     images: [
-      'https://images.pexels.com/photos/5473337/pexels-photo-5473337.jpeg',
-      'https://images.pexels.com/photos/5473336/pexels-photo-5473336.jpeg',
-      'https://images.pexels.com/photos/5417696/pexels-photo-5417696.jpeg',
+      'https://media.istockphoto.com/id/485250290/photo/tandem-road-roller-and-traffic-cones-on-the-road-construction.webp?a=1&b=1&s=612x612&w=0&k=20&c=snYGg25_9ScVnYAplrPNz0_hDrVRYTvx75v2h87roDo=',
+      'https://images.unsplash.com/photo-1706946140241-5a2587ba9c77?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTR8fHRyYWZmaWMlMjBjb25lcyUyMGRydW1zfGVufDB8MHwwfHx8MA%3D%3D',
+      'https://images.unsplash.com/photo-1667752648977-55ddae5450cb?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NTZ8fHRyYWZmaWMlMjBjb25lcyUyMGRydW1zfGVufDB8MHwwfHx8MA%3D%3D',
     ],
     description: 'High-visibility traffic cones and drums manufactured from durable materials to withstand heavy traffic and harsh weather conditions.',
     detailedInfo: {
@@ -251,9 +251,9 @@ export const products: Product[] = [
     title: 'Crash Barriers & Attenuators',
     shortDescription: 'Heavy-duty protective barriers for maximum safety',
     images: [
-      'https://images.pexels.com/photos/161711/relay-road-highway-traffic-161711.jpeg',
-      'https://images.pexels.com/photos/163811/crash-test-collision-60-km-h-distraction-163811.jpeg',
-      'https://images.pexels.com/photos/753876/pexels-photo-753876.jpeg',
+      'https://plus.unsplash.com/premium_photo-1721460167367-175a544c4617?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8Y3Jhc2gtYmFycmllcnMtYXR0ZW51YXRvcnN8ZW58MHwwfDB8fHww',
+      'https://images.unsplash.com/photo-1589475799796-e1083de723af?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTJ8fGNyYXNoLWJhcnJpZXJzLWF0dGVudWF0b3JzfGVufDB8MHwwfHx8MA%3D%3D',
+      'https://plus.unsplash.com/premium_photo-1721830791498-ec809d9d94ec?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjF8fGNyYXNoLWJhcnJpZXJzLWF0dGVudWF0b3JzfGVufDB8MHwwfHx8MA%3D%3D',
     ],
     description: 'High-impact crash barriers and attenuators designed to protect workers, vehicles, and infrastructure in high-risk traffic management zones.',
     detailedInfo: {
@@ -333,9 +333,9 @@ export const products: Product[] = [
     title: 'Flashing Beacons & Strobes',
     shortDescription: 'High-intensity warning lights for enhanced visibility',
     images: [
-      'https://images.pexels.com/photos/2055389/pexels-photo-2055389.jpeg',
-      'https://images.pexels.com/photos/1005091/pexels-photo-1005091.jpeg',
-      'https://images.pexels.com/photos/2882570/pexels-photo-2882570.jpeg',
+      'https://media.istockphoto.com/id/1433027223/photo/wall-mounted-red-warning-light-spinning-and-blinking-air-raid-siren.webp?a=1&b=1&s=612x612&w=0&k=20&c=k20LVXTZ9h_Iyp2MyOxAe-2mqWcdfFbR3EnrMm9pM94=',
+      'https://evaq8.co.uk/images/category/Guardian-Adventure-Lights.jpg',
+      'https://m.media-amazon.com/images/I/710wxOe6G9L._AC_SX679_.jpg',
     ],
     description: 'Ultra-bright LED flashing beacons and strobes designed to maximize attention and warn approaching traffic of hazards, obstacles, and work zones.',
     detailedInfo: {
@@ -415,9 +415,9 @@ export const products: Product[] = [
     title: 'Speed Monitoring Systems',
     shortDescription: 'Advanced radar-based speed detection and display solutions',
     images: [
-      'https://images.pexels.com/photos/459728/pexels-photo-459728.jpeg',
-      'https://images.pexels.com/photos/1004665/pexels-photo-1004665.jpeg',
-      'https://images.pexels.com/photos/210182/pexels-photo-210182.jpeg',
+      'https://image.made-in-china.com/202f0j00VPcosRkrgbzL/Yaliya-Airport-Under-Vehicle-Inspection-System-with-Driver-Face-Capture-Camera-Optional-.webp',
+      'https://assets-global.website-files.com/64fb705e4112db5a746cda56/6632fdca0b962eee340e616f_6632fdb50db739427ef23790_v2-b8slu-a2p7l.jpeg',
+      'https://amsterdamfox.com/wp-content/uploads/2022/11/GF-Feb-Speeding-drivers-1000x600.jpeg',
     ],
     description: 'State-of-the-art speed monitoring systems that display real-time vehicle speeds to promote safer driving in work zones and sensitive areas.',
     detailedInfo: {
@@ -497,9 +497,9 @@ export const products: Product[] = [
     title: 'CCTV & Monitoring',
     shortDescription: 'Professional surveillance systems for traffic and site security',
     images: [
-      'https://images.pexels.com/photos/430208/pexels-photo-430208.jpeg',
-      'https://images.pexels.com/photos/2228842/pexels-photo-2228842.jpeg',
-      'https://images.pexels.com/photos/2763927/pexels-photo-2763927.jpeg',
+      'https://images.unsplash.com/photo-1621874250030-554a558f0db6?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8Y2N0diUyMG1vbml0b3JpbmclMjB0cmFmZmljfGVufDB8MHwwfHx8MA%3D%3D',
+      'https://plus.unsplash.com/premium_photo-1661759219536-ff2d48de39e0?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NjF8fGNjdHYlMjBtb25pdG9yaW5nJTIwdHJhZmZpYyUyMHNjcmVlbnxlbnwwfDB8MHx8fDA%3D',
+      'https://images.unsplash.com/photo-1584649525122-8d6895492a5d?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTEzfHxjY3R2JTIwbW9uaXRvcmluZyUyMHRyYWZmaWMlMjBzY3JlZW58ZW58MHwwfDB8fHww',
     ],
     description: 'Advanced CCTV and monitoring solutions providing real-time surveillance and recording for traffic management and site security applications.',
     detailedInfo: {
@@ -579,9 +579,9 @@ export const products: Product[] = [
     title: 'Pedestrian Barriers',
     shortDescription: 'Durable crowd control barriers for safe pedestrian management',
     images: [
-      'https://images.pexels.com/photos/1058770/pexels-photo-1058770.jpeg',
-      'https://images.pexels.com/photos/2747449/pexels-photo-2747449.jpeg',
-      'https://images.pexels.com/photos/936722/pexels-photo-936722.jpeg',
+      'https://images.unsplash.com/photo-1708712327743-19d145eac333?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjZ8fHBlZGVzdHJpYW4tYmFycmllcnN8ZW58MHwwfDB8fHww',
+      'https://images.unsplash.com/photo-1758797859332-6af8ac8bddee?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTE2fHxwZWRlc3RyaWFuLWJhcnJpZXJzfGVufDB8MHwwfHx8MA%3D%3D',
+      'https://images.unsplash.com/photo-1720339414148-b5bcbee96e30?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OTN8fHBlZGVzdHJpYW4tYmFycmllcnN8ZW58MHwwfDB8fHww',
     ],
     description: 'Heavy-duty pedestrian barriers designed to guide foot traffic, create safe walkways, and manage crowds at construction sites and events.',
     detailedInfo: {

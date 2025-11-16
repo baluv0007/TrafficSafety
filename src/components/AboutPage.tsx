@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Shield, Users, Award, Target, Clock, ThumbsUp, Zap, Headphones, TrendingUp, Truck, CheckCircle, ChevronLeft, ChevronRight } from 'lucide-react';
 import { useScrollAnimation } from '../hooks/useScrollAnimation';
+import { preloadCriticalImages } from '../utils/imagePreloader';
 import FounderImage from '../assets/FounderImagenew.jpg';
 import TTMImage from '../assets/01TTMcopy.jpeg';
 import TMPImage from '../assets/02TMP.jpeg';
@@ -42,6 +43,11 @@ export default function AboutPage({ onNavigate }: AboutPageProps) {
 
   useEffect(() => {
     const allImages = [TTMImage, TMPImage, WZImage, FounderImage];
+    const validImages = allImages.filter(src => src && src.length > 0);
+
+    if (validImages.length > 0) {
+      preloadCriticalImages(validImages);
+    }
 
     allImages.forEach((src, index) => {
       const img = new Image();
@@ -49,6 +55,9 @@ export default function AboutPage({ onNavigate }: AboutPageProps) {
       img.loading = 'eager';
       img.decoding = 'async';
       img.onload = () => {
+        setImagesLoaded(prev => new Set([...prev, index]));
+      };
+      img.onerror = () => {
         setImagesLoaded(prev => new Set([...prev, index]));
       };
       img.src = src;
@@ -138,7 +147,7 @@ export default function AboutPage({ onNavigate }: AboutPageProps) {
             <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-6">
               {storyImages[currentImageIndex].title}
             </h3>
-            <div className="relative rounded-2xl overflow-hidden shadow-2xl bg-gray-100 flex-1 group min-h-[500px]">
+            <div className="relative rounded-2xl overflow-hidden shadow-2xl bg-gradient-to-br from-gray-100 to-gray-200 flex-1 group min-h-[500px]">
               <div className="relative w-full h-full flex items-center justify-center">
                 {storyImages.map((image, index) => (
                   <div
@@ -151,14 +160,24 @@ export default function AboutPage({ onNavigate }: AboutPageProps) {
                         : 'opacity-0 translate-x-full'
                     }`}
                   >
-                    <img
-                      src={image.src}
-                      alt={image.alt}
-                      className="w-full h-full object-contain p-6"
-                      loading="eager"
-                      fetchPriority="high"
-                      decoding="async"
-                    />
+                    <div className="w-full h-full flex items-center justify-center bg-white">
+                      <img
+                        src={image.src}
+                        alt={image.alt}
+                        className="w-full h-full object-contain p-6 max-w-full max-h-full"
+                        loading="eager"
+                        fetchPriority="high"
+                        decoding="async"
+                        onError={(e) => {
+                          const target = e.target as HTMLImageElement;
+                          target.style.display = 'none';
+                          const parent = target.parentElement;
+                          if (parent) {
+                            parent.innerHTML = `<div class="flex flex-col items-center justify-center w-full h-full text-gray-400"><svg class="w-24 h-24 mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg><p>${image.alt}</p></div>`;
+                          }
+                        }}
+                      />
+                    </div>
                   </div>
                 ))}
               </div>
@@ -389,7 +408,7 @@ export default function AboutPage({ onNavigate }: AboutPageProps) {
           }`}
         >
           <div className="grid lg:grid-cols-2 gap-0">
-            <div className="relative h-[500px]">
+            <div className="relative h-[500px] bg-gradient-to-br from-gray-100 to-gray-200">
               <img
                 src={FounderImage}
                 alt="Founder and CEO"
@@ -397,6 +416,14 @@ export default function AboutPage({ onNavigate }: AboutPageProps) {
                 loading="eager"
                 fetchPriority="high"
                 decoding="async"
+                onError={(e) => {
+                  const target = e.target as HTMLImageElement;
+                  target.style.display = 'none';
+                  const parent = target.parentElement;
+                  if (parent) {
+                    parent.innerHTML = `<div class="flex items-center justify-center w-full h-full bg-gradient-to-br from-gray-100 to-gray-200"><svg class="w-32 h-32 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path></svg></div>`;
+                  }
+                }}
               />
             </div>
             <div className="p-12 flex flex-col justify-center">

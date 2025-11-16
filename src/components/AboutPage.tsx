@@ -13,6 +13,7 @@ interface AboutPageProps {
 export default function AboutPage({ onNavigate }: AboutPageProps) {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const [isAutoScrolling, setIsAutoScrolling] = useState(true);
+  const [imagesLoaded, setImagesLoaded] = useState<Set<number>>(new Set());
   const hero = useScrollAnimation({ threshold: 0.2 });
   const story = useScrollAnimation({ threshold: 0.2 });
   const values_section = useScrollAnimation({ threshold: 0.1 });
@@ -38,6 +39,19 @@ export default function AboutPage({ onNavigate }: AboutPageProps) {
       alt: 'Work Zone Safety Configurations'
     }
   ];
+
+  useEffect(() => {
+    storyImages.forEach((image, index) => {
+      const img = new Image();
+      img.onload = () => {
+        setImagesLoaded(prev => new Set([...prev, index]));
+      };
+      img.src = image.src;
+    });
+
+    const founderImg = new Image();
+    founderImg.src = FounderImage;
+  }, []);
 
   useEffect(() => {
     if (!isAutoScrolling) return;
@@ -122,7 +136,7 @@ export default function AboutPage({ onNavigate }: AboutPageProps) {
             <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-6">
               {storyImages[currentImageIndex].title}
             </h3>
-            <div className="relative rounded-2xl overflow-hidden shadow-2xl bg-gray-100 flex-1 group">
+            <div className="relative rounded-2xl overflow-hidden shadow-2xl bg-gray-100 flex-1 group min-h-[500px] md:min-h-[600px]">
               <div className="relative w-full h-full flex items-center justify-center">
                 {storyImages.map((image, index) => (
                   <div
@@ -138,11 +152,20 @@ export default function AboutPage({ onNavigate }: AboutPageProps) {
                     <img
                       src={image.src}
                       alt={image.alt}
-                      className="w-full h-full object-contain p-6"
+                      className={`w-full h-full object-contain p-6 transition-opacity duration-300 ${
+                        imagesLoaded.has(index) ? 'opacity-100' : 'opacity-0'
+                      }`}
                       loading="eager"
+                      fetchPriority={index === 0 ? 'high' : 'low'}
+                      decoding="async"
                     />
                   </div>
                 ))}
+                {!imagesLoaded.has(currentImageIndex) && (
+                  <div className="absolute inset-0 flex items-center justify-center">
+                    <div className="w-12 h-12 border-4 border-orange-600 border-t-transparent rounded-full animate-spin"></div>
+                  </div>
+                )}
               </div>
 
               <button
@@ -371,7 +394,7 @@ export default function AboutPage({ onNavigate }: AboutPageProps) {
           }`}
         >
           <div className="grid lg:grid-cols-2 gap-0">
-            <div className="relative h-[500px]">
+            <div className="relative h-[500px] bg-gray-100">
               <img
                 src={FounderImage}
                 alt="Founder and CEO"
@@ -379,6 +402,10 @@ export default function AboutPage({ onNavigate }: AboutPageProps) {
                 loading="eager"
                 fetchPriority="high"
                 decoding="async"
+                onLoad={(e) => {
+                  (e.target as HTMLImageElement).style.opacity = '1';
+                }}
+                style={{ opacity: 0, transition: 'opacity 0.3s ease-in-out' }}
               />
             </div>
             <div className="p-12 flex flex-col justify-center">

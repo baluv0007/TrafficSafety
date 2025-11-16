@@ -11,6 +11,9 @@ import safety02Copy from '../assets/safety02 copy.jpg';
 import safety03Copy from '../assets/safety03.jpeg copy.jpg';
 import safety04Copy from '../assets/safety04.jpeg copy.jpg';
 import safety05Copy from '../assets/saftey05.jpeg copy.jpg';
+import safety06 from '../assets/saftey06.jpg';
+import safety07 from '../assets/saftey07.jpeg.jpg';
+import safety08 from '../assets/safety08.png';
 
 const SAFETY_IMAGES = [
   { src: safety01, alt: 'Road construction safety procedures' },
@@ -23,6 +26,9 @@ const SAFETY_IMAGES = [
   { src: safety03Copy, alt: 'Road safety measures comparison' },
   { src: safety04Copy, alt: 'Night work zone safety' },
   { src: safety05Copy, alt: 'Night construction operations' },
+  { src: safety06, alt: 'Construction accident causes statistics' },
+  { src: safety07, alt: 'Indian road construction safety statistics' },
+  { src: safety08, alt: 'Proper safety procedures for road construction' },
 ];
 
 export default function SafetyCarousel() {

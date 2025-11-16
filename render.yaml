@@ -1,0 +1,43 @@
+# Render Configuration for TrafficSafety SPA
+# This file fixes the white screen issue on page refresh
+
+# Build Command (already configured in Render dashboard)
+buildCommand: "npm install && npm run build"
+
+# Publish Directory (already configured in Render dashboard)
+publishDirectory: "dist"
+
+# Critical Rewrite Rules for SPA Routing
+# This fixes white screen on page refresh for all routes
+rewrites:
+  # Route all requests to index.html except for static files
+  - source: "/*"
+    destination: "/index.html"
+
+# Static files routing (optional but recommended)
+routes:
+  # Route API calls if you have any
+  - type: api
+    source: "/api/*"
+
+  # Route static assets to avoid rewriting them
+  - type: static
+    source: "/assets/*"
+  - type: static
+    source: "/images/*"
+  - type: static
+    source: "/*.png"
+  - type: static
+    source: "/*.jpg"
+  - type: static
+    source: "/*.jpeg"
+  - type: static
+    source: "/*.gif"
+  - type: static
+    source: "/*.svg"
+  - type: static
+    source: "/*.ico"
+  - type: static
+    source: "/*.css"
+  - type: static
+    source: "/*.js"

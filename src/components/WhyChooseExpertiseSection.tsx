@@ -7,8 +7,8 @@ export default function WhyChooseExpertiseSection() {
   const highlights = [
     {
       icon: Rocket,
-      title: '17+ Years of Industry Leadership',
-      description: 'Most experienced employees with proven track record in traffic management solutions.'
+      title: 'Professional Team Excellence',
+      description: 'Qualified professionals committed to delivering reliable traffic management solutions with industry best practices.'
     },
     {
       icon: Building2,
@@ -17,13 +17,13 @@ export default function WhyChooseExpertiseSection() {
     },
     {
       icon: MapPin,
-      title: 'Nationwide Operations',
-      description: 'Presence in major cities with extensive project experience.'
+      title: 'Growing Market Presence',
+      description: 'Expanding services across India with focus on quality project delivery and customer satisfaction.'
     },
     {
       icon: Award,
-      title: 'ISO 9001-2008 Certified',
-      description: 'Commitment to quality and continuous improvement.'
+      title: 'Quality Commitment',
+      description: 'Dedicated to maintaining high standards and continuous improvement in all our services.'
     }
   ];
 

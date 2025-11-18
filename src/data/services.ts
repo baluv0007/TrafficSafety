@@ -147,7 +147,7 @@ export const services: Service[] = [
     ]
   },
   {
-    id: 'Training-Consultation',
+    id: 'training-consultation',
     title: 'Training & Consultation',
     shortDescription: 'Professional training programs for traffic management personnel',
     images: [

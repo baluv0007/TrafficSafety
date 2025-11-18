@@ -26,15 +26,15 @@ export default function MissionStatementSection() {
             YOUR PARTNER IN ADVANCED TRAFFIC TECHNOLOGY
           </p>
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white text-center mb-6 leading-tight">
-            "Leading the Way in Intelligent Traffic Management"
+            "Building the Future of Intelligent Traffic Management"
           </h2>
 
           <div className="max-w-5xl mx-auto space-y-4 text-gray-200 text-lg leading-relaxed">
             <p>
-              TrafficSafety is a leading provider of Traffic Signal Management Systems. With a strong nationwide presence, we operate the highest number of traffic signals across major cities including metropolitan and regional areas. Our commitment to quality and innovation has made us a trusted partner for municipalities and urban planners.
+             TrafficSafety is committed to providing innovative Traffic Signal Management Systems. As an emerging company with a vision for safer roads, we focus on delivering quality solutions for traffic management needs across India. Our dedication to excellence and cutting-edge technology positions us to serve municipalities and urban planners.
             </p>
             <p>
-              Explore our comprehensive range of Intelligent Transport Systems (ITS) designed to meet the evolving needs of modern cities. From reducing congestion to coordinating emergency responses, our technology-driven approach is making cities smarter and safer.
+              Explore our comprehensive range of Intelligent Transport Systems (ITS) designed to meet the evolving needs of modern cities. From reducing congestion to coordinating emergency responses, our technology-driven approach aims to make cities smarter and safer.
             </p>
           </div>
         </div>

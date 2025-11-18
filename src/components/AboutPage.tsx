@@ -391,8 +391,8 @@ export default function AboutPage({ onNavigate }: AboutPageProps) {
                 <div className="bg-gradient-to-br from-red-500 to-red-600 w-14 h-14 rounded-xl flex items-center justify-center mb-4 shadow-lg">
                   <TrendingUp className="w-7 h-7 text-white" />
                 </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-3">Proven Track Record</h3>
-                <p className="text-gray-600 leading-relaxed">Decades of industry expertise with major infrastructure projects, consistent excellence, and measurable improvement outcomes.</p>
+                <h3 className="text-xl font-bold text-gray-900 mb-3">Quality Commitment</h3>
+                <p className="text-gray-600 leading-relaxed">Professional standards and innovative solutions with focus on safety, reliability, and measurable improvement outcomes for every project.</p>
               </div>
             </div>
           </div>

@@ -286,13 +286,10 @@ export default function AboutPage({ onNavigate }: AboutPageProps) {
           }`}
         >
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-            Our Mission
+            Our Mission & Vision
           </h2>
           <p className="text-xl text-white/90 max-w-4xl mx-auto leading-relaxed">
-            To provide innovative, reliable, and safe traffic management
-            solutions that protect lives, minimize disruption, and enable
-            infrastructure development. We are committed to excellence in every
-            aspect of our service, from equipment quality to customer support.
+            At TrafficSafety, we are committed to building safer roads across India through innovative traffic management solutions. Our vision is to become a trusted partner for municipalities and organizations seeking reliable, professional traffic control services.
           </p>
         </div>
 

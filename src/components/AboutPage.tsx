@@ -131,8 +131,7 @@ export default function AboutPage({ onNavigate }: AboutPageProps) {
             About TrafficSafety
           </h1>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-            Leading the industry in traffic management solutions with over two
-            decades of experience
+            Bringing innovative traffic management solutions to enhance road safety and efficiency across India
           </p>
         </div>
 

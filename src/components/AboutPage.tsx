@@ -220,24 +220,16 @@ export default function AboutPage({ onNavigate }: AboutPageProps) {
             </h2>
             <div className="space-y-4 text-gray-600 text-lg leading-relaxed">
               <p>
-                Founded with a vision to revolutionize traffic management,
-                TrafficSafety has grown to become a trusted partner for
-                construction companies, local authorities, and event organizers
-                across the nation.
+                Founded with a vision to bring innovative and reliable traffic management solutions to India, TrafficSafety represents a new approach to road safety and traffic control.
               </p>
               <p>
-                Our journey began with a simple commitment: to provide the
-                highest quality traffic management equipment and services while
-                maintaining an unwavering focus on safety. Today, we serve
-                hundreds of clients with the same dedication and attention to
-                detail that defined our early days.
+                Our journey begins with a simple but important commitment: to provide quality traffic management equipment and services while maintaining an unwavering focus on safety. We believe that every road user deserves professional traffic management that prioritizes safety above all else.
+
               </p>
               <p>
-                With a fleet of modern equipment, a team of certified
-                professionals, and a 24/7 support system, we're equipped to
-                handle projects of any scale and complexity. From emergency
-                roadworks to major infrastructure projects, we deliver solutions
-                that exceed expectations.
+                Starting with carefully selected equipment, a dedicated team, and a comprehensive service approach, we're building TrafficSafety to become a trusted partner for construction companies, local authorities, and event organizers who value safety and reliability. </p>
+<p>
+From road maintenance projects to event management, we're committed to delivering solutions that meet the highest safety standards while exceeding client expectations.
               </p>
             </div>
           </div>

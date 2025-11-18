@@ -424,13 +424,13 @@ export default function AboutPage({ onNavigate }: AboutPageProps) {
               </h3>
               <div className="space-y-4 text-gray-600 text-lg leading-relaxed">
                 <p>
-                  With over many years of experience in traffic management and civil engineering, Sumanth founded TrafficSafety with a clear vision: to create the safest, most efficient traffic management solutions in the industry.
+                  Sumanth founded TrafficSafety with a clear entrepreneurial vision: to create innovative and reliable traffic management solutions that prioritize safety and efficiency across India.
                 </p>
                 <p>
-                  His commitment to innovation and safety has driven the company's growth from a small local operation to a nationally recognized leader in traffic control services.
+                  His commitment to excellence and strategic thinking have shaped TrafficSafety's approach to delivering professional traffic management services. Sumanth's leadership focuses on building strong client relationships and implementing industry best practices.
                 </p>
                 <p>
-                  Under Sumanth's leadership, TrafficSafety has pioneered new technologies and best practices that have become industry standards, ensuring every project prioritizes the safety of workers and the public.
+                  Under Sumanth's guidance, TrafficSafety is dedicated to establishing itself as a trusted partner in traffic control services, ensuring every project meets the highest safety standards for workers and the public.
                 </p>
               </div>
             </div>

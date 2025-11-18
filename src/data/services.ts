@@ -147,15 +147,15 @@ export const services: Service[] = [
     ]
   },
   {
-    id: 'training-certifications',
-    title: 'Training & Certifications',
+    id: 'Training-Consultation',
+    title: 'Training & Consultation',
     shortDescription: 'Professional training programs for traffic management personnel',
     images: [
       'https://media.istockphoto.com/id/1932531930/photo/teacher-explaining-traffic-rules-to-audience-during-lesson-in-driving-school.webp?a=1&b=1&s=612x612&w=0&k=20&c=Pa0KzV8q1tdpUQII2xZHOYWb-9sreB6ZJ6DqQhMkF4w=',
       'https://media.istockphoto.com/id/1283621201/photo/man-training-business-skilled-expert-productivity-and-knowledge-training-e-learning.webp?a=1&b=1&s=612x612&w=0&k=20&c=7_efh18PIdyWHXEMhGDs6TEoSNiO2sBxndrCECedBSQ=',
       'https://plus.unsplash.com/premium_photo-1687948157437-d4ae6a00e3ca?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTIzfHx0cmFpbmluZy1jZXJ0aWZpY2F0aW9ucyUyMHRyYWZmaWMlMjBwZW9wbGV8ZW58MHwwfDB8fHww',
     ],
-    description: 'Comprehensive training programs and certification courses designed to equip your team with the knowledge and skills required for safe and effective traffic management.',
+    description: 'Professional training consultation and educational support designed to help equip your team with the knowledge and skills required for safe and effective traffic management.',
     features: [
       'Accredited training courses',
       'Hands-on practical instruction',

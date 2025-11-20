@@ -6,9 +6,11 @@ export const services: Service[] = [
     title: 'Rapid Development Teams',
     shortDescription: 'Emergency response and quick setup traffic management services',
     images: [
-      'https://images.unsplash.com/photo-1707044353662-bbce055f9ff1?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTZ8fHRyYWZmaWMlMjB3b3JrZXJzfGVufDB8MHwwfHx8MA%3D%3D',
-      'https://plus.unsplash.com/premium_photo-1687948157521-348a723ffede?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NDB8fHRyYWZmaWMlMjB3b3JrZXJzfGVufDB8MHwwfHx8MA%3D%3D',
-      'https://plus.unsplash.com/premium_photo-1687948155996-8fe64cd74c02?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nzd8fHRyYWZmaWMlMjB3b3JrZXJzfGVufDB8MHwwfHx8MA%3D%3D',
+      'https://image2url.com/images/1763655944407-4caf5bd9-c1c0-4521-b2b1-91e095656713.jpg',
+      'https://image2url.com/images/1763656033301-a688c91d-f918-472b-880e-fd07170ac66d.jpg',
+      'https://image2url.com/images/1763656057405-6b5c3695-0747-4782-b27b-6fd47bfd82c1.jpg',
+      'https://image2url.com/images/1763656111648-aeabde68-9128-4056-aa56-91fb5fd775ec.jpg',
+      'https://image2url.com/images/1763656135501-15521d61-ebf3-41c0-bf56-7263da4201b3.jpg',
     ],
     description: 'Our rapid deployment teams provide immediate traffic management solutions for emergency situations, unplanned roadworks, and urgent infrastructure projects requiring swift action.',
     features: [

@@ -169,9 +169,9 @@ export const products: Product[] = [
     title: 'Traffic Cones & Drums',
     shortDescription: 'Premium quality channeling devices for safe traffic management',
     images: [
-      'https://media.istockphoto.com/id/485250290/photo/tandem-road-roller-and-traffic-cones-on-the-road-construction.webp?a=1&b=1&s=612x612&w=0&k=20&c=snYGg25_9ScVnYAplrPNz0_hDrVRYTvx75v2h87roDo=',
-      'https://images.unsplash.com/photo-1706946140241-5a2587ba9c77?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTR8fHRyYWZmaWMlMjBjb25lcyUyMGRydW1zfGVufDB8MHwwfHx8MA%3D%3D',
-      'https://images.unsplash.com/photo-1667752648977-55ddae5450cb?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NTZ8fHRyYWZmaWMlMjBjb25lcyUyMGRydW1zfGVufDB8MHwwfHx8MA%3D%3D',
+      'https://image2url.com/images/1763656456116-7342bfbd-f732-42e5-9254-342a048f5ce5.jpg',
+      'https://image2url.com/images/1763656527913-24884de1-6921-4d8e-833d-b573c8b311c8.jpg',
+      'https://image2url.com/images/1763656546108-e2f641ba-62b9-417e-a010-b79f2a1bc3b9.jpg',
     ],
     description: 'High-visibility traffic cones and drums manufactured from durable materials to withstand heavy traffic and harsh weather conditions.',
     detailedInfo: {

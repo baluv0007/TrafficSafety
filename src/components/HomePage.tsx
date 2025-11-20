@@ -1,7 +1,6 @@
 import LandingPage from './LandingPage';
 import ProductsSection from './ProductsSection';
 import ServicesSection from './ServicesSection';
-import TestimonialsSection from './TestimonialsSection';
 import WhyChooseSection from './WhyChooseSection';
 import WhyChooseExpertiseSection from './WhyChooseExpertiseSection';
 import AdditionalServicesSection from './AdditionalServicesSection';
@@ -29,7 +28,6 @@ export default function HomePage({
       <ServicesSection onServiceClick={onServiceClick} />
       <AdditionalServicesSection onNavigate={onNavigate} />
       <HowWeWorkSection onNavigate={onNavigate} />
-      <TestimonialsSection />
     </div>
   );
 }

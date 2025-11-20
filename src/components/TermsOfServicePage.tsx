@@ -23,7 +23,7 @@ export default function TermsOfServicePage() {
             Terms of Service
           </h1>
           <p className="text-lg text-gray-600">
-            Last Updated: January 20, 2025
+            Last Updated: november 20, 2025
           </p>
         </div>
 

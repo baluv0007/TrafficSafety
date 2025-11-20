@@ -39,6 +39,7 @@ export const services: Service[] = [
     images: [
       'https://image2url.com/images/1763670323093-b09e49b8-d1dc-4556-9df9-e67976843472.jpg',
       'https://image2url.com/images/1763670356561-0d496229-2138-4c3c-b342-c165fdc3edbe.jpg',
+      'https://image2url.com/images/1763670418935-ed90adfe-12f8-4128-bcfb-abde9db50ed7.jpg',
       'https://image2url.com/images/1763670375130-e9cafbb4-d6ba-454a-8d3f-e4fc8db58605.jpg',
     ],
     description: 'Comprehensive rental and leasing options for all traffic management equipment, from single items to complete fleet solutions, with flexible terms to match your project timeline.',

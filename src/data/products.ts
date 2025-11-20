@@ -497,9 +497,9 @@ export const products: Product[] = [
     title: 'CCTV & Monitoring',
     shortDescription: 'Professional surveillance systems for traffic and site security',
     images: [
-      'https://images.unsplash.com/photo-1621874250030-554a558f0db6?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8Y2N0diUyMG1vbml0b3JpbmclMjB0cmFmZmljfGVufDB8MHwwfHx8MA%3D%3D',
-      'https://plus.unsplash.com/premium_photo-1661759219536-ff2d48de39e0?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NjF8fGNjdHYlMjBtb25pdG9yaW5nJTIwdHJhZmZpYyUyMHNjcmVlbnxlbnwwfDB8MHx8fDA%3D',
-      'https://images.unsplash.com/photo-1584649525122-8d6895492a5d?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTEzfHxjY3R2JTIwbW9uaXRvcmluZyUyMHRyYWZmaWMlMjBzY3JlZW58ZW58MHwwfDB8fHww',
+      'https://image2url.com/images/1763652404362-4b52e8e2-6d79-4552-b423-3711c1ed0335.jpg',
+      'https://image2url.com/images/1763652457996-e1334efc-6d3f-4888-a9b3-8604a000c045.jpg',
+      'https://image2url.com/images/1763652474833-4810be67-1916-4358-9ee0-c5596aac60bd.jpg',
     ],
     description: 'Advanced CCTV and monitoring solutions providing real-time surveillance and recording for traffic management and site security applications.',
     detailedInfo: {

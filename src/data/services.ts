@@ -93,9 +93,9 @@ export const services: Service[] = [
     title: 'Complete Lifecycle Management',
     shortDescription: 'End-to-end project management for traffic control solutions',
     images: [
-      'https://images.unsplash.com/photo-1677772241032-b820361a10ff?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NDV8fGNvbXBsZXRlJTIwdHJhZmZpYyUyMGxpZmVjeWNsZS1tYW5hZ2VtZW50fGVufDB8MHwwfHx8MA%3D%3D',
-      'https://images.unsplash.com/photo-1595734479747-1c325e70127b?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NzB8fGNvbXBsZXRlJTIwdHJhZmZpYyUyMG1hbmFnZW1lbnR8ZW58MHwwfDB8fHww',
-      'https://images.unsplash.com/photo-1667729555757-bb6e9fd8c182?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8ODl8fGNvbXBsZXRlJTIwdHJhZmZpYyUyMG1hbmFnZW1lbnR8ZW58MHwwfDB8fHww',
+      'https://image2url.com/images/1763652513129-a69d40d7-9654-47a9-8459-013c3c84a5b8.jpg',
+      'https://image2url.com/images/1763652559302-6c250656-8dd3-4805-81d7-95675b0071fc.jpg',
+      'https://image2url.com/images/1763652583352-5e64ae02-84d9-4b2e-b54e-3ccb1e4dd1ce.jpg',
     ],
     description: 'Comprehensive lifecycle management service covering every phase of your traffic management project from initial planning through to completion and decommissioning.',
     features: [

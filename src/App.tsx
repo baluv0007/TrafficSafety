@@ -8,9 +8,11 @@ import ServiceDetail from './components/ServiceDetail';
 import AboutPage from './components/AboutPage';
 import ContactPage from './components/ContactPage';
 import CareersPage from './components/CareersPage';
+import PrivacyPolicyPage from './components/PrivacyPolicyPage';
+import TermsOfServicePage from './components/TermsOfServicePage';
 import Footer from './components/Footer';
 
-type Page = 'home' | 'products' | 'services' | 'about' | 'contact' | 'careers';
+type Page = 'home' | 'products' | 'services' | 'about' | 'contact' | 'careers' | 'privacy' | 'terms';
 
 function App() {
   const [currentPage, setCurrentPage] = useState<Page>('home');
@@ -52,6 +54,14 @@ function App() {
       setSelectedService(null);
     } else if (cleanPath === '/careers') {
       setCurrentPage('careers');
+      setSelectedProduct(null);
+      setSelectedService(null);
+    } else if (cleanPath === '/privacy') {
+      setCurrentPage('privacy');
+      setSelectedProduct(null);
+      setSelectedService(null);
+    } else if (cleanPath === '/terms') {
+      setCurrentPage('terms');
       setSelectedProduct(null);
       setSelectedService(null);
     }
@@ -155,6 +165,10 @@ function App() {
       {currentPage === 'contact' && <ContactPage />}
 
       {currentPage === 'careers' && <CareersPage />}
+
+      {currentPage === 'privacy' && <PrivacyPolicyPage />}
+
+      {currentPage === 'terms' && <TermsOfServicePage />}
 
       <Footer onNavigate={handleNavigate} />
     </div>

@@ -125,12 +125,18 @@ export default function Footer({ onNavigate }: FooterProps) {
               &copy; {currentYear} TrafficSafety. All rights reserved.
             </p>
             <div className="flex gap-6">
-              <a href="#" className="text-gray-400 hover:text-orange-500 text-sm transition-colors">
+              <button
+                onClick={() => onNavigate?.('privacy')}
+                className="text-gray-400 hover:text-orange-500 text-sm transition-colors"
+              >
                 Privacy Policy
-              </a>
-              <a href="#" className="text-gray-400 hover:text-orange-500 text-sm transition-colors">
+              </button>
+              <button
+                onClick={() => onNavigate?.('terms')}
+                className="text-gray-400 hover:text-orange-500 text-sm transition-colors"
+              >
                 Terms of Service
-              </a>
+              </button>
             </div>
           </div>
         </div>

@@ -37,9 +37,9 @@ export const services: Service[] = [
     title: 'Flexible Rental & Leasing',
     shortDescription: 'Cost-effective equipment rental solutions for all project durations',
     images: [
-      'https://plus.unsplash.com/premium_photo-1661963287664-ea60b0039118?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjV8fHJlbnRhbC1sZWFzaW5nJTIwdHJhZmZpY3xlbnwwfDB8MHx8fDA%3D',
-      'https://images.unsplash.com/photo-1706887743083-3c222e904b74?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTh8fHJlbnRhbCUyMGxlYXNpbmclMjB0cmFmZmljfGVufDB8MHwwfHx8MA%3D%3D',
-      'https://plus.unsplash.com/premium_photo-1742493663512-4155bf0cc343?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjJ8fHJlbnRhbCUyMGxlYXNpbmclMjB0cmFmZmljfGVufDB8MHwwfHx8MA%3D%3D',
+      'https://image2url.com/images/1763670323093-b09e49b8-d1dc-4556-9df9-e67976843472.jpg',
+      'https://image2url.com/images/1763670356561-0d496229-2138-4c3c-b342-c165fdc3edbe.jpg',
+      'https://image2url.com/images/1763670375130-e9cafbb4-d6ba-454a-8d3f-e4fc8db58605.jpg',
     ],
     description: 'Comprehensive rental and leasing options for all traffic management equipment, from single items to complete fleet solutions, with flexible terms to match your project timeline.',
     features: [

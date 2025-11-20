@@ -333,9 +333,9 @@ export const products: Product[] = [
     title: 'Flashing Beacons & Strobes',
     shortDescription: 'High-intensity warning lights for enhanced visibility',
     images: [
-      'https://media.istockphoto.com/id/1433027223/photo/wall-mounted-red-warning-light-spinning-and-blinking-air-raid-siren.webp?a=1&b=1&s=612x612&w=0&k=20&c=k20LVXTZ9h_Iyp2MyOxAe-2mqWcdfFbR3EnrMm9pM94=',
-      'https://evaq8.co.uk/images/category/Guardian-Adventure-Lights.jpg',
-      'https://m.media-amazon.com/images/I/710wxOe6G9L._AC_SX679_.jpg',
+      'https://image2url.com/images/1763652620703-3ed1a775-98d3-4bba-832c-74ce64db2e64.jpg',
+      'https://image2url.com/images/1763652679934-c1390d6c-7734-4dd6-8cde-ecec2ae9ad64.jpg',
+      'https://image2url.com/images/1763652704250-f8a3f487-bfcc-4599-b2cf-243f62cefa51.jpg',
     ],
     description: 'Ultra-bright LED flashing beacons and strobes designed to maximize attention and warn approaching traffic of hazards, obstacles, and work zones.',
     detailedInfo: {

@@ -6,9 +6,9 @@ export const products: Product[] = [
     title: 'Temporary Traffic Lights',
     shortDescription: 'Advanced portable traffic control systems for safe work zones',
     images: [
-      'https://media.istockphoto.com/id/1502200274/photo/stop-go-lights.webp?a=1&b=1&s=612x612&w=0&k=20&c=o5ib4M-DCRCu4iDh-GWynBtrah2K8O-PC2r3YcIaZq8=',
-      'https://media.istockphoto.com/id/523629839/photo/detour-road.jpg?s=612x612&w=0&k=20&c=E1jWrZvxscQVr23q2EHmHZItmJz718EM67RQYYd335k=',
-      'https://media.istockphoto.com/id/545092132/photo/road-signs-informing-about-detour.jpg?s=612x612&w=0&k=20&c=mKdRm4CGKLChN64YI5Xr9aTDKUrsaG-ZKgWzpBnlQoY=',
+      'https://image2url.com/images/1763656614491-20baeaa3-2cb1-4e50-a549-263598dd5e31.jpg',
+      'https://image2url.com/images/1763656685149-b7cbcf19-2e2b-4d0f-8e58-75a8ae5297ff.jpg',
+      'https://image2url.com/images/1763656710958-2cbc09c0-1256-4de8-a362-a37efcf7e6e3.jpg',
     ],
     description: 'Our temporary traffic lights provide reliable, portable traffic control solutions for construction sites, roadworks, and emergency situations. Engineered for durability and ease of deployment.',
     detailedInfo: {
@@ -87,9 +87,11 @@ export const products: Product[] = [
     title: 'Variable Message Signs (VMS)',
     shortDescription: 'Dynamic digital signage for real-time traffic communication',
     images: [
-      'https://images.unsplash.com/photo-1723403067414-3d8570dc5fc4?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTh8fFZhcmlhYmxlJTIwTWVzc2FnZSUyMFNpZ25zJTIwYm9hcmRzJTIwdHJhZmZpY3xlbnwwfHwwfHx8MA%3D%3D',
-      'https://media.istockphoto.com/id/89330498/photo/rainy-road.webp?a=1&b=1&s=612x612&w=0&k=20&c=ogg_dmgJlHOxzOhGuafs5TMLVQIBzwMcT2j5ySZsjys=',
-      'https://media.istockphoto.com/id/869561300/photo/electronic-traffic-signs.webp?a=1&b=1&s=612x612&w=0&k=20&c=b1pqw5qNiYx5lqQXTMH4t_H8tF3vsc_q5GPDdROaE90=',
+      'https://image2url.com/images/1763656739273-0ddba1dc-8d2f-472b-866d-d8da4a4af5fe.jpg',
+      'https://image2url.com/images/1763656764176-2112a798-5688-4a4c-a482-7e5157d72071.jpg',
+      'https://image2url.com/images/1763656797114-27aba903-5d8c-4a85-97d5-cefeb96efd14.jpg',
+      'https://image2url.com/images/1763656820284-f88c8ea4-28bd-4f2e-aaf1-2a72c65349d3.jpg',
+      'https://image2url.com/images/1763656852480-5bd4edef-4f55-4256-88c2-47f11cca0eae.jpg',
     ],
     description: 'High-visibility variable message signs that deliver critical traffic information in real-time. Perfect for managing traffic flow, warning of hazards, and providing route guidance.',
     detailedInfo: {

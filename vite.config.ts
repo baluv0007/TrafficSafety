@@ -10,10 +10,16 @@ export default defineConfig({
     outDir: 'dist',
     sourcemap: false,
     minify: 'terser',
+    target: ['es2015', 'edge88', 'firefox78', 'chrome87', 'safari13'],
+    cssTarget: ['chrome87', 'edge88', 'firefox78', 'safari13'],
     terserOptions: {
       compress: {
         drop_console: true,
         drop_debugger: true,
+        pure_funcs: ['console.log', 'console.info'],
+      },
+      format: {
+        comments: false,
       },
     },
     rollupOptions: {
@@ -39,6 +45,7 @@ export default defineConfig({
     },
     cssCodeSplit: true,
     chunkSizeWarningLimit: 1000,
+    assetsInlineLimit: 4096,
   },
   server: {
     port: 5173,

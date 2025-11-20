@@ -579,9 +579,9 @@ export const products: Product[] = [
     title: 'Pedestrian Barriers',
     shortDescription: 'Durable crowd control barriers for safe pedestrian management',
     images: [
-      'https://images.unsplash.com/photo-1708712327743-19d145eac333?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjZ8fHBlZGVzdHJpYW4tYmFycmllcnN8ZW58MHwwfDB8fHww',
-      'https://images.unsplash.com/photo-1758797859332-6af8ac8bddee?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTE2fHxwZWRlc3RyaWFuLWJhcnJpZXJzfGVufDB8MHwwfHx8MA%3D%3D',
-      'https://images.unsplash.com/photo-1720339414148-b5bcbee96e30?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OTN8fHBlZGVzdHJpYW4tYmFycmllcnN8ZW58MHwwfDB8fHww',
+      'https://image2url.com/images/1763655792539-de856062-3194-40e4-afdb-bb26ba403f13.jpg',
+      'https://image2url.com/images/1763655849055-bd349286-aa09-426a-9a88-246374adf595.jpg',
+      'https://image2url.com/images/1763655874080-a5c9b095-326b-4053-9e22-84f5ab4bcb05.jpg',
     ],
     description: 'Heavy-duty pedestrian barriers designed to guide foot traffic, create safe walkways, and manage crowds at construction sites and events.',
     detailedInfo: {

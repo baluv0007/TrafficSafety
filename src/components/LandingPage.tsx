@@ -17,14 +17,12 @@ export default function LandingPage({ onNavigate }: LandingPageProps) {
   ];
 
   const backgroundImages = [
-    'https://images.pexels.com/photos/210182/pexels-photo-210182.jpeg',
-    'https://images.pexels.com/photos/2219024/pexels-photo-2219024.jpeg',
-    'https://images.pexels.com/photos/1427541/pexels-photo-1427541.jpeg',
-    'https://images.pexels.com/photos/159358/construction-site-build-construction-work-159358.jpeg',
-    'https://images.pexels.com/photos/279984/pexels-photo-279984.jpeg',
-    'https://images.pexels.com/photos/273209/pexels-photo-273209.jpeg',
-    'https://images.pexels.com/photos/1249610/pexels-photo-1249610.jpeg',
-    'https://images.pexels.com/photos/532803/pexels-photo-532803.jpeg',
+    'https://image2url.com/images/1763656932023-8fd8e391-a824-480e-a050-e301c726d31f.jpg',
+    'https://image2url.com/images/1763657145296-d50475a3-d307-4563-ac7c-fb3e5e651b38.jpg',
+    'https://image2url.com/images/1763657126087-f8231c7c-b7a4-4198-97d9-08100fccf12b.jpg',
+    'https://image2url.com/images/1763657109308-69256184-983a-4082-9169-8cdd4d2bfac2.jpg',
+    'https://image2url.com/images/1763657069958-6aa906dc-1f57-4600-ad9c-00ac8e12b730.jpg',
+    'https://image2url.com/images/1763657051356-7319598d-3622-4e2c-92f8-80295b552577.jpg',
   ];
 
   useEffect(() => {

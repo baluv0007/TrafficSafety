@@ -66,9 +66,9 @@ export const services: Service[] = [
     title: 'Site Assessment',
     shortDescription: 'Comprehensive site evaluation and safety analysis services',
     images: [
-      'https://images.unsplash.com/photo-1627378753431-e1bac9874c36?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NjZ8fHNpdGUtYXNzZXNzbWVudCUyMHRyYWZmaWN8ZW58MHwwfDB8fHww',
-      'https://images.unsplash.com/photo-1722336760994-8e33dc1c116a?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTA3fHxzaXRlLWFzc2Vzc21lbnQlMjB0cmFmZmljfGVufDB8MHwwfHx8MA%3D%3D',
-      'https://plus.unsplash.com/premium_photo-1687948155585-ef58a07d5dda?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTM0fHxzaXRlLWFzc2Vzc21lbnQlMjB0cmFmZmljfGVufDB8MHwwfHx8MA%3D%3D',
+      'https://image2url.com/images/1763656211675-4327d0cf-b4e2-4bea-9999-342c5780f379.jpg',
+      'https://image2url.com/images/1763656262686-1a44ed45-68e6-44ad-a666-d945685b7355.jpg',
+      'https://image2url.com/images/1763656293534-e27afb4f-a1df-4e38-a2cb-79b83327cf39.jpg',
     ],
     description: 'Professional site assessment services providing detailed analysis of traffic patterns, safety requirements, and optimal traffic management strategies for your project.',
     features: [

@@ -128,7 +128,7 @@ export default function AboutPage({ onNavigate }: AboutPageProps) {
           }`}
         >
           <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
-            About TrafficSafety
+            About FutureRoute Systems
           </h1>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
             Bringing innovative traffic management solutions to enhance road safety and efficiency across India
@@ -220,14 +220,14 @@ export default function AboutPage({ onNavigate }: AboutPageProps) {
             </h2>
             <div className="space-y-4 text-gray-600 text-lg leading-relaxed">
               <p>
-                Founded with a vision to bring innovative and reliable traffic management solutions to India, TrafficSafety represents a new approach to road safety and traffic control.
+                Founded with a vision to bring innovative and reliable traffic management solutions to India, FutureRoute Systems represents a new approach to road safety and traffic control.
               </p>
               <p>
                 Our journey begins with a simple but important commitment: to provide quality traffic management equipment and services while maintaining an unwavering focus on safety. We believe that every road user deserves professional traffic management that prioritizes safety above all else.
 
               </p>
               <p>
-                Starting with carefully selected equipment, a dedicated team, and a comprehensive service approach, we're building TrafficSafety to become a trusted partner for construction companies, local authorities, and event organizers who value safety and reliability. </p>
+                Starting with carefully selected equipment, a dedicated team, and a comprehensive service approach, we're building FutureRoute Systems to become a trusted partner for construction companies, local authorities, and event organizers who value safety and reliability. </p>
 <p>
 From road maintenance projects to event management, we're committed to delivering solutions that meet the highest safety standards while exceeding client expectations.
               </p>
@@ -281,7 +281,7 @@ From road maintenance projects to event management, we're committed to deliverin
             Our Mission & Vision
           </h2>
           <p className="text-xl text-white/90 max-w-4xl mx-auto leading-relaxed">
-            At TrafficSafety, we are committed to building safer roads across India through innovative traffic management solutions. Our vision is to become a trusted partner for municipalities and organizations seeking reliable, professional traffic control services.
+            At FutureRoute Systems, we are committed to building safer roads across India through innovative traffic management solutions. Our vision is to become a trusted partner for municipalities and organizations seeking reliable, professional traffic control services.
           </p>
         </div>
 
@@ -413,13 +413,13 @@ From road maintenance projects to event management, we're committed to deliverin
               </h3>
               <div className="space-y-4 text-gray-600 text-lg leading-relaxed">
                 <p>
-                  Sumanth founded TrafficSafety with a clear entrepreneurial vision: to create innovative and reliable traffic management solutions that prioritize safety and efficiency across India.
+                  Sumanth founded FutureRoute Systems with a clear entrepreneurial vision: to create innovative and reliable traffic management solutions that prioritize safety and efficiency across India.
                 </p>
                 <p>
-                  His commitment to excellence and strategic thinking have shaped TrafficSafety's approach to delivering professional traffic management services. Sumanth's leadership focuses on building strong client relationships and implementing industry best practices.
+                  His commitment to excellence and strategic thinking have shaped FutureRoute Systems's approach to delivering professional traffic management services. Sumanth's leadership focuses on building strong client relationships and implementing industry best practices.
                 </p>
                 <p>
-                  Under Sumanth's guidance, TrafficSafety is dedicated to establishing itself as a trusted partner in traffic control services, ensuring every project meets the highest safety standards for workers and the public.
+                  Under Sumanth's guidance, FutureRoute Systems is dedicated to establishing itself as a trusted partner in traffic control services, ensuring every project meets the highest safety standards for workers and the public.
                 </p>
               </div>
             </div>

@@ -72,7 +72,7 @@ export default function Footer({ onNavigate }: FooterProps) {
               <li className="flex items-start gap-2">
                 <Mail className="w-5 h-5 text-orange-500 flex-shrink-0 mt-0.5" />
                 <div>
-                  <p className="text-gray-400 text-sm">info@trafficsafety.com</p>
+                  <p className="text-gray-400 text-sm">info@futureroute.com</p>
                 </div>
               </li>
               <li className="flex items-start gap-2">

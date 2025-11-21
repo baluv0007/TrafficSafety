@@ -154,7 +154,7 @@ export default function PrivacyPolicyPage() {
               <div className="bg-gray-50 rounded-lg p-3 sm:p-4 md:p-6 border border-gray-200 break-words">
                 <p className="font-semibold text-gray-900 mb-2 sm:mb-3 text-sm sm:text-base break-words">FutureRoute Systems</p>
                 <div className="space-y-1 sm:space-y-2 text-xs sm:text-sm md:text-base text-gray-700 break-words">
-                  <p className="break-all"><strong>Email:</strong> <a href="mailto:info@trafficsafety.com" className="text-orange-600 hover:text-orange-700">info@trafficsafety.com</a></p>
+                  <p className="break-all"><strong>Email:</strong> <a href="mailto:info@futureroute.com" className="text-orange-600 hover:text-orange-700">info@futureroute.com</a></p>
                   <p><strong>Phone:</strong> 0800 123 4567</p>
                   <p className="break-words"><strong>Address:</strong> 123 Traffic Management Lane, Industrial Estate, City, Postcode</p>
                   <p><strong>Business Hours:</strong> Monday - Friday, 9:00 AM - 6:00 PM IST</p>

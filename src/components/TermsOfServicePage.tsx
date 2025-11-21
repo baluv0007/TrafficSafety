@@ -146,7 +146,7 @@ export default function TermsOfServicePage() {
                 <li>Service descriptions and methodologies</li>
                 <li>Website design, layout, and user interface elements</li>
                 <li>Marketing materials, presentations, and promotional content</li>
-                <li>Custom graphics, illustrations, and visual assets created by or for TrafficSafety</li>
+                <li>Custom graphics, illustrations, and visual assets created by or for FutureRoute Systems</li>
                 <li>Compilations and arrangements of content on our website</li>
               </ul>
 
@@ -397,7 +397,7 @@ export default function TermsOfServicePage() {
               <div className="bg-gray-50 rounded-lg p-6 border border-gray-200">
                 <p className="font-semibold text-gray-900 mb-3">FutureRoute Systems</p>
                 <div className="space-y-2 text-gray-700">
-                  <p><strong>Email:</strong> <a href="mailto:info@trafficsafety.com" className="text-orange-600 hover:text-orange-700">info@trafficsafety.com</a></p>
+                  <p><strong>Email:</strong> <a href="mailto:info@futureroute.com" className="text-orange-600 hover:text-orange-700">info@futureroute.com</a></p>
                   <p><strong>Phone:</strong> 0800 123 4567</p>
                   <p><strong>Address:</strong> 123 Traffic Management Lane, Industrial Estate, City, Postcode</p>
                   <p><strong>Business Hours:</strong> Monday - Friday, 9:00 AM - 6:00 PM IST</p>

@@ -97,10 +97,10 @@ export default function CareersPage() {
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
               <Mail className="w-6 h-6 text-orange-600" />
               <a
-                href="mailto:careers@trafficsafety.com"
+                href="mailto:careers@futureroute.com"
                 className="text-orange-600 font-bold text-lg hover:text-orange-700 transition-colors"
               >
-                careers@trafficsafety.com
+                careers@futureroute.com
               </a>
             </div>
           </div>

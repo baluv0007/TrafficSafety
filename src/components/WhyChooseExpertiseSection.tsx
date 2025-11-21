@@ -37,7 +37,7 @@ export default function WhyChooseExpertiseSection() {
             }`}
           >
             <p className="text-orange-600 font-bold text-sm uppercase tracking-wider mb-4">
-              Why Choose TrafficSafety
+              Why Choose FutureRoute Systems
             </p>
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4 leading-tight">
               Unmatched Expertise, Innovation, and Reliability in Traffic Management Solutions

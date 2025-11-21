@@ -40,7 +40,7 @@ export default function TermsOfServicePage() {
                 <div>
                   <h3 className="text-lg font-bold text-blue-900 mb-2">Important Legal Agreement</h3>
                   <p className="text-blue-800 text-sm leading-relaxed">
-                    Please read these Terms of Service carefully before using our website or services. By accessing or using TrafficSafety's website and services, you agree to be bound by these terms. If you do not agree with any part of these terms, please do not use our website or services.
+                    Please read these Terms of Service carefully before using our website or services. By accessing or using FutureRoute Systems's website and services, you agree to be bound by these terms. If you do not agree with any part of these terms, please do not use our website or services.
                   </p>
                 </div>
               </div>
@@ -52,17 +52,17 @@ export default function TermsOfServicePage() {
                 <h2 className="text-2xl font-bold text-gray-900 m-0">1. Acceptance of Terms</h2>
               </div>
               <p className="text-gray-700 leading-relaxed mb-4">
-                These Terms of Service ("Terms") constitute a legally binding agreement between you ("User," "you," or "your") and TrafficSafety ("Company," "we," "us," or "our") regarding your access to and use of our website, services, and related offerings.
+                These Terms of Service ("Terms") constitute a legally binding agreement between you ("User," "you," or "your") and FutureRoute Systems ("Company," "we," "us," or "our") regarding your access to and use of our website, services, and related offerings.
               </p>
               <p className="text-gray-700 leading-relaxed">
-                By accessing our website at any domain associated with TrafficSafety, submitting inquiries, requesting quotes, or engaging with our services, you acknowledge that you have read, understood, and agree to be bound by these Terms, as well as our Privacy Policy, which is incorporated herein by reference.
+                By accessing our website at any domain associated with FutureRoute Systems, submitting inquiries, requesting quotes, or engaging with our services, you acknowledge that you have read, understood, and agree to be bound by these Terms, as well as our Privacy Policy, which is incorporated herein by reference.
               </p>
             </section>
 
             <section className="mb-10">
               <h2 className="text-2xl font-bold text-gray-900 mb-4">2. Description of Services</h2>
               <p className="text-gray-700 leading-relaxed mb-4">
-                TrafficSafety provides traffic management solutions, equipment rental, installation services, and related offerings as described on our website. Our services include but are not limited to:
+                FutureRoute Systems provides traffic management solutions, equipment rental, installation services, and related offerings as described on our website. Our services include but are not limited to:
               </p>
               <ul className="list-disc pl-6 space-y-2 text-gray-700">
                 <li>Temporary traffic light systems and installation</li>
@@ -133,15 +133,15 @@ export default function TermsOfServicePage() {
 
               <h3 className="text-xl font-semibold text-gray-800 mt-6 mb-3">5.1 Ownership of Content</h3>
               <p className="text-gray-700 leading-relaxed mb-4">
-                All content on our website, including but not limited to text, graphics, logos, trademarks, service marks, design elements, photographs, videos, software, and compiled data (collectively, "Content"), is the exclusive property of TrafficSafety or its content suppliers and is protected by intellectual property laws including copyright, trademark, and other applicable laws.
+                All content on our website, including but not limited to text, graphics, logos, trademarks, service marks, design elements, photographs, videos, software, and compiled data (collectively, "Content"), is the exclusive property of FutureRoute Systems or its content suppliers and is protected by intellectual property laws including copyright, trademark, and other applicable laws.
               </p>
 
-              <h3 className="text-xl font-semibold text-gray-800 mt-6 mb-3">5.2 TrafficSafety Brand and Materials</h3>
+              <h3 className="text-xl font-semibold text-gray-800 mt-6 mb-3">5.2 FutureRoute Systems Brand and Materials</h3>
               <p className="text-gray-700 leading-relaxed mb-4">
-                The following are proprietary to TrafficSafety and may not be used without our express written permission:
+                The following are proprietary to FutureRoute Systems and may not be used without our express written permission:
               </p>
               <ul className="list-disc pl-6 space-y-2 text-gray-700">
-                <li>TrafficSafety name, logo, and all related branding elements</li>
+                <li>FutureRoute Systems name, logo, and all related branding elements</li>
                 <li>Product descriptions, specifications, and technical documentation</li>
                 <li>Service descriptions and methodologies</li>
                 <li>Website design, layout, and user interface elements</li>
@@ -157,11 +157,11 @@ export default function TermsOfServicePage() {
               <ul className="list-disc pl-6 space-y-2 text-gray-700">
                 <li>Stock photography obtained from licensed commercial sources</li>
                 <li>Open-source images from public repositories with appropriate usage rights</li>
-                <li>Original photography and graphics created by TrafficSafety</li>
+                <li>Original photography and graphics created by FutureRoute Systems</li>
                 <li>Images depicting general industry concepts and applications</li>
               </ul>
               <p className="text-gray-700 leading-relaxed mt-4">
-                While we make reasonable efforts to use properly licensed images, these images are for illustrative purposes and may not depict actual TrafficSafety projects, installations, or services. The products, scenarios, or locations shown in images are representative of typical traffic management applications.
+                While we make reasonable efforts to use properly licensed images, these images are for illustrative purposes and may not depict actual FutureRoute Systems projects, installations, or services. The products, scenarios, or locations shown in images are representative of typical traffic management applications.
               </p>
 
               <h3 className="text-xl font-semibold text-gray-800 mt-6 mb-3">5.4 Restrictions on Use</h3>
@@ -189,7 +189,7 @@ export default function TermsOfServicePage() {
 
               <h3 className="text-xl font-semibold text-gray-800 mt-6 mb-3">6.1 Quotations and Proposals</h3>
               <p className="text-gray-700 leading-relaxed mb-4">
-                All quotations, estimates, and proposals provided by TrafficSafety are:
+                All quotations, estimates, and proposals provided by FutureRoute Systems are:
               </p>
               <ul className="list-disc pl-6 space-y-2 text-gray-700">
                 <li>Valid for the period specified in the quotation document</li>
@@ -205,7 +205,7 @@ export default function TermsOfServicePage() {
 
               <h3 className="text-xl font-semibold text-gray-800 mt-6 mb-3">6.3 Equipment Rental</h3>
               <p className="text-gray-700 leading-relaxed mb-4">
-                When renting equipment from TrafficSafety, you agree to:
+                When renting equipment from FutureRoute Systems, you agree to:
               </p>
               <ul className="list-disc pl-6 space-y-2 text-gray-700">
                 <li>Use equipment only for its intended purpose and in accordance with instructions</li>
@@ -218,7 +218,7 @@ export default function TermsOfServicePage() {
 
               <h3 className="text-xl font-semibold text-gray-800 mt-6 mb-3">6.4 Installation and Maintenance</h3>
               <p className="text-gray-700 leading-relaxed">
-                Professional installation and maintenance services are performed by qualified TrafficSafety personnel or authorized contractors. You agree to provide safe access to work sites and to comply with all site-specific requirements and safety protocols.
+                Professional installation and maintenance services are performed by qualified FutureRoute Systems personnel or authorized contractors. You agree to provide safe access to work sites and to comply with all site-specific requirements and safety protocols.
               </p>
             </section>
 
@@ -278,7 +278,7 @@ export default function TermsOfServicePage() {
                   Critical Legal Notice
                 </p>
                 <p className="text-gray-700 leading-relaxed text-sm">
-                  TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, IN NO EVENT SHALL TRAFFICSAFETY, ITS OFFICERS, DIRECTORS, EMPLOYEES, AGENTS, OR AFFILIATES BE LIABLE FOR ANY INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, OR PUNITIVE DAMAGES, INCLUDING BUT NOT LIMITED TO LOSS OF PROFITS, DATA, USE, GOODWILL, OR OTHER INTANGIBLE LOSSES, ARISING OUT OF OR RELATED TO YOUR USE OF OR INABILITY TO USE OUR WEBSITE OR SERVICES, EVEN IF WE HAVE BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES.
+                  TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, IN NO EVENT SHALL FUTUREROUTE SYSTEMS, ITS OFFICERS, DIRECTORS, EMPLOYEES, AGENTS, OR AFFILIATES BE LIABLE FOR ANY INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, OR PUNITIVE DAMAGES, INCLUDING BUT NOT LIMITED TO LOSS OF PROFITS, DATA, USE, GOODWILL, OR OTHER INTANGIBLE LOSSES, ARISING OUT OF OR RELATED TO YOUR USE OF OR INABILITY TO USE OUR WEBSITE OR SERVICES, EVEN IF WE HAVE BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES.
                 </p>
               </div>
 
@@ -294,7 +294,7 @@ export default function TermsOfServicePage() {
             <section className="mb-10">
               <h2 className="text-2xl font-bold text-gray-900 mb-4">10. Indemnification</h2>
               <p className="text-gray-700 leading-relaxed mb-4">
-                You agree to indemnify, defend, and hold harmless TrafficSafety, its officers, directors, employees, agents, affiliates, and contractors from and against any and all claims, liabilities, damages, losses, costs, expenses, or fees (including reasonable attorneys' fees) arising from:
+                You agree to indemnify, defend, and hold harmless FutureRoute Systems, its officers, directors, employees, agents, affiliates, and contractors from and against any and all claims, liabilities, damages, losses, costs, expenses, or fees (including reasonable attorneys' fees) arising from:
               </p>
               <ul className="list-disc pl-6 space-y-2 text-gray-700">
                 <li>Your use or misuse of our website or services</li>
@@ -362,7 +362,7 @@ export default function TermsOfServicePage() {
 
               <h3 className="text-xl font-semibold text-gray-800 mt-6 mb-3">14.1 Entire Agreement</h3>
               <p className="text-gray-700 leading-relaxed mb-4">
-                These Terms, together with our Privacy Policy and any separate service agreements, constitute the entire agreement between you and TrafficSafety regarding your use of our website and services.
+                These Terms, together with our Privacy Policy and any separate service agreements, constitute the entire agreement between you and FutureRoute Systems regarding your use of our website and services.
               </p>
 
               <h3 className="text-xl font-semibold text-gray-800 mt-6 mb-3">14.2 Severability</h3>
@@ -395,7 +395,7 @@ export default function TermsOfServicePage() {
                 For questions, concerns, or inquiries regarding these Terms of Service, please contact us:
               </p>
               <div className="bg-gray-50 rounded-lg p-6 border border-gray-200">
-                <p className="font-semibold text-gray-900 mb-3">TrafficSafety</p>
+                <p className="font-semibold text-gray-900 mb-3">FutureRoute Systems</p>
                 <div className="space-y-2 text-gray-700">
                   <p><strong>Email:</strong> <a href="mailto:info@trafficsafety.com" className="text-orange-600 hover:text-orange-700">info@trafficsafety.com</a></p>
                   <p><strong>Phone:</strong> 0800 123 4567</p>
@@ -408,7 +408,7 @@ export default function TermsOfServicePage() {
             <section className="mb-10">
               <h2 className="text-2xl font-bold text-gray-900 mb-4">16. Startup Acknowledgment</h2>
               <p className="text-gray-700 leading-relaxed">
-                TrafficSafety is a growing startup committed to delivering professional traffic management solutions while building our operational capabilities. As we continue to develop and refine our services, these Terms may be updated to reflect our evolving business practices and legal requirements. We are dedicated to transparency, fairness, and building lasting relationships with our clients. Your feedback and patience as we grow are greatly appreciated.
+                FutureRoute Systems is a growing startup committed to delivering professional traffic management solutions while building our operational capabilities. As we continue to develop and refine our services, these Terms may be updated to reflect our evolving business practices and legal requirements. We are dedicated to transparency, fairness, and building lasting relationships with our clients. Your feedback and patience as we grow are greatly appreciated.
               </p>
             </section>
 

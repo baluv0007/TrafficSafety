@@ -22,7 +22,7 @@ export default function CareersPage() {
           style={{
             transitionDelay: headerSection.isVisible ? '100ms' : '0ms'
           }}>
-            TrafficSafety is growing, and we're looking for talented individuals to join our passionate team. If you're ready to make an impact and grow your career in traffic management and safety solutions, we'd love to hear from you.
+            FutureRoute Systems is growing, and we're looking for talented individuals to join our passionate team. If you're ready to make an impact and grow your career in traffic management and safety solutions, we'd love to hear from you.
           </p>
         </div>
       </div>

@@ -40,7 +40,7 @@ export default function PrivacyPolicyPage() {
                 <div className="min-w-0 flex-1">
                   <h3 className="text-base sm:text-lg font-bold text-blue-900 mb-1 sm:mb-2 break-words">Important Notice</h3>
                   <p className="text-xs sm:text-sm text-blue-800 leading-relaxed break-words">
-                    TrafficSafety is committed to protecting your privacy. This Privacy Policy explains how we collect, use, and safeguard your information when you visit our website or use our services.
+                    FutureRoute Systems is committed to protecting your privacy. This Privacy Policy explains how we collect, use, and safeguard your information when you visit our website or use our services.
                   </p>
                 </div>
               </div>
@@ -152,7 +152,7 @@ export default function PrivacyPolicyPage() {
                 If you have questions, concerns, or requests regarding this Privacy Policy or our privacy practices, please contact us:
               </p>
               <div className="bg-gray-50 rounded-lg p-3 sm:p-4 md:p-6 border border-gray-200 break-words">
-                <p className="font-semibold text-gray-900 mb-2 sm:mb-3 text-sm sm:text-base break-words">TrafficSafety</p>
+                <p className="font-semibold text-gray-900 mb-2 sm:mb-3 text-sm sm:text-base break-words">FutureRoute Systems</p>
                 <div className="space-y-1 sm:space-y-2 text-xs sm:text-sm md:text-base text-gray-700 break-words">
                   <p className="break-all"><strong>Email:</strong> <a href="mailto:info@trafficsafety.com" className="text-orange-600 hover:text-orange-700">info@trafficsafety.com</a></p>
                   <p><strong>Phone:</strong> 0800 123 4567</p>

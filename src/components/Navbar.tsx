@@ -96,7 +96,7 @@ export default function Navbar({ onNavigate, onProductClick, onServiceClick, cur
           >
             <TrafficLightLogo />
             <div className="text-2xl font-bold text-blue-600 group-hover:text-blue-700 transition-colors">
-              TrafficSafety
+              FutureRoute Systems
             </div>
           </div>
 

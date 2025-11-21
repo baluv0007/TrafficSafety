@@ -47,7 +47,7 @@ export default function HowWeWorkSection({ onNavigate }: HowWeWorkSectionProps) 
             How We Work
           </h2>
           <p className="text-lg text-gray-600 max-w-4xl mx-auto leading-relaxed">
-            At TrafficSafety, our approach to traffic management is driven by precision, innovation, and reliability. Here's a brief overview of our process:
+            At FutureRoute Systems, our approach to traffic management is driven by precision, innovation, and reliability. Here's a brief overview of our process:
           </p>
         </div>
 

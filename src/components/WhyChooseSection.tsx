@@ -43,7 +43,7 @@ export default function WhyChooseSection() {
             Your Trusted Partner in Seamless Traffic Management
           </h2>
           <p className="text-lg text-gray-300 max-w-4xl mx-auto text-center leading-relaxed">
-            At TrafficSafety, we pride ourselves on delivering unparalleled quality in the installation and operation of traffic signaling systems. As the largest operator of traffic signals in the country, we are dedicated to maintaining the highest standards and ensuring that our systems operate flawlessly, even in challenging conditions.
+            At FutureRoute Systems, we pride ourselves on delivering unparalleled quality in the installation and operation of traffic signaling systems. As the largest operator of traffic signals in the country, we are dedicated to maintaining the highest standards and ensuring that our systems operate flawlessly, even in challenging conditions.
           </p>
         </div>
 

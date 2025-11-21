@@ -6,8 +6,8 @@ export const services: Service[] = [
     title: 'Rapid Development Teams',
     shortDescription: 'Emergency response and quick setup traffic management services',
     images: [
-      'https://image2url.com/images/1763655944407-4caf5bd9-c1c0-4521-b2b1-91e095656713.jpg',
       'https://image2url.com/images/1763656033301-a688c91d-f918-472b-880e-fd07170ac66d.jpg',
+      'https://image2url.com/images/1763655944407-4caf5bd9-c1c0-4521-b2b1-91e095656713.jpg',
       'https://image2url.com/images/1763656057405-6b5c3695-0747-4782-b27b-6fd47bfd82c1.jpg',
       'https://image2url.com/images/1763656111648-aeabde68-9128-4056-aa56-91fb5fd775ec.jpg',
       'https://image2url.com/images/1763656135501-15521d61-ebf3-41c0-bf56-7263da4201b3.jpg',
